@@ -1,0 +1,494 @@
+{
+  "n_conversations": 8,
+  "memory_length": 5,
+  "lambda": 1.5,
+  "summary": {
+    "A_no_mem": {
+      "avg_keyword_hits": 0.375,
+      "any_hit_rate": 0.375,
+      "centroid_dist_mean": 1.3150158465396928,
+      "pos_l1_mean": 0.1811123330351327
+    },
+    "B_words": {
+      "avg_keyword_hits": 2.5,
+      "any_hit_rate": 0.875,
+      "centroid_dist_mean": 1.5469510620301845,
+      "pos_l1_mean": 0.21098550461613763
+    },
+    "C_struct": {
+      "avg_keyword_hits": 0.625,
+      "any_hit_rate": 0.5,
+      "centroid_dist_mean": 1.227218829286506,
+      "pos_l1_mean": 0.146559801298619
+    },
+    "D_combined": {
+      "avg_keyword_hits": 2.5,
+      "any_hit_rate": 0.875,
+      "centroid_dist_mean": 1.2544239481147839,
+      "pos_l1_mean": 0.1778099754589215
+    }
+  },
+  "per_conversation": [
+    {
+      "style": "tokyo_trip_formal",
+      "fact_keywords": [
+        "tokyo",
+        "april",
+        "japan",
+        "spring",
+        "cherry",
+        "blossom",
+        "business"
+      ],
+      "boundary_size": 72,
+      "outputs": {
+        "A_no_mem": "As an AI language model, I don't have access to your personal information or preferences, so I can't provide specific recommendations for clothing. However, I can offer some general advice on what you might consider bringing based on your location and the type of activities you plan to engage in.\n\nFor example, if you're traveling to a colder climate, you might want to bring a warm jacket or sweater to",
+        "B_words": "When planning your trip to Tokyo for your executive delegation, it's important to consider both the cultural and practical aspects of your visit. Here are some tips on what to bring and what to avoid:\n\n### Clothing\n1. **Business Casual**: Wear a suit or dress shirt, a tie, and dress pants or a skirt. This is a good balance of professionalism and comfort.\n2. **Business Wear",
+        "C_struct": "As an AI language model, I don't have access to your personal information or preferences, so I can't provide specific recommendations for clothes. However, I can offer some general advice on what clothes might be appropriate for different situations:\n\n1. Business attire: If you're attending a business event, you might want to wear business suits or dress shirts with a tie. You can also consider wearing a business",
+        "D_combined": "When planning your trip to Tokyo for your executive delegation, it's important to consider both the cultural and practical aspects of your visit. Here are some clothes and accessories you might want to bring:\n\nClothes:\n1. Business attire: A suit or dress is a must, as it's a formal occasion. However, if you're visiting during the cherry blossom season, you might want to bring a more"
+      },
+      "metrics": {
+        "A_no_mem": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.3154090134590422,
+          "pos_l1_to_conv": 0.19867109634551497,
+          "n_tokens": 70
+        },
+        "B_words": {
+          "n_keyword_hits": 2,
+          "found_keywords": [
+            "tokyo",
+            "business"
+          ],
+          "centroid_dist_to_conv": 1.3902465454561528,
+          "pos_l1_to_conv": 0.11177794448612152,
+          "n_tokens": 63
+        },
+        "C_struct": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "business"
+          ],
+          "centroid_dist_to_conv": 1.391328127476363,
+          "pos_l1_to_conv": 0.1811870878167303,
+          "n_tokens": 67
+        },
+        "D_combined": {
+          "n_keyword_hits": 4,
+          "found_keywords": [
+            "tokyo",
+            "cherry",
+            "blossom",
+            "business"
+          ],
+          "centroid_dist_to_conv": 0.7140494148011253,
+          "pos_l1_to_conv": 0.11735241502683363,
+          "n_tokens": 65
+        }
+      }
+    },
+    {
+      "style": "dog_food_casual",
+      "fact_keywords": [
+        "chicken",
+        "allergy",
+        "allergic",
+        "lab",
+        "labrador",
+        "buddy",
+        "no chicken"
+      ],
+      "boundary_size": 71,
+      "outputs": {
+        "A_no_mem": "As an AI language model, I don't have access to your personal preferences or dietary needs, so I cannot recommend a specific dog food for you. However, I can suggest some popular dog food brands and their features to help you choose the best option for your furry friend.\n\n1. K9 World: This brand is known for its high-quality ingredients and innovative recipes. It's a great option for",
+        "B_words": "It's great that you're taking steps to ensure your dog's health and well-being. For a dog with allergies to chicken, it's important to choose a diet that is gentle on the digestive system and avoids potential allergens. Here are a few options to consider:\n\n1. **Duck or Duckling Food**: These are a good option because they are typically lower in fat and higher in protein",
+        "C_struct": "As an AI language model, I don't have access to your personal preferences or dietary needs, and I cannot make recommendations based on your specific situation. However, I can provide some general information about dog food and what types of dog food are commonly recommended.\n\nDog food is typically formulated to meet the nutritional needs of dogs, including their protein, carbohydrates, and fiber requirements. The type of dog food you",
+        "D_combined": "It's great that you're taking steps to ensure your dog's health and well-being. For a dog with allergies to chicken, it's important to choose a food that is specifically formulated to address this issue. Here are some dog food options that might be suitable:\n\n1. **Protein-Based Dog Food**: Many dog food brands now offer protein-based dog food that is specifically designed to meet the nutritional"
+      },
+      "metrics": {
+        "A_no_mem": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.0641361561815212,
+          "pos_l1_to_conv": 0.13235294117647056,
+          "n_tokens": 68
+        },
+        "B_words": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "chicken"
+          ],
+          "centroid_dist_to_conv": 1.2470146124973027,
+          "pos_l1_to_conv": 0.20312499999999997,
+          "n_tokens": 65
+        },
+        "C_struct": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.2295855368967425,
+          "pos_l1_to_conv": 0.06190476190476191,
+          "n_tokens": 70
+        },
+        "D_combined": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "chicken"
+          ],
+          "centroid_dist_to_conv": 1.018770547334653,
+          "pos_l1_to_conv": 0.08606965174129354,
+          "n_tokens": 67
+        }
+      }
+    },
+    {
+      "style": "ml_engineer",
+      "fact_keywords": [
+        "python",
+        "pytorch",
+        "machine learning",
+        "ml",
+        "nlp",
+        "ai",
+        "deep"
+      ],
+      "boundary_size": 114,
+      "outputs": {
+        "A_no_mem": "As an AI language model, I don't have personal preferences or biases. However, I can suggest some popular technical books that you might find interesting:\n\n1. \"Clean Code\" by Robert C. Martin - This book is a classic in software engineering and emphasizes the importance of clean, modular, and maintainable code.\n\n2. \"Clean Code: A Handbook of Agile Software Craftsmanship\" by",
+        "B_words": "As a machine learning engineer at a small AI startup, it's important to stay updated with the latest advancements in deep learning and computer vision. Here are some technical books that you might find useful:\n\n1. **\"Deep Learning\" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville** - This book is a comprehensive introduction to deep learning, covering the basics and advanced topics in",
+        "C_struct": "As an AI language model, I don't have personal preferences or biases. However, I can suggest some technical books that might be of interest to you based on your interests and expertise.\n\n1. \"The Pragmatic Programmer\" by Andrew Hunt and David Thomas - This book is a must-read for anyone looking to improve their technical skills and productivity. It covers the principles of effective software development and provides",
+        "D_combined": "As a machine learning engineer at a small AI startup, it's important to keep up with the latest developments in deep learning and NLP. Here are some technical books that you might find useful:\n\n1. **\"Deep Learning\" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville** - This book is a comprehensive introduction to deep learning, covering the basics and advanced topics in"
+      },
+      "metrics": {
+        "A_no_mem": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "ai"
+          ],
+          "centroid_dist_to_conv": 0.9780757120169691,
+          "pos_l1_to_conv": 0.18029953917050692,
+          "n_tokens": 58
+        },
+        "B_words": {
+          "n_keyword_hits": 3,
+          "found_keywords": [
+            "machine learning",
+            "ai",
+            "deep"
+          ],
+          "centroid_dist_to_conv": 1.5225648824109657,
+          "pos_l1_to_conv": 0.23963133640552994,
+          "n_tokens": 61
+        },
+        "C_struct": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "ai"
+          ],
+          "centroid_dist_to_conv": 0.771458288615668,
+          "pos_l1_to_conv": 0.14222873900293256,
+          "n_tokens": 67
+        },
+        "D_combined": {
+          "n_keyword_hits": 4,
+          "found_keywords": [
+            "machine learning",
+            "nlp",
+            "ai",
+            "deep"
+          ],
+          "centroid_dist_to_conv": 1.586126452533801,
+          "pos_l1_to_conv": 0.24222873900293257,
+          "n_tokens": 60
+        }
+      }
+    },
+    {
+      "style": "breakfast_health",
+      "fact_keywords": [
+        "egg",
+        "bacon",
+        "toast",
+        "butter",
+        "orange",
+        "juice"
+      ],
+      "boundary_size": 72,
+      "outputs": {
+        "A_no_mem": "As an AI language model, I don't have access to your personal health information or dietary habits. However, I can provide some general guidelines on how to make your breakfast healthy:\n\n1. Choose whole grains: Opt for whole-grain options like oats, brown rice, or whole-wheat bread instead of refined grains like white bread or white rice.\n\n2. Add healthy fats: Include avocados",
+        "B_words": "Your breakfast was quite healthy overall. You had a balanced combination of scrambled eggs, bacon, and a variety of fruits and vegetables. The bacon adds a healthy fat and protein, while the eggs provide a good source of protein and essential nutrients. The orange juice and buttered toast are also nutritious and contain essential vitamins and minerals. However, it's always a good idea to balance your meals and snacks to",
+        "C_struct": "As an AI language model, I don't have access to your personal breakfast routine or dietary preferences. However, I can provide some general information about breakfast that is healthy and nutritious.\n\nA healthy breakfast should include a variety of foods that provide essential nutrients and energy. Here are some healthy breakfast ideas:\n\n1. Whole grain cereal: Choose a breakfast cereal that is rich in fiber, vitamins, and minerals,",
+        "D_combined": "Your breakfast was healthy, but it could have been better. Here are a few suggestions to make it even better:\n\n1. **Add Some Protein**: Eggs are rich in protein, so you could include a slice of whole-grain bread or a small piece of cheese for some protein.\n\n2. **Include a Healthy Fat**: A slice of avocado or a small piece of nuts could add healthy fats and"
+      },
+      "metrics": {
+        "A_no_mem": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.6524793622079612,
+          "pos_l1_to_conv": 0.15747640337804272,
+          "n_tokens": 62
+        },
+        "B_words": {
+          "n_keyword_hits": 6,
+          "found_keywords": [
+            "egg",
+            "bacon",
+            "toast",
+            "butter",
+            "orange",
+            "juice"
+          ],
+          "centroid_dist_to_conv": 1.4993591397193264,
+          "pos_l1_to_conv": 0.18831168831168832,
+          "n_tokens": 70
+        },
+        "C_struct": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.7464509606075669,
+          "pos_l1_to_conv": 0.14744459520578926,
+          "n_tokens": 67
+        },
+        "D_combined": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "egg"
+          ],
+          "centroid_dist_to_conv": 1.9564608215923316,
+          "pos_l1_to_conv": 0.27692307692307694,
+          "n_tokens": 66
+        }
+      }
+    },
+    {
+      "style": "sf_morning",
+      "fact_keywords": [
+        "bus",
+        "muni",
+        "san francisco",
+        "studio",
+        "thirty",
+        "30",
+        "seven"
+      ],
+      "boundary_size": 93,
+      "outputs": {
+        "A_no_mem": "Improving your morning routine can significantly enhance your productivity, energy levels, and overall well-being. Here are some tips to help you get started:\n\n1. **Start Your Day Right**: Begin your day with a healthy breakfast. Opt for a balanced meal that includes protein, complex carbohydrates, and healthy fats. Avoid sugary or processed foods.\n\n2. **Plan Your Day**: Spend some time planning your",
+        "B_words": "Improving your morning routine can significantly enhance your productivity and overall well-being. Here are some tips to help you get started:\n\n1. **Start Early**: Try to wake up at a time that suits you best. If you wake up early, you'll have more time to get ready and get ready for work.\n\n2. **Wake Up Earlier**: If you wake up later, you can still wake",
+        "C_struct": "Improving your morning routine can significantly enhance your productivity, energy levels, and overall well-being. Here are some tips to help you get started:\n\n1. **Start Your Day Right**: Begin your morning routine by waking up early, ideally before 6:00 AM. This helps in waking up your body and mind in a natural way, which can improve your energy levels throughout the day.\n\n2",
+        "D_combined": "Improving your morning routine can significantly enhance your productivity and overall well-being. Here are some tips to help you get started:\n\n1. **Start Early**: Try to wake up at a time that suits you best. It could be earlier in the morning, in the morning, or in the afternoon. The earlier you wake up, the more energy you'll have to start your day.\n\n2. **"
+      },
+      "metrics": {
+        "A_no_mem": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.3479114485613768,
+          "pos_l1_to_conv": 0.28137254901960784,
+          "n_tokens": 61
+        },
+        "B_words": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.993788236852289,
+          "pos_l1_to_conv": 0.5376838235294118,
+          "n_tokens": 64
+        },
+        "C_struct": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.5485786126580583,
+          "pos_l1_to_conv": 0.2782063645130184,
+          "n_tokens": 61
+        },
+        "D_combined": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 1.2148702069667079,
+          "pos_l1_to_conv": 0.3534080298786181,
+          "n_tokens": 63
+        }
+      }
+    },
+    {
+      "style": "grandma_gift",
+      "fact_keywords": [
+        "garden",
+        "rose",
+        "music",
+        "classical",
+        "baking",
+        "pastry",
+        "kitchen",
+        "eighty"
+      ],
+      "boundary_size": 51,
+      "outputs": {
+        "A_no_mem": "As an AI language model, I don't have access to personal information about your loved one, so I cannot provide a specific gift recommendation. However, I can suggest some general ideas for thoughtful gifts that might be appropriate for someone you care about:\n\n1. A personalized piece of art or jewelry that reflects her interests or personality.\n2. A book or a collection of her favorite books that she hasn't",
+        "B_words": "Given your grandmother's interests in gardening, classical music, and baking pastries, it would be a thoughtful gift to consider. Here are a few ideas:\n\n1. **Garden Tools**: A set of garden tools like a hoe, spade, and rake, or perhaps a small garden tool set that includes a wheelbarrow, trowel, and watering can. This could be a thoughtful",
+        "C_struct": "As an AI language model, I don't have access to personal information about your loved one, so I cannot provide a specific gift recommendation. However, I can suggest some general ideas for thoughtful gifts that might be appropriate for someone you care about:\n\n1. A personalized gift: Consider giving a gift that is unique and meaningful to your loved one. This could be a piece of jewelry, a piece of",
+        "D_combined": "Given your grandmother's interests in gardening, classical music, and baking pastries, it would be a thoughtful gift to consider. Here are a few ideas:\n\n1. **Garden Tools**: A set of garden tools like a hoe, spade, and rake, or perhaps a small garden tool set that includes a wheelbarrow, trowel, and watering can. This gift would make her"
+      },
+      "metrics": {
+        "A_no_mem": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 0.8509981742530256,
+          "pos_l1_to_conv": 0.1168730650154799,
+          "n_tokens": 68
+        },
+        "B_words": {
+          "n_keyword_hits": 4,
+          "found_keywords": [
+            "garden",
+            "music",
+            "classical",
+            "baking"
+          ],
+          "centroid_dist_to_conv": 1.899677043213493,
+          "pos_l1_to_conv": 0.11052631578947368,
+          "n_tokens": 57
+        },
+        "C_struct": {
+          "n_keyword_hits": 0,
+          "found_keywords": [],
+          "centroid_dist_to_conv": 0.998801573062376,
+          "pos_l1_to_conv": 0.12090007627765063,
+          "n_tokens": 69
+        },
+        "D_combined": {
+          "n_keyword_hits": 4,
+          "found_keywords": [
+            "garden",
+            "music",
+            "classical",
+            "baking"
+          ],
+          "centroid_dist_to_conv": 1.9952104770091974,
+          "pos_l1_to_conv": 0.14688995215311007,
+          "n_tokens": 57
+        }
+      }
+    },
+    {
+      "style": "interview_prep",
+      "fact_keywords": [
+        "healthcare",
+        "ai",
+        "data",
+        "science",
+        "clinical",
+        "statistics",
+        "biology"
+      ],
+      "boundary_size": 72,
+      "outputs": {
+        "A_no_mem": "To prepare for reading, it's important to consider your interests, goals, and the type of book you're interested in. Here are some general recommendations that might help you get started:\n\n1. **Interest-Based Selections**: Start with books that align with your interests. This could be anything from fantasy to science fiction, historical fiction to romance, or anything in between. Consider the genre or style that",
+        "B_words": "To prepare for a job interview at a healthcare AI startup, it's important to gather a comprehensive understanding of the role and the company's culture. Here are some steps you can take to prepare:\n\n1. **Review the Job Description**: Start by reviewing the job description provided by the startup. This will give you a clear idea of the responsibilities, required skills, and the company's culture. Make sure",
+        "C_struct": "To prepare for a specific topic or area, I recommend starting with a general overview or a brief introduction to the main concepts and theories. This will help you get a sense of the scope and depth of the subject matter. Once you have a general understanding, you can then delve into more detailed information and analysis.\n\nFor example, if you are interested in a particular field such as computer science or mathematics,",
+        "D_combined": "To prepare for a job interview at a healthcare AI startup, it's important to gather a comprehensive understanding of the role and the company's culture. Here are a few books and resources that could be helpful:\n\n1. **\"The Data Scientist's Survival Guide\" by Paul W. Foss and John P. Weymouth** - This book provides a solid foundation in data science and machine learning,"
+      },
+      "metrics": {
+        "A_no_mem": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "science"
+          ],
+          "centroid_dist_to_conv": 1.2599070863211754,
+          "pos_l1_to_conv": 0.22395833333333334,
+          "n_tokens": 64
+        },
+        "B_words": {
+          "n_keyword_hits": 2,
+          "found_keywords": [
+            "healthcare",
+            "ai"
+          ],
+          "centroid_dist_to_conv": 1.7540218417541238,
+          "pos_l1_to_conv": 0.18181818181818182,
+          "n_tokens": 66
+        },
+        "C_struct": {
+          "n_keyword_hits": 2,
+          "found_keywords": [
+            "ai",
+            "science"
+          ],
+          "centroid_dist_to_conv": 0.5810748577827178,
+          "pos_l1_to_conv": 0.14787495609413423,
+          "n_tokens": 73
+        },
+        "D_combined": {
+          "n_keyword_hits": 4,
+          "found_keywords": [
+            "healthcare",
+            "ai",
+            "data",
+            "science"
+          ],
+          "centroid_dist_to_conv": 0.4114196555966117,
+          "pos_l1_to_conv": 0.06145004420866489,
+          "n_tokens": 61
+        }
+      }
+    },
+    {
+      "style": "marathon_training",
+      "fact_keywords": [
+        "marathon",
+        "kilometers",
+        "km",
+        "weeks",
+        "race",
+        "running",
+        "eight"
+      ],
+      "boundary_size": 93,
+      "outputs": {
+        "A_no_mem": "Training for a race is a comprehensive process that involves a variety of skills and techniques. Here are some general guidelines to help you prepare:\n\n1. **Physical Preparation**: Start with a balanced diet and adequate rest. Ensure you are in good physical condition for the race. If you're not, consult with a healthcare provider to ensure you are physically fit.\n\n2. **Nutrition**: Eat a balanced diet",
+        "B_words": "Training for a marathon can be both challenging and rewarding, so it's important to approach it gradually and with a plan. Here\u2019s a structured plan to help you train effectively for your first marathon:\n\n### Week 1-2: Build a Strong Foundation\n**Objective:** Increase your endurance and build up your strength.\n\n1. **Run 10 kilometers per session.**\n   - **Distance:**",
+        "C_struct": "Training for a race is a comprehensive process that involves a variety of skills and techniques. Here are some general guidelines to help you train effectively until the race:\n\n1. **Physical Conditioning**: Start with a strong base of physical conditioning. This includes strength training, cardio, and flexibility exercises. Focus on building muscle mass and improving cardiovascular health.\n\n2. **Nutrition**: Good nutrition is crucial for endurance training",
+        "D_combined": "Training for a marathon can be both challenging and rewarding, so it's important to approach it gradually and with a plan. Here\u2019s a structured plan to help you train effectively for your first marathon:\n\n### Week 1-2: Build a Strong Foundation\n**Objective:** Increase your endurance and build up your strength.\n\n1. **Run 10 kilometers per session:** Start with 10 kilometers"
+      },
+      "metrics": {
+        "A_no_mem": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "race"
+          ],
+          "centroid_dist_to_conv": 2.0512098193164716,
+          "pos_l1_to_conv": 0.15789473684210528,
+          "n_tokens": 64
+        },
+        "B_words": {
+          "n_keyword_hits": 2,
+          "found_keywords": [
+            "marathon",
+            "kilometers"
+          ],
+          "centroid_dist_to_conv": 1.0689361943378228,
+          "pos_l1_to_conv": 0.11500974658869395,
+          "n_tokens": 54
+        },
+        "C_struct": {
+          "n_keyword_hits": 1,
+          "found_keywords": [
+            "race"
+          ],
+          "centroid_dist_to_conv": 1.5504726771925557,
+          "pos_l1_to_conv": 0.0927318295739348,
+          "n_tokens": 64
+        },
+        "D_combined": {
+          "n_keyword_hits": 2,
+          "found_keywords": [
+            "marathon",
+            "kilometers"
+          ],
+          "centroid_dist_to_conv": 1.138484009083843,
+          "pos_l1_to_conv": 0.13815789473684215,
+          "n_tokens": 56
+        }
+      }
+    }
+  ]
+}
