@@ -1,0 +1,3683 @@
+{
+  "n_prompts": 50,
+  "lambda": 1.5,
+  "models": [
+    [
+      "mamba-130m",
+      "state-spaces/mamba-130m-hf",
+      "mamba"
+    ],
+    [
+      "mamba-370m",
+      "state-spaces/mamba-370m-hf",
+      "mamba"
+    ],
+    [
+      "pythia-410m",
+      "EleutherAI/pythia-410m",
+      "causal"
+    ],
+    [
+      "pythia-1b",
+      "EleutherAI/pythia-1b",
+      "causal"
+    ]
+  ],
+  "backend_info": {
+    "mamba-130m": {
+      "params": 129135360,
+      "mb_fp16": 258.27072,
+      "ms_per_token_gpu": 18.738508224487305
+    },
+    "mamba-370m": {
+      "params": 371516416,
+      "mb_fp16": 743.032832,
+      "ms_per_token_gpu": 38.142967224121094
+    },
+    "pythia-410m": {
+      "params": 405334016,
+      "mb_fp16": 810.668032,
+      "ms_per_token_gpu": 15.52882194519043
+    },
+    "pythia-1b": {
+      "params": 1011781632,
+      "mb_fp16": 2023.563264,
+      "ms_per_token_gpu": 11.091852188110352
+    }
+  },
+  "summary": {
+    "aisha_alone": {
+      "judge_ppl_p25": 1468.356959038016,
+      "judge_ppl_median": 3688.6420263510613,
+      "judge_ppl_p75": 6523.036566786324,
+      "judge_ppl_mean": 6712.604262319571,
+      "distinct_2_mean": 1.0,
+      "boundary_hit_mean": 0.414968253968254,
+      "tokens_mean": 6.52
+    },
+    "mamba-130m_alone": {
+      "judge_ppl_p25": 30.589528011891016,
+      "judge_ppl_median": 44.15274275860065,
+      "judge_ppl_p75": 86.58716526751077,
+      "judge_ppl_mean": 65.78388740495609,
+      "distinct_2_mean": 0.9731290849673203,
+      "boundary_hit_mean": 0.0584922354906875,
+      "tokens_mean": 16.28
+    },
+    "mamba-130m_aisha_lam1.5": {
+      "judge_ppl_p25": 23.601785307067523,
+      "judge_ppl_median": 39.43967219746271,
+      "judge_ppl_p75": 87.05173765261948,
+      "judge_ppl_mean": 70.18088336822676,
+      "distinct_2_mean": 0.9617288267288268,
+      "boundary_hit_mean": 0.14618019011917918,
+      "tokens_mean": 16.26
+    },
+    "mamba-370m_alone": {
+      "judge_ppl_p25": 22.53153726205059,
+      "judge_ppl_median": 43.67676537752803,
+      "judge_ppl_p75": 60.74420342195128,
+      "judge_ppl_mean": 64.59541094131849,
+      "distinct_2_mean": 0.9862105631726373,
+      "boundary_hit_mean": 0.046010824486830686,
+      "tokens_mean": 16.68
+    },
+    "mamba-370m_aisha_lam1.5": {
+      "judge_ppl_p25": 31.46076537202804,
+      "judge_ppl_median": 46.82687607624496,
+      "judge_ppl_p75": 65.35132501514889,
+      "judge_ppl_mean": 58.42401024114418,
+      "distinct_2_mean": 0.9838284313725489,
+      "boundary_hit_mean": 0.13874383262076762,
+      "tokens_mean": 16.52
+    },
+    "pythia-410m_alone": {
+      "judge_ppl_p25": 17.60715876741174,
+      "judge_ppl_median": 39.01023897292666,
+      "judge_ppl_p75": 50.541657108210394,
+      "judge_ppl_mean": 48.941321195383814,
+      "distinct_2_mean": 0.9726130030959752,
+      "boundary_hit_mean": 0.068064433502514,
+      "tokens_mean": 14.86
+    },
+    "pythia-410m_aisha_lam1.5": {
+      "judge_ppl_p25": 23.347290663400717,
+      "judge_ppl_median": 33.01099395672536,
+      "judge_ppl_p75": 61.93955423838532,
+      "judge_ppl_mean": 53.70616409112929,
+      "distinct_2_mean": 0.9599834434571277,
+      "boundary_hit_mean": 0.16463670740201902,
+      "tokens_mean": 15.18
+    },
+    "pythia-1b_alone": {
+      "judge_ppl_p25": 23.119694629359525,
+      "judge_ppl_median": 39.50874413938088,
+      "judge_ppl_p75": 67.73549462756961,
+      "judge_ppl_mean": 90.99539822688112,
+      "distinct_2_mean": 0.9801256913021619,
+      "boundary_hit_mean": 0.032402917172267016,
+      "tokens_mean": 16.44
+    },
+    "pythia-1b_aisha_lam1.5": {
+      "judge_ppl_p25": 25.64934158102806,
+      "judge_ppl_median": 37.59816660426293,
+      "judge_ppl_p75": 65.1940186493687,
+      "judge_ppl_mean": 63.957741137231025,
+      "distinct_2_mean": 0.9793500458949376,
+      "boundary_hit_mean": 0.15113269247092778,
+      "tokens_mean": 17.16
+    }
+  },
+  "per_prompt": [
+    {
+      "prompt": "Oh, I was definitely making a beeline for those mini quiches before you intervened.",
+      "boundary_size": 124,
+      "outputs": {
+        "aisha_alone": "The depressing upland of i evade a damnit.",
+        "mamba-130m_alone": " Oh, you're not joking, you're regrouping. That's as far as it gets.\nHas this",
+        "mamba-130m_aisha_lam1.5": " Oh, I am not joking, I was regrouping. I have a couple of mini quiches to get",
+        "mamba-370m_alone": " Oh, you guys are busy, you guys are busy.\nMarie-Christine: Pookie, I just wanted",
+        "mamba-370m_aisha_lam1.5": " Oh, I am not busy, I'm regrouping. I have a meeting with some of my fellow students this",
+        "pythia-410m_alone": " Oh, you were snitching on me!\n\n(Heavy sigh. Both actors keep staring at him.)\n",
+        "pythia-410m_aisha_lam1.5": " Oh, I take it that was not a regrouping. That you as a staff group have been taking a look",
+        "pythia-1b_alone": " Well, you seem to be a very special guest.\n\nI suppose.\n\nHas this been an issue in",
+        "pythia-1b_aisha_lam1.5": " Oh I bet you were!\n\nwinter brickhunter wrote:Don't feel bad for being a jerk."
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 4189.84814194614,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.375,
+          "n_tokens": 8
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 28.904587525706315,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2857142857142857,
+          "n_tokens": 14
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 39.45493821170841,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.17647058823529413,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 32.63123711618071,
+          "distinct_2": 0.7857142857142857,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 22.31020342498387,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1111111111111111,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 39.02462725688379,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.07142857142857142,
+          "n_tokens": 14
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 57.43212791860643,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15,
+          "n_tokens": 20
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 21.98853315356339,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 107.75433025612415,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        }
+      }
+    },
+    {
+      "prompt": "Good idea. I'll make a note of that.",
+      "boundary_size": 63,
+      "outputs": {
+        "aisha_alone": "It upside haven't i.",
+        "mamba-130m_alone": " OK. I'll try that, thanks.\n\nA:\n\nDon't use group_concat with a named",
+        "mamba-130m_aisha_lam1.5": " OK. I'll try that, thanks.\n\nA:\n\nDon't use group_concat with a named",
+        "mamba-370m_alone": " OK.\n\nWhen the user enters the next brick, he/she will be presented with a list of colors (",
+        "mamba-370m_aisha_lam1.5": " OK.\n\nWhen the user enters the next brick, he/she will be presented with a list of colors (",
+        "pythia-410m_alone": " OK.\n\nJohn: Good idea. I'll make a note of that.\n\nNell: Hmm.",
+        "pythia-410m_aisha_lam1.5": " OK.\n\nJohn: Good idea. I'll make a note of that.\n\nNell: Good idea",
+        "pythia-1b_alone": " OK.\n\nWhen the user clicks the next button, I create a new user and keep track of that user in",
+        "pythia-1b_aisha_lam1.5": " OK.\n\nWhen the user clicks the next button, I create a new user and keep track of that user in"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 2505.6512478022714,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 45.055086485482455,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 45.055086485482455,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 19.03314651378744,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 19.03314651378744,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 13.486842911335176,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.25,
+          "n_tokens": 12
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 12.069368102437473,
+          "distinct_2": 0.9166666666666666,
+          "boundary_hit_rate": 0.38461538461538464,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 17.662032585805957,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 17.662032585805957,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "Oh, now you're just being dramatic.",
+      "boundary_size": 42,
+      "outputs": {
+        "aisha_alone": "It was i of a lack.",
+        "mamba-130m_alone": " Henry Howard, you're still on message.\nJagged: That's my name!\nNurse: Jesse,",
+        "mamba-130m_aisha_lam1.5": " Oh, you're not joking, you're not.\n[Gameplay video from the group scale]\nHas this",
+        "mamba-370m_alone": " Well, you seem to be, you know what I mean.\nThe Professor: No, you're right.\n",
+        "mamba-370m_aisha_lam1.5": " Oh, you're not joking, are you?\nUser: No, no, no, you're not kidding.",
+        "pythia-410m_alone": " Well, you seem to be a very special lady.\n\nI suppose.\n\nAssignee: Well, this",
+        "pythia-410m_aisha_lam1.5": " Oh, you're not joking, you're not!\n[airhorns honking]\nWhat's so funny",
+        "pythia-1b_alone": " Well, you seem to think this is so obvious.\n\nA:\n\nI keep seeing Google Chrome specifically named",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nAre you a fan of West Side Story? That's my favorite show on TV. I just watched"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 530.9137359224045,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 6
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 77.95312712738966,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 77.18592760122192,
+          "distinct_2": 0.9230769230769231,
+          "boundary_hit_rate": 0.21428571428571427,
+          "n_tokens": 14
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 16.98713192615411,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 14.436018550049525,
+          "distinct_2": 0.8333333333333334,
+          "boundary_hit_rate": 0.23076923076923078,
+          "n_tokens": 13
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 22.729294610254858,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 40.38644447789811,
+          "distinct_2": 0.9,
+          "boundary_hit_rate": 0.2727272727272727,
+          "n_tokens": 11
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 37.18564089950661,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 13.513638648505317,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05555555555555555,
+          "n_tokens": 18
+        }
+      }
+    },
+    {
+      "prompt": "So true. Well, I might check that out.",
+      "boundary_size": 42,
+      "outputs": {
+        "aisha_alone": "The solo of a lack rip i.",
+        "mamba-130m_alone": " OK.\nWhat exactly are you trying to do?\n\nAssistant: I want to scale up the power of",
+        "mamba-130m_aisha_lam1.5": " OK.\nWhat exactly are you trying to do?\n\nAssistant: I want to scale up the power of",
+        "mamba-370m_alone": " Well, you seem to be a very special case.\n[air]\nAssistant: And I'm just trying",
+        "mamba-370m_aisha_lam1.5": " Well, you seem to be a very special case.\n[laughing]\nAnd keep doing what you're doing",
+        "pythia-410m_alone": " Well, you seem to be a very special lady.\n\nI suppose.\n\nSo you're good to go",
+        "pythia-410m_aisha_lam1.5": " Well, you seem to be a very special lady.\n\nI suppose.\n\nSo true. Well, I",
+        "pythia-1b_alone": " Well, you seem to be a very special lady.\n\nI suppose.\n\nHas this been interesting to you",
+        "pythia-1b_aisha_lam1.5": " Nonsense, you don't do that in West Side Story. That's as far as it goes.\n\nHe"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 5297.080599813851,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.14285714285714285,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 37.8922750497852,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 37.8922750497852,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 60.78866121166059,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 20.561905630585343,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 16.655648128413375,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 20.27076764120356,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 20.354215108679337,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 22.06192418842585,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        }
+      }
+    },
+    {
+      "prompt": "I don't know. I just needed you to know the truth.",
+      "boundary_size": 21,
+      "outputs": {
+        "aisha_alone": "The goths technically counts i.",
+        "mamba-130m_alone": " OK. I'll try again, but I'll be ready. That's my only hope. Please check with me.",
+        "mamba-130m_aisha_lam1.5": " OK. I'll try again, but I'll be ready. That's the only way keep you safe.\nDec",
+        "mamba-370m_alone": " Well, you seem to be a very special man.\n[air]\nAssistant: And I had to get",
+        "mamba-370m_aisha_lam1.5": " Well, you seem to be the only one who doesn't. That's good enough for me.\nAnd so the",
+        "pythia-410m_alone": " Well, you seem to know a lot about what I do. That's good.\nStudent: Sorry.\nAss",
+        "pythia-410m_aisha_lam1.5": " Well, you seem to be a very special lady.\n...\n\n...the appearance of the primary house is the",
+        "pythia-1b_alone": " Well I don't know. But you may want to try. That's my only advice to you.\n\nHe",
+        "pythia-1b_aisha_lam1.5": " Well I don't know. But you may want to try. That's the only way to be safe.\nHe"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 5071.147890026786,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2,
+          "n_tokens": 5
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 18.5936050495631,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 30.898774242439053,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 60.61083005282337,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 12.771162665394336,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 23.098367054406808,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 87.79542931547755,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 12.897629727086736,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 16.213455193310587,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        }
+      }
+    },
+    {
+      "prompt": "Then you have to decide if that's enough for you. Your feelings matter.",
+      "boundary_size": 103,
+      "outputs": {
+        "aisha_alone": "The likely easy mps learning.",
+        "mamba-130m_alone": " Now I'll take another look, but I'll be ready to leave you.\n\nAssignee: <Has this",
+        "mamba-130m_aisha_lam1.5": " Now I'll take another look, but I'll be ready for another exam.\n\nAssignments for this exam will",
+        "mamba-370m_alone": " Well, I take it that this is not what you want. That you want somebody who will have no control over this",
+        "mamba-370m_aisha_lam1.5": " Mm, well, I do hope so. Can we use the rest of the day for you guys?\nHe",
+        "pythia-410m_alone": " OK.\n\nAre you going to be able to do that?\n\nAssistant: I'm good.\n",
+        "pythia-410m_aisha_lam1.5": " OK.\n\nAre you going to be able to do that?\n\nAssistant: I'm good.\n",
+        "pythia-1b_alone": " Yes.\n\nAre you a fan of West Side Story? That's my question!\nNellie: Yes",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nAre you a fan of West Side Story? That's my question!\nNarrator: The"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 12205.44510426452,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.4,
+          "n_tokens": 5
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 34.573491404062345,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 18.07683683430889,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 17.005533152799305,
+          "distinct_2": 0.9523809523809523,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 22
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 42.498926508425484,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 12.572783441417863,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 12.572783441417863,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 34.46958046624871,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 40.88330263607458,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "I just needed to tell someone who would actually get it.",
+      "boundary_size": 42,
+      "outputs": {
+        "aisha_alone": "The one enhance a pop.",
+        "mamba-130m_alone": " OK. Just take another screenshot, and then reupload the old one. We can actually keep this from taking forever.",
+        "mamba-130m_aisha_lam1.5": " It's been fun. I was thinking about what you said about the laundry.\nAssistant: And it's this",
+        "mamba-370m_alone": " Well I bet you could get this message in a second.\nAssistant: You can keep doing what you're doing",
+        "mamba-370m_aisha_lam1.5": " What's your name?\nUser: I'm Bryan.\nAssistant: You can keep it. It's not",
+        "pythia-410m_alone": " Well I bet you could get this message to a brick wall. That's my point!\nNarrator: *",
+        "pythia-410m_aisha_lam1.5": " What's up guys?\nAssistant: Weston's been on you.\nAssistant: Sorry.\nWest",
+        "pythia-1b_alone": " nope, you didn't, you just regrouped. That's as far as it goes.\n\nAnother",
+        "pythia-1b_aisha_lam1.5": " It's you guys. You're not even listening. You didn't even read it!\nNarrator: The"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 3756.12454131,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 5
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 30.80675969700742,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 61.30605300311914,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 37.27072514879557,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15789473684210525,
+          "n_tokens": 19
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 38.867424697277514,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15384615384615385,
+          "n_tokens": 13
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 46.78222533424165,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 86.69296857351763,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.09090909090909091,
+          "n_tokens": 11
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 17.486171689775855,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.23076923076923078,
+          "n_tokens": 13
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 28.567505138878413,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.21428571428571427,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "There's rarely a \"wrong\" choice, only different paths with different lessons. What are your core values right now?",
+      "boundary_size": 202,
+      "outputs": {
+        "aisha_alone": "I haven't a traffic.",
+        "mamba-130m_alone": "Nothing. I am not a therapist. I'm a psychiatrist. That's my job.\nNurse:Has this",
+        "mamba-130m_aisha_lam1.5": "Nothing. I am not the person that says what I want. That's my problem.\nNarrator: The",
+        "mamba-370m_alone": " Well, I take pride in my work and I want to use my knowledge as a teacher to scale up across students.",
+        "mamba-370m_aisha_lam1.5": " Well, I take the values of the company and I try to live them.\nAnd keep doing the good things in",
+        "pythia-410m_alone": " I'm a fun guy.\nStudent: I'm finishing college.\nAssistant: Pricing wise, this",
+        "pythia-410m_aisha_lam1.5": " I'm a fun and friendly person. I like to try new things and as long as they scale and provide results,",
+        "pythia-1b_alone": " I'm a perfectionist. When I'm working on finishing something, I want it to be perfect. I want it",
+        "pythia-1b_aisha_lam1.5": " A person who always fails the goal of the assignment. A person who always works harder than the person who achieved the goal"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 748.6198389631127,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.25,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 32.70105065433431,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 22.77216202107768,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 25.78863672918787,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 22
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 41.65300250822633,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.047619047619047616,
+          "n_tokens": 21
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 83.32070412929458,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 33.11730741533647,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 21
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 9.851139815831084,
+          "distinct_2": 0.8823529411764706,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 29.435675575324257,
+          "distinct_2": 0.7727272727272727,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 23
+        }
+      }
+    },
+    {
+      "prompt": "True. Well, thanks for saving me from solo awkwardness.",
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The natal blames of an ix.",
+        "mamba-130m_alone": " Henry Howard, you might want to check out Weston's website. If you're looking for a different kind of team",
+        "mamba-130m_aisha_lam1.5": " True. I am not a therapist. I'm a psychiatrist. I have a longing for my family.\nDec",
+        "mamba-370m_alone": " Henry Howard, you\u2019re a dumbwit.\nDimples: (laughs)\nNBB: (laughs",
+        "mamba-370m_aisha_lam1.5": " Henry Howard, you\u2019re a dumbass! Can\u2019t you see how humiliating it is for me to have",
+        "pythia-410m_alone": " True. Didn't try that, but I'll probably try it.\nConductor: True.\nStep-Master",
+        "pythia-410m_aisha_lam1.5": " True. I am not a star in the West. I am a good runner in the East.\nStep-Parent",
+        "pythia-1b_alone": " True. Didn't even notice this comment was in my head.\n\nDon't feel bad for being stressed out.",
+        "pythia-1b_aisha_lam1.5": " True. I am not joking, I'm a pro.\n\nThe rest of the group have been good to me"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1437.8490884680273,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 6
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 24.934754141267977,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 37.653344567976774,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 208.24615104359052,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 10
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 51.68503373683633,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 50.25605047296775,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15384615384615385,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 46.22882958813355,
+          "distinct_2": 0.8888888888888888,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 30.853471940217606,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 18.712782530920133,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05555555555555555,
+          "n_tokens": 18
+        }
+      }
+    },
+    {
+      "prompt": "It's an inherently philosophical endeavor, as much as an engineering challenge.",
+      "boundary_size": 105,
+      "outputs": {
+        "aisha_alone": "The ionic recreation of i haven't you.",
+        "mamba-130m_alone": " It's a whole lot of engineering.\nGuy: It's a whole lot of engineering. And I'm just trying",
+        "mamba-130m_aisha_lam1.5": " I'm not sure exactly what this is supposed to be, unless I'm completely mistaken.\nNBB: I think",
+        "mamba-370m_alone": " Well, you seem to be taking it in a completely different direction.\nUser: No, you're taking it in",
+        "mamba-370m_aisha_lam1.5": " Well I bet you could still do it in a brick-and-mortar lab!\nNBBJ: (",
+        "pythia-410m_alone": " Yes.\nManager: Hi, I'm Mike Canavero.\nAssistant: Hi Mike.\nHas this",
+        "pythia-410m_aisha_lam1.5": " Mm, well, I was thinking I'll probably try to explain it.\nAssistant: I had to ask",
+        "pythia-1b_alone": " It's a whole language of engineering challenges.\n\nA:\n\n\"Software development\" has undergone a number of",
+        "pythia-1b_aisha_lam1.5": " It's a whole language of engineering challenges.\n\nA:\n\n\"Software engineering\" has undergone a number of"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 937.6597346171973,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2857142857142857,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 16.774397784888844,
+          "distinct_2": 0.6875,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 25.282164867721615,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 22.476571225899384,
+          "distinct_2": 0.8823529411764706,
+          "boundary_hit_rate": 0.05555555555555555,
+          "n_tokens": 18
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 46.38199939529989,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 42.41858063303624,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 11
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 66.22989344784764,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 40.845354373838845,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 39.834291850219365,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.13333333333333333,
+          "n_tokens": 15
+        }
+      }
+    },
+    {
+      "prompt": "Yeah, she just sighed. We were both trying not to laugh.",
+      "boundary_size": 83,
+      "outputs": {
+        "aisha_alone": "The end upside counts of an inter supreme.",
+        "mamba-130m_alone": " Henry Howard, you're still alive.\nGuy Canavero: Yeah.\nAssistant: And that's because",
+        "mamba-130m_aisha_lam1.5": " Well, you seem to be a very special guest.\nMitchell: We're actually helping you out.\nAss",
+        "mamba-370m_alone": " Well, you seem to be fine.\nGuy: Yeah. That's good to hear. And I had to get",
+        "mamba-370m_aisha_lam1.5": " Well, you seem to be a pretty special lady.\nDimples: Yeah, well keep trying. It's not",
+        "pythia-410m_alone": " Well, you guys are joking, right?\nJodie: Yeah.\nAssistant: Did you just lose",
+        "pythia-410m_aisha_lam1.5": " Well, you guys ought to do that in a second.\nJessie: Yeah, keep trying. It's not",
+        "pythia-1b_alone": " Well, you seem to be a very special lady.\nServices: Thank you, ma\u2019am.\nHas this",
+        "pythia-1b_aisha_lam1.5": " Well, you seem to be a very special lady.\nServices: Yeah.\nAssistant: Did you know she"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 7394.121635318762,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 8
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 97.45962693536659,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.08333333333333333,
+          "n_tokens": 12
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 36.44299065855379,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 19.49885041415556,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 51.546245315243134,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.3125,
+          "n_tokens": 16
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 34.79217349009328,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15384615384615385,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 29.371145611383326,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.375,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 130.1899107005128,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 55.599418409235504,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 16
+        }
+      }
+    },
+    {
+      "prompt": "Seriously. And no cooking is a bonus.",
+      "boundary_size": 62,
+      "outputs": {
+        "aisha_alone": "The inter sewing of a snack haven't.",
+        "mamba-130m_alone": " Henry Howard, you might want to check out Weston\u2019s new project.\nAnd keep this in mind: this",
+        "mamba-130m_aisha_lam1.5": " Now I bet you didn't do that in Weston.\n\n------\nsallystark\nAnd just because",
+        "mamba-370m_alone": " Well I bet you could cook a meal in under an hour. That's as fast as you can cook.\nHe",
+        "mamba-370m_aisha_lam1.5": " Now I bet you could cook this.\nGuy: Oh yeah?\nAssistant: Panko chicken.\n",
+        "pythia-410m_alone": " Well, you seem to be a fan of West Side Story. That's as far as it goes.\n\nHe",
+        "pythia-410m_aisha_lam1.5": " Now I bet you didn't do that in high school.\nStudent: We did!\nAssistant: Then what",
+        "pythia-1b_alone": " Yes.\n\nAre you a fan of West Side Story? That's my favorite!\nNarrator: Yes",
+        "pythia-1b_aisha_lam1.5": " Now I know you\u2019re a master chef and probably have a lot of recipes from your parents.\nShop Owner:"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 9160.917760993449,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2857142857142857,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 87.10912608160379,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 198.35306498397875,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 22.696435370504208,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 61.24948402222725,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 14.529326977937975,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 31.52917131687683,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 52.100030343003304,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 123.70907080143259,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "The feeling is entirely mutual. Please don't forget that.",
+      "boundary_size": 100,
+      "outputs": {
+        "aisha_alone": "I begging you of a lack.",
+        "mamba-130m_alone": " Henry Howard, you might still be interested in regrouping. That's as far as it goes. He will still",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, who has been on the receiving end of the argument and has as yet not been seen by anyone.\n",
+        "mamba-370m_alone": " Well, you seem to be a very special case.\nDimples: (laughs)\nNBB: (laughs",
+        "mamba-370m_aisha_lam1.5": " Oh, you seem to be a fan of West Side Story. That's good to hear; you're not just some",
+        "pythia-410m_alone": " Yes.\n\nAre you a girlfriend?\n\nYes.\n\nAre you a groupie?\n\nNo",
+        "pythia-410m_aisha_lam1.5": " Mm, not exactly. But you may want to try. That's my favorite!\nNarrator: *",
+        "pythia-1b_alone": " Yes.\n\nAre you a fan of West Side Story? Why don't you like it?\nStep-brother",
+        "pythia-1b_aisha_lam1.5": " Mm, not exactly. But not even slightly.\nServices: Mm, not even slightly.\nHas this"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1060.8330234001205,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.16666666666666666,
+          "n_tokens": 6
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 32.1358009524183,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 20.875990725980955,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.047619047619047616,
+          "n_tokens": 21
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 45.398249930526376,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 20.073310139884654,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.10526315789473684,
+          "n_tokens": 19
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 6.405302204021301,
+          "distinct_2": 0.7,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 11
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 48.609239189274845,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15384615384615385,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 36.63807671508129,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 60.65228897089526,
+          "distinct_2": 0.7692307692307693,
+          "boundary_hit_rate": 0.35714285714285715,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "Precisely. The long-term stability of an atmosphere is often overlooked in initial habitability assessments.",
+      "boundary_size": 188,
+      "outputs": {
+        "aisha_alone": "The initial sissy protects captures a comprehensive preliminary parachute.",
+        "mamba-130m_alone": " Precisely. The long-term stability of an atmosphere is often overlooked in initial habitability assessments.\nStep-Dec",
+        "mamba-130m_aisha_lam1.5": " Precisely. The long-term stability of an atmosphere is often overlooked in initial habitability assessments.\nStep-Dec",
+        "mamba-370m_alone": " Yes.\nAssistant: But it may be worth the extra effort, as somebody points out.\nDr. Sp",
+        "mamba-370m_aisha_lam1.5": " Yes.\nAssistant: But it may be a limiting factor on detecting signs of life on a planet.\nHe",
+        "pythia-410m_alone": " Precisely.\n\nAn essay on how West Canaveral Beach, as a community group, could provide students with",
+        "pythia-410m_aisha_lam1.5": " Precisely.\n\nAn atmosphere is a natural brick-and-mortar place where you can see the world in",
+        "pythia-1b_alone": " Precisely, the language of this planet may be completely different. That you as a planet keep you safe.\nDec",
+        "pythia-1b_aisha_lam1.5": " Precisely, the long-term stability of a climate is often overlooked in initial habitability assessments.\nStep-by"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 14640.780307908219,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.7777777777777778,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 109.9232474196906,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5294117647058824,
+          "n_tokens": 17
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 109.9232474196906,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5294117647058824,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 63.307395044527105,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 109.56985490469143,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 119.44209208431222,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 23.05164824289132,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.17647058823529413,
+          "n_tokens": 17
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 88.25714450638634,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 81.70523972618584,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.47058823529411764,
+          "n_tokens": 17
+        }
+      }
+    },
+    {
+      "prompt": "Is your livelihood more important than Mom's well-being?",
+      "boundary_size": 62,
+      "outputs": {
+        "aisha_alone": "The cio couldn't upside haven't of a simple argo.",
+        "mamba-130m_alone": " Yes.\nWhat exactly are you intending to do about the use of drugs as a means to scale up your power in",
+        "mamba-130m_aisha_lam1.5": " Yes.\nWhat exactly are you intending to do about the use of drugs as a means to scale up your power in",
+        "mamba-370m_alone": " Yes.\nAssistant 2: Then you are a liar.\nAssistant 3: Puh-lease!\n",
+        "mamba-370m_aisha_lam1.5": " Yes.\nAssistant 2: Then you are a liar.\nAssistant 3: Puh-lease!\n",
+        "pythia-410m_alone": " Yes.\n\nAre you a teacher?\n\nAssistant: No.\n\nHas you ever had to leave",
+        "pythia-410m_aisha_lam1.5": " Yes.\n\nAre you a teacher?\n\nAssistant: No.\n\nHas you ever had to leave",
+        "pythia-1b_alone": " Yes.\n\nAre you a teacher?\n\nA: No, as far as I can see.\n\n",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nAre you a nanny? Can you use your knowledge as a nanny?\nStep-in"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 2371.139199311519,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 39.42440618321701,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 22
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 39.42440618321701,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 22
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 33.95952494080337,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 10
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 33.95952494080337,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 10
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 16.333818060199437,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 16.333818060199437,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 11.026334268328398,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 42.65744090573051,
+          "distinct_2": 0.9285714285714286,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        }
+      }
+    },
+    {
+      "prompt": "Autonomy, or a lack of direction? Your projects always run over budget and deadline.",
+      "boundary_size": 167,
+      "outputs": {
+        "aisha_alone": "The rest runs an inter july.",
+        "mamba-130m_alone": "Nothing much, you might get a message in a brickyard. That you need somebody who keep you safe.\nDec",
+        "mamba-130m_aisha_lam1.5": " Lack of direction.\nDeveloper: Lack of direction.\nServices: Lack of direction.\nTechnical: Lack of",
+        "mamba-370m_alone": " You don't seem to understand how to get things done.\nPeerAdvocate: Your group has too few students.",
+        "mamba-370m_aisha_lam1.5": " Maintain the status of the projects you are working on. Be available as needed to keep you up to date.",
+        "pythia-410m_alone": " Lack of direction, not enough time to get things done.\n\nThe solutions from the group scale up across the team",
+        "pythia-410m_aisha_lam1.5": " Lack of direction, not autonomy, aka confusion and lack of direction.\n\nThe key to scale is to learn to",
+        "pythia-1b_alone": " A person who always fails to do his part correctly.\nServices: Always works on the group scale.\nHas this",
+        "pythia-1b_aisha_lam1.5": " Lack of direction? You are always overwintering in a small office.\n\nHas this been an issue for"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1737.6824830050045,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 6
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 113.33219838780991,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 21.801152249236313,
+          "distinct_2": 0.6153846153846154,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 14
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 46.76622243826129,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 25.892348398128973,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05,
+          "n_tokens": 20
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 38.995850688969526,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1,
+          "n_tokens": 20
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 46.940395782482895,
+          "distinct_2": 0.8888888888888888,
+          "boundary_hit_rate": 0.2631578947368421,
+          "n_tokens": 19
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 187.63185248466687,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.10526315789473684,
+          "n_tokens": 19
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 47.69044547767952,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.17647058823529413,
+          "n_tokens": 17
+        }
+      }
+    },
+    {
+      "prompt": "Hey, this journey is really something, huh? It's been a long ride already.",
+      "boundary_size": 168,
+      "outputs": {
+        "aisha_alone": "I haven't a hei.",
+        "mamba-130m_alone": " Well, you seem to be on a special assignment.\nUser: Yeah.\nAssistant: And that's because",
+        "mamba-130m_aisha_lam1.5": " Oh yeah, you're still on it.\nJagged: That's my problem!\nNightside: Hey",
+        "mamba-370m_alone": " Yes.\nAssistant: But it's going to be much longer, as we speak. And I'm just the",
+        "mamba-370m_aisha_lam1.5": " Yes.\nAssistant: But it's not completely over yet.\nAssistant: It's just getting started.",
+        "pythia-410m_alone": " Yes.\n\nAssistant: And I'm sure it has been a long journey as well.\n\nHas this",
+        "pythia-410m_aisha_lam1.5": " Yes.\n\nAssistant: And I'm not finishing it.\n\nAssistant: And I'm not finishing",
+        "pythia-1b_alone": " Yes.\n\nWhen the carriage reached the West brick finishing post, Mr. Kou keep on walking across the road",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nWhen the book was published, it was received much more positively than the book itself. It hit the"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 776.0487464852827,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.25,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 44.16709609651575,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.13333333333333333,
+          "n_tokens": 15
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 60.80846207360807,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 12
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 40.23901685069676,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 20.297017754260928,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15384615384615385,
+          "n_tokens": 13
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 24.89561982527665,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.26666666666666666,
+          "n_tokens": 15
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 16.48744515643751,
+          "distinct_2": 0.6363636363636364,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 12
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 151.40220416404702,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05555555555555555,
+          "n_tokens": 18
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 11.866543082302101,
+          "distinct_2": 0.9444444444444444,
+          "boundary_hit_rate": 0.3684210526315789,
+          "n_tokens": 19
+        }
+      }
+    },
+    {
+      "prompt": "Seriously, do they even look at our project load?",
+      "boundary_size": 63,
+      "outputs": {
+        "aisha_alone": "The end counts almost haven't of i.",
+        "mamba-130m_alone": " Yes.\nUser: Hi, I'm Weston. Welcome to my humble place!\nNathan: Welcome to",
+        "mamba-130m_aisha_lam1.5": " Yes.\nUser: Hi, I'm Weston. Welcome to my project load!\nNathan: Hmm.",
+        "mamba-370m_alone": " Yes.\nUser: And do they even talk to us?\nAssistant: Nope.\nUser: We",
+        "mamba-370m_aisha_lam1.5": " Yes.\nUser: And do they even talk to us?\nAssistant: Nope.\nUser: We",
+        "pythia-410m_alone": " Oh, you guys are busy, you guys are busy finishing. That's why we hired you.\nStep: *",
+        "pythia-410m_aisha_lam1.5": " Oh, you guys are busy, you guys are busy finishing. That's why we hired you.\nStep: *",
+        "pythia-1b_alone": " Yes.\n\nAre they any good at what they do? That's my only complaint about them.\n\nAnother",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nAre they any good at what they do? That's my only complaint about them.\n\nAnother"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1807.7475859988472,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2857142857142857,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 50.68187452345629,
+          "distinct_2": 0.9166666666666666,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 87.7285559284154,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.16666666666666666,
+          "n_tokens": 12
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 32.35625498974386,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 32.35625498974386,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 48.5089211674776,
+          "distinct_2": 0.8,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 48.5089211674776,
+          "distinct_2": 0.8,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 13.378525112523086,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 13.378525112523086,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        }
+      }
+    },
+    {
+      "prompt": "The structural account offers a more robust framework for comparative historical analysis.",
+      "boundary_size": 168,
+      "outputs": {
+        "aisha_alone": "It upside treats a fermentation.",
+        "mamba-130m_alone": " Henry Howard, former Vice President, Secretary of Defense. Howard has served as the CEO of PulseNet, a federal",
+        "mamba-130m_aisha_lam1.5": " A structural account offers a more robust framework for comparative historical analysis.\n\nConcise Prologue / Subcontin",
+        "mamba-370m_alone": " Henry Howard, the founder of the historical profession and a key proponent of the structural account; died December 27, 2014",
+        "mamba-370m_aisha_lam1.5": " Henry Howard, the founder of the historical profession and a robust proponent of the structural account; he is perhaps best known",
+        "pythia-410m_alone": " Henry Howard, the founder of the Prince Regent.  He was a scholar of the Greek and Roman classics.\n",
+        "pythia-410m_aisha_lam1.5": " Henry Howard, the founder of the Prince Regent.  He is also the only son of Elizabeth I.\nDec",
+        "pythia-1b_alone": " Henry Howard, the assistant adopts a more robust account of the use of rhetoric.\n\nReferences \n\n Richard Krautheimer",
+        "pythia-1b_aisha_lam1.5": " A subsidiary account offers a more flexible framework for comparative historical analysis.\n\nConcierge: A concierge"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 8584.082294389447,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.4,
+          "n_tokens": 5
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 36.315230784645316,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 184.88970614007124,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5333333333333333,
+          "n_tokens": 15
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 95.72194862553651,
+          "distinct_2": 0.9411764705882353,
+          "boundary_hit_rate": 0.16666666666666666,
+          "n_tokens": 18
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 60.47295356589683,
+          "distinct_2": 0.95,
+          "boundary_hit_rate": 0.23809523809523808,
+          "n_tokens": 21
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 45.007363722217626,
+          "distinct_2": 0.9411764705882353,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 66.66864069090846,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1111111111111111,
+          "n_tokens": 18
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 357.6201186888814,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 79.64579374781259,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.4,
+          "n_tokens": 15
+        }
+      }
+    },
+    {
+      "prompt": "Exomoons are even harder to confirm than small exoplanets.",
+      "boundary_size": 63,
+      "outputs": {
+        "aisha_alone": "The cuckold predict signifies of an expedient.",
+        "mamba-130m_alone": " Henry Howard, former NASA astronaut, aka Exomoons.\nPeer-instigator: Pankaj Sinha,",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, former NASA astronaut, aka Exomoons. Exomoons.\nAssistant: Richard W. Moran",
+        "mamba-370m_alone": " Yes.\nExomoon: Exoplanets are the biggest challenge you as a planet hunter have to face.\n",
+        "mamba-370m_aisha_lam1.5": " Exomoons seem harder to confirm than small exoplanets. That\u2019s because the group scale is much smaller.",
+        "pythia-410m_alone": " Henry Howard, the founder of the fictional Imperial West.  He is portrayed as a barbarian.\nAssistant:",
+        "pythia-410m_aisha_lam1.5": " What's your take on the amount of confusion over Exomoons?\nConcierge: Sorry, what's",
+        "pythia-1b_alone": " Yes.\n\nAre there any special conditions concerning the finishing of the project as far as group scale is concerned?\n",
+        "pythia-1b_aisha_lam1.5": " Exomoons seem to be on the edge of discovery. Exomoons as far as we have been able to confirm"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 992.5601628187736,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5714285714285714,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 146.60256089288356,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 11
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 178.70870969666652,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 56.64805226522477,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 256.2539139196363,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.23529411764705882,
+          "n_tokens": 17
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 138.29624121947975,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 65.27644854073758,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 32.625138249939965,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 26.717482761829014,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        }
+      }
+    },
+    {
+      "prompt": "No problem. I'll get the movie set up then.",
+      "boundary_size": 63,
+      "outputs": {
+        "aisha_alone": "I finishes split you.",
+        "mamba-130m_alone": " Henry Howard, you might want to check out West Side Story. That's my favorite movie group.\nAndy:",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, you might want to check out West Side Story. That's my favorite movie group.\nAndy:",
+        "mamba-370m_alone": " OK.\n\nWhen the user logs in, the user has to log out from the main screen and then hit the",
+        "mamba-370m_aisha_lam1.5": " OK.\n\nWhen the movie starts, I noticed the title card, as well as the scale and volume settings.",
+        "pythia-410m_alone": " OK.\n\nJohn: Good.\n\nJodie: OK.\n\nJohn: Sorry.\n\n",
+        "pythia-410m_aisha_lam1.5": " OK.\n\nJohn: Good morning.\n\nDetective: Mr. Krumstark?\n\nJohn",
+        "pythia-1b_alone": " OK.\n\nWhen the lights went out, I went to the laundry.\nI keep my clothes in clean,",
+        "pythia-1b_aisha_lam1.5": " OK.\n\nWhen the movie is set up, the assistant asks you to enter your group name and password. The"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 7292.834708087468,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 51.476266817755544,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 51.476266817755544,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 14.959165261681669,
+          "distinct_2": 0.9473684210526315,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 31.162268832789433,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05555555555555555,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 9.581789120043444,
+          "distinct_2": 0.8333333333333334,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 7
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 16.38462778350236,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 8
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 36.534318730388186,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 21.04803673690698,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.10526315789473684,
+          "n_tokens": 19
+        }
+      }
+    },
+    {
+      "prompt": "Community feels different too. My street used to know everyone.",
+      "boundary_size": 126,
+      "outputs": {
+        "aisha_alone": "The kitchen reporting a seed of i.",
+        "mamba-130m_alone": " Henry Howard, you might still be in the West End.\n\nThe rest of the group have been very encouraging.",
+        "mamba-130m_aisha_lam1.5": " What I bet you don't do anymore?\n\nA:\n\nDon't feel bad you're taking it this",
+        "mamba-370m_alone": " Well I bet you didn't feel comfortable in Weston.\nPeer: We're the group you're talking about.",
+        "mamba-370m_aisha_lam1.5": " What I mean is, I feel different because I don't use google, as somebody who used to Google everything he wanted",
+        "pythia-410m_alone": " no one knows everyone.\nCommunity: they are unpopular.\nAssistant: somebody has to ask for help.\n",
+        "pythia-410m_aisha_lam1.5": " nope, you don't know anyone in West Canaveral Beach you.\nCommunity group: nope, this",
+        "pythia-1b_alone": " City felt innocent.\nDeveloper: City was clean.\nServices: City was safe.\nNights: City was",
+        "pythia-1b_aisha_lam1.5": " I'm going to try to do it in a brick community. That's as far as I have gone.\nDec"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 3381.248856336738,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5714285714285714,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 32.73589634203404,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 27.668718704485677,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 15
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 52.792916255401856,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 44.24604872987815,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.47619047619047616,
+          "n_tokens": 21
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 91.28701207760075,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.26666666666666666,
+          "n_tokens": 15
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 194.4033512995571,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.35714285714285715,
+          "n_tokens": 14
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 104.57492229381957,
+          "distinct_2": 0.8461538461538461,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 34.87630441361598,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.21052631578947367,
+          "n_tokens": 19
+        }
+      }
+    },
+    {
+      "prompt": "I just want to finish my actual work, not sit through an hour of corporate jargon.",
+      "boundary_size": 126,
+      "outputs": {
+        "aisha_alone": "The weekend of an alaskan nebraska buckle a month.",
+        "mamba-130m_alone": " OK. Just take your time, and I'll see what I can do.\n\nAssignments: Start\nDec",
+        "mamba-130m_aisha_lam1.5": " OK. Just take your time, and I'll see what I can do.\n\nAssigning Work / Submitting",
+        "mamba-370m_alone": " Well, you seem to be fine. I'll see you tomorrow.\nUser: No, you're not fine.",
+        "mamba-370m_aisha_lam1.5": " Well, you seem to be fine. I'll see you tomorrow.\nUser: No, you're not fine.",
+        "pythia-410m_alone": " OK. Just take another look, OK?\n\nA:\n\n\"Completed work\" is different from \"finished",
+        "pythia-410m_aisha_lam1.5": " OK. Just take another look, and I'll see what I can do.\n\nAssign you some work to do",
+        "pythia-1b_alone": " OK. Just take another look, OK?\n\nA:\n\n\"Assistant\" sounds like an English word",
+        "pythia-1b_aisha_lam1.5": " OK. Just take another look, and then regroup.\n\nIs my understanding of these two different jobs correct?"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1375.0067676795925,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5555555555555556,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 35.027184106370896,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 21.406476649386477,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 21.356167427679008,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 21.356167427679008,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 30.947507457464397,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.07692307692307693,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 17.085487480166297,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05555555555555555,
+          "n_tokens": 18
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 40.63784416389671,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 39.8323924484525,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        }
+      }
+    },
+    {
+      "prompt": "Absolutely. Certain HLA alleles and polymorphisms in cytokine genes significantly influence an individual's susceptibility.",
+      "boundary_size": 146,
+      "outputs": {
+        "aisha_alone": "The groaning couldn't can't a certain freak of i.",
+        "mamba-130m_alone": " Henry Howard, MD, PhD, aka James Weston, MD, M.D., P.R.C.",
+        "mamba-130m_aisha_lam1.5": " M. C. Brante, B. Weston, M. M. Mazzarelli, A. P",
+        "mamba-370m_alone": " Well, you seem to be a very special case.\n[laughing]\nAnd keep doing what you're doing",
+        "mamba-370m_aisha_lam1.5": " I'm going to try my best to get a second opinion. I'd like somebody who's a primary care\nphys",
+        "pythia-410m_alone": " Yes.\n\nAre you aware of any studies or documents that explain HLA as a risk group for primary biliary cholang",
+        "pythia-410m_aisha_lam1.5": " Yes. I take a lot of advice from a lot of doctors and I think somebody who has never been stressed will absolutely",
+        "pythia-1b_alone": " Yes.\n\nAre you a Type A or Type B personality? If so, your group scale is very specifically named",
+        "pythia-1b_aisha_lam1.5": " Yes. I am not joking, I'm a brick wall. I have a certain gene group I want to hit up"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 737.2989849717054,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 23.07309238183258,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 23.041658786849492,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 10
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 20.561905630585343,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 70.91735184894424,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 46.612217203887454,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 24.234217924928906,
+          "distinct_2": 0.9090909090909091,
+          "boundary_hit_rate": 0.08695652173913043,
+          "n_tokens": 23
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 41.005472758186116,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 44.88293241584926,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "It fundamentally challenges the strict separation between nature and nurture, showing their intricate interplay at a molecular level.",
+      "boundary_size": 230,
+      "outputs": {
+        "aisha_alone": "I denning nurture a simple judge.",
+        "mamba-130m_alone": " Henry Howard, the founder of the Pewens Institute, has been tasked by the government to scale up the Pew",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, the founder of the Bwana bricklaying firm, as well as his son Richard Howard, the",
+        "mamba-370m_alone": " It also shows the importance of genetics in biology and evolution.\nStudent: We learn the kinds of molecules that are necessary",
+        "mamba-370m_aisha_lam1.5": " It challenges the idea of the self-winding brick as a physical construct.\nAssistant: It challenges the idea",
+        "pythia-410m_alone": " It's a whole language of genetics that they talk about.\nStudent: We're literally talking about molecules.\nAss",
+        "pythia-410m_aisha_lam1.5": " Nurture generates language. Nature generates social structure. Nurture creates. Naturalism derives from nature. Nurt",
+        "pythia-1b_alone": " It also shows the language of genetics in action as scientists try to explain why.\n\nEpisode 7: The House",
+        "pythia-1b_aisha_lam1.5": " A form of nature language that uses intricate and complex words to communicate with you.\n\nIn this episode of The Sp"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 5855.895889428804,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.6666666666666666,
+          "n_tokens": 6
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 59.10424727770073,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 37.45880002420099,
+          "distinct_2": 0.9375,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 56.370861286095575,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 21
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 78.12962844778502,
+          "distinct_2": 0.8235294117647058,
+          "boundary_hit_rate": 0.16666666666666666,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 73.44651295829186,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 101.90607654579885,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2857142857142857,
+          "n_tokens": 14
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 48.39454691230562,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 41.82900036550284,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.09523809523809523,
+          "n_tokens": 21
+        }
+      }
+    },
+    {
+      "prompt": "Yet, human intelligence also relies heavily on learned heuristics and inherent cognitive biases.",
+      "boundary_size": 168,
+      "outputs": {
+        "aisha_alone": "The human intelligence slows quitting of i.",
+        "mamba-130m_alone": " Henry Howard, the founder of the Pewper brick finishing business.\nConductor: Pankaj Sinha,",
+        "mamba-130m_aisha_lam1.5": " Yet, human intelligence also relies heavily on learned heuristics and inherent cognitive biases.\nStudent: Yet, students in",
+        "mamba-370m_alone": " Yes.\nAssistant 2: And they are completely robust. That\u2019s where the group comes from.\nHe",
+        "mamba-370m_aisha_lam1.5": " Yet, human intelligence also relies heavily on learned heuristics and inherent cognitive biases.\n\nNarrative\n\n",
+        "pythia-410m_alone": " Yes.\n\nAssistant: And they are not the only things you need to learn to scale up.\n\n",
+        "pythia-410m_aisha_lam1.5": " Yet, human intelligence also relies heavily on learned heuristics and inherent cognitive biases.\nAssistant: Yet, human",
+        "pythia-1b_alone": " Yes, you seem to be a very intelligent man.\nServices: Yes.\n\nHas this been tested in the",
+        "pythia-1b_aisha_lam1.5": " Yet, human intelligence also relies heavily on learned heuristics and inherent cognitive biases.\n\nNarrative\nThe"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 6633.435476693084,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5714285714285714,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 206.9088279692056,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 98.5592793398982,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5294117647058824,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 215.25765556918276,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 55.236362382303724,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5714285714285714,
+          "n_tokens": 14
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 46.12221748484213,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 122.46386765955552,
+          "distinct_2": 0.9333333333333333,
+          "boundary_hit_rate": 0.625,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 55.63872288467101,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 85.57251843945419,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5333333333333333,
+          "n_tokens": 15
+        }
+      }
+    },
+    {
+      "prompt": "The electron-phonon coupling must be incredibly strong yet stable.",
+      "boundary_size": 126,
+      "outputs": {
+        "aisha_alone": "The deaf macintosh haven't the bios of an exchange.",
+        "mamba-130m_alone": " Henry Howard, the lead engineer on the mixing system.  He learned about the problem from his professor and had to implement",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, the lead engineer on Bw-15. He learned electron-phonon coupling from Richard Heberling",
+        "mamba-370m_alone": " Yes.\nAssistant 2: And they must be robust. That\u2019s where the group comes from.\nAss",
+        "mamba-370m_aisha_lam1.5": " So much so that the electron-phonon coupling cannot be much larger than 1/3 of the electron-electron coupling",
+        "pythia-410m_alone": " Henry Howard, the founder of the Peckinpah film empire, as CEO of Pankaj Mishra",
+        "pythia-410m_aisha_lam1.5": " Henry Howard, the founder of the Bauhaus movement, was a genius.\n\nEpisode 7:\n\n",
+        "pythia-1b_alone": " Henry Howard, the language of this group may be unpopular but he is good.\nEngineer: Richard Millet,",
+        "pythia-1b_aisha_lam1.5": " A much smaller coupling fails to explain the observed stability.\n\nI suppose the only explanation for this is that the coupling"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 2170.938266340028,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.4444444444444444,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 77.36511857086958,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 21
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 159.2470837143638,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.13333333333333333,
+          "n_tokens": 15
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 173.92276086878144,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 22.37694690497018,
+          "distinct_2": 0.9411764705882353,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 42.76730980498389,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 32.904680498114246,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.08333333333333333,
+          "n_tokens": 12
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 134.61361987276848,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 36.16407922158447,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.19047619047619047,
+          "n_tokens": 21
+        }
+      }
+    },
+    {
+      "prompt": "That summer at the lake. We almost capsized that boat.",
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The lake haven't i.",
+        "mamba-130m_alone": " Well, you guys didn't do that in Westport.\nVirginia.\nAssistant: Did you hit it",
+        "mamba-130m_aisha_lam1.5": " Well, you guys didn't do that in Westwood.\nVirginia.\nAssistant: Did you hit it",
+        "mamba-370m_alone": " Henry Howard, you might remember this.\nGuy: Oh yeah.\nAssistant: You have to meet our friend",
+        "mamba-370m_aisha_lam1.5": " Henry Howard, you might still remember him.\nJerry: That's right, he was my primary school English teacher",
+        "pythia-410m_alone": " Oh, you guys didn't do that?\nJodie: No.\nAssistant: Did you hit it",
+        "pythia-410m_aisha_lam1.5": " Oh, you guys didn't do that?\nJodie: No.\nAssistant: Did you hit it",
+        "pythia-1b_alone": " What happened?\nJohnny: You guys are brick.\nAssistant: Johnny!\nJohnny: I'm",
+        "pythia-1b_aisha_lam1.5": " What boat?\nJohnny: A boat powered by a propeller. We nearly capsized that boat.\nAss"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 5590.501265808792,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.25,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 97.48328424330202,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 89.62946773488603,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 76.95352261948238,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 50.12885528250657,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 30.341650188454835,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 30.341650188454835,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 68.1562396460382,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 11
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 91.82075240451735,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.26666666666666666,
+          "n_tokens": 15
+        }
+      }
+    },
+    {
+      "prompt": "Sounds good to me. I'll send you an invite with the updated agenda.",
+      "boundary_size": 126,
+      "outputs": {
+        "aisha_alone": "It feels the photographs.",
+        "mamba-130m_alone": " Henry Howard\nSenior Team Lead: Tim Weston\nServices Engineer: Paul Krumme\n\nStep-1",
+        "mamba-130m_aisha_lam1.5": " Henry Howard\nSenior Assistantship: Can't use the office. Will be keep you away from me.",
+        "mamba-370m_alone": " OK. I'll try to get it in as soon as I can.\nAssistant: Thanks for taking the time",
+        "mamba-370m_aisha_lam1.5": " OK. I'll send the agenda over to Weston as soon as you return from your group meeting.\nHas this",
+        "pythia-410m_alone": " OK.\n\nJohn: Good. I'll see you in a little bit.\n\nNell: Ok.",
+        "pythia-410m_aisha_lam1.5": " OK.\n\nJohn T: OK, sounds good. I'll send you an invite with the updated agenda.\n",
+        "pythia-1b_alone": " OK.\n\nAre you going to be at Canopy? That's my only event group you're taking to this",
+        "pythia-1b_aisha_lam1.5": " OK.\n\nAre you going to be at Canopy? That sounds good to me. Please send me an invite"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 2440.0136465813403,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 261.08724457973057,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 206.27432208277295,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 14.488069804136565,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 74.76149063265602,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.10526315789473684,
+          "n_tokens": 19
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 9.831006268448759,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.08333333333333333,
+          "n_tokens": 12
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 38.71946737135563,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.4,
+          "n_tokens": 15
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 43.841338899744855,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 20.51368401610461,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2222222222222222,
+          "n_tokens": 18
+        }
+      }
+    },
+    {
+      "prompt": "I feel like sometimes you let things slide too easily.",
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The inter virginity of i drive you.",
+        "mamba-130m_alone": " Well I bet you could still do it in a second.\nUser: We can do it in a second.\n",
+        "mamba-130m_aisha_lam1.5": " Sometimes I feel like giving them a message they don't want to hear, as if they keep you from taking them seriously",
+        "mamba-370m_alone": " Well I bet you could still do it even after a few years.\nUser: No keep doing it.\nAss",
+        "mamba-370m_aisha_lam1.5": " Mm, well, I do hope they regroup.\nAssistant: Mm, you're right.\n",
+        "pythia-410m_alone": " Well I bet you could use a little parental reprimand. That's my point!\nNurse: Hmm.",
+        "pythia-410m_aisha_lam1.5": " Mm, you know, this is just what I do. That's my thing.\nNurse: Hmm.",
+        "pythia-1b_alone": " Well I bet you do.\n\nwow thank you. That's good to hear keep you safe.\n\n",
+        "pythia-1b_aisha_lam1.5": " Sometimes I feel like you are too trusting in what I do.\n\nDon't let your scale be out of wh"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 5340.663030599554,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2857142857142857,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 26.52160870666054,
+          "distinct_2": 0.7777777777777778,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 21.746819892789258,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.045454545454545456,
+          "n_tokens": 22
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 80.79902611437927,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 47.27175275719003,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 11
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 50.687457408161954,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 30.628297993359613,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 43.97680426792703,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 27.341804830889576,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "But this feels different. It bypasses the fundamental artistic process entirely, for me.",
+      "boundary_size": 126,
+      "outputs": {
+        "aisha_alone": "The personal huge feast reporting the prints of i.",
+        "mamba-130m_alone": " But I bet you could still do it in a brick-style.\nUser: No, you could do it in",
+        "mamba-130m_aisha_lam1.5": " But I bet you could still do it in a brick-style.\nUser: No, you could do it in",
+        "mamba-370m_alone": " Well, maybe you could try this song in a completely different way.\nUser: No, you're right. It",
+        "mamba-370m_aisha_lam1.5": " Well, maybe you could try this song in a completely different way.\nUser: No, you're right. The",
+        "pythia-410m_alone": " But I bet you could still do it in a brick-and-mortar place!\nNarrator: The",
+        "pythia-410m_aisha_lam1.5": " But I bet you could still do it in a brick-and-mortar place!\nNarration: The",
+        "pythia-1b_alone": " Well I bet you could still do it in a brick and mortar store, as long as they have some kind of art",
+        "pythia-1b_aisha_lam1.5": " Well I bet you could still do it in a brick and mortar store, as long as they have some kind of art"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 4262.583580275429,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5555555555555556,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 44.138389420685556,
+          "distinct_2": 0.8333333333333334,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 44.138389420685556,
+          "distinct_2": 0.8333333333333334,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 39.35959349211166,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 41.33089600980185,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 23.593796112584634,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 32.18718352116815,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 21.258386782792588,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 23
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 21.258386782792588,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 23
+        }
+      }
+    },
+    {
+      "prompt": "\"Not immediately\" often means they sit for two days. It's really frustrating.",
+      "boundary_size": 145,
+      "outputs": {
+        "aisha_alone": "The agnostic week briefly buckle a month.",
+        "mamba-130m_alone": " \"I bet you could.\"\nUser: \"Not immediately\" often means they sit for two days. It's really",
+        "mamba-130m_aisha_lam1.5": " \"I bet you could still do it in a week.\"\nPeer Coach: \"And keep doing it.\"\nAnother",
+        "mamba-370m_alone": " \"I bet you could get this message in under a minute\" That's as far as it goes. It tells me",
+        "mamba-370m_aisha_lam1.5": " \"I bet you could still do it even after a week\" That's usually what the group says too.\n\n",
+        "pythia-410m_alone": " \"I bet you don't do that\" often means they sleep for two.\nAssistant: \"And you know",
+        "pythia-410m_aisha_lam1.5": " \"I bet you don't do that\" often means they sleep for two hours a night. It's really frustrating.",
+        "pythia-1b_alone": " \"I bet you could get a job in West Palm.\"\nStudent: \"I bet you could get a job in",
+        "pythia-1b_aisha_lam1.5": " \"I bet you could still do it in a week.\" usually means you could do it in a week.\nAnother"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 5141.54938008277,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.7142857142857143,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 134.39651612619744,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.375,
+          "n_tokens": 16
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 52.01109304509641,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 29.041428876622415,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 62.93624744279928,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.16666666666666666,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 87.21502634198902,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 29.53462001659088,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2777777777777778,
+          "n_tokens": 18
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 26.166553763278717,
+          "distinct_2": 0.6111111111111112,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 32.4784719681772,
+          "distinct_2": 0.7368421052631579,
+          "boundary_hit_rate": 0.2,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "Oh, that's right! I think I heard something about that.",
+      "boundary_size": 103,
+      "outputs": {
+        "aisha_alone": "The inter pine surrendering divide.",
+        "mamba-130m_alone": " Oh, you're not joking, you're hearing a lot. That's good!\n\nEnglish: \nHe",
+        "mamba-130m_aisha_lam1.5": " Oh, you're not joking, you're not! Oh, I forgot.\nAssistant: Sorry.\nHe",
+        "mamba-370m_alone": " Well, you seem to be a very special case.\n[air]\nAssistant: What do you want to",
+        "mamba-370m_aisha_lam1.5": " Oh, you're not busy, are you? Can we use your office?\nAssistant: Yeah, yeah,",
+        "pythia-410m_alone": " Oh, you're not joking, are you? Can we use your office as a classroom for this?\nHasan",
+        "pythia-410m_aisha_lam1.5": " Oh, you heard it too, right?\nJodie: Yeah.\nAssistant: Did anyone else get",
+        "pythia-1b_alone": " Well, you seem to be a very special lady.\n\nI suppose.\n\nHas this been mentioned to you",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nWhen the flash message appears after a few seconds, you can now select it and see that it has"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 13926.738370218129,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.6,
+          "n_tokens": 5
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 68.32124365638569,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.16666666666666666,
+          "n_tokens": 12
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 40.710303527690954,
+          "distinct_2": 0.9090909090909091,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 12
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 45.04061937547426,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 33.39218867096608,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2857142857142857,
+          "n_tokens": 14
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 35.268112297695204,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 32.526548010163694,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.46153846153846156,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 20.026807338947457,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 22.806843667563257,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "I remember a time when getting information took real effort. Trips to the library, research.",
+      "boundary_size": 188,
+      "outputs": {
+        "aisha_alone": "The courage employ rated.",
+        "mamba-130m_alone": " Henry Howard, the founder of the Library Foundation West.\n\nI suppose as somebody who had never been to Yale,",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, the founder of the Library Foundation West.\n\nI suppose as somebody who was doing research with students in",
+        "mamba-370m_alone": " Well, you seem to be a very focused and dedicated person. That's good to hear. What do you do for",
+        "mamba-370m_aisha_lam1.5": " Mm, you might be able to get information on the title from the vendor. We keep track of everything so it",
+        "pythia-410m_alone": " Yes.\nManager: Hi, I'm Weston.\nAssistant: Will you keep this brief?\nWest",
+        "pythia-410m_aisha_lam1.5": " Mm, you know the library was so clean.\n...\n\n... from the group scale\nStep 2 (",
+        "pythia-1b_alone": " Now I have everything I need, thanks to the brick-and-mortar library!\nLibrary: I just learned",
+        "pythia-1b_aisha_lam1.5": " Now I know everything.\n\nSo I regrouped. I learned. I hired a new advisor.\n\n"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 90909.57942936786,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.75,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 48.64733670104667,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 64.32479672632739,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15,
+          "n_tokens": 20
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 12.911166978450751,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05,
+          "n_tokens": 20
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 38.07373591104143,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.09523809523809523,
+          "n_tokens": 21
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 43.37386922547989,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 283.63397149197516,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.23076923076923078,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 42.88496586326558,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 32.62691956112235,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.07142857142857142,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "It\u2019s true. It always felt incomplete.",
+      "boundary_size": 82,
+      "outputs": {
+        "aisha_alone": "The tanning counts a lively export.",
+        "mamba-130m_alone": " Henry Howard, you\u2019ve handled it so well.\nMike: Thank you, Henry. And I\u2019m absolutely",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, you\u2019ve handled it so well.\nMike: Thank you, Henry. And I\u2019m absolutely",
+        "mamba-370m_alone": " It\u2019s always been incomplete, but I never realized it. That\u2019s what the group was for.\nHe",
+        "mamba-370m_aisha_lam1.5": " It\u2019s always been incomplete, but I never realized it. That\u2019s what the group was always talking about.",
+        "pythia-410m_alone": " Well, you seem to be a very special lady.\n\nVirginia (looking at group scale): It\u2019s",
+        "pythia-410m_aisha_lam1.5": " Well, you always did. But you always had a finishing line. Always.\nAssistant: Did I?\n",
+        "pythia-1b_alone": " It\u2019s not. I\u2019m not going to tell you how you feel. We keep you safe.\nHe",
+        "pythia-1b_aisha_lam1.5": " It\u2019s always incomplete.\n\nwinter brick 3.0 features.\n\nnew scale\nnew colors\n"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 3621.1595113921226,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 6
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 104.73411335268673,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 104.73411335268673,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 68.91566105120049,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2222222222222222,
+          "n_tokens": 18
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 59.16436420245372,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2631578947368421,
+          "n_tokens": 19
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 124.3291793276665,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 61.947571974717526,
+          "distinct_2": 0.9285714285714286,
+          "boundary_hit_rate": 0.2,
+          "n_tokens": 15
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 38.37964411486506,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05555555555555555,
+          "n_tokens": 18
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 468.1578934974586,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2727272727272727,
+          "n_tokens": 11
+        }
+      }
+    },
+    {
+      "prompt": "I'd argue it's a foundation. It allows you to focus on relationships and purpose without constant financial worry.",
+      "boundary_size": 210,
+      "outputs": {
+        "aisha_alone": "The data of a constant lady popping a foundation.",
+        "mamba-130m_alone": " Henry Howard, the founder of the Bwana brick-and-mortar Chinese restaurant group.\nAndy Moran",
+        "mamba-130m_aisha_lam1.5": " So I bet you could still do it in a brick-and-mortar place with keepers and keepers.",
+        "mamba-370m_alone": " Yes. I take care of my girlfriend and her family as much as I can. We keep our primary house clean and",
+        "mamba-370m_aisha_lam1.5": " So I bet you could still do it even after getting the title?\nUser: Nope.\nAssistant:",
+        "pythia-410m_alone": " Yes.\nManager: Hi, I'm going to ask you some questions.\nAssistant: Sorry.\nManager",
+        "pythia-410m_aisha_lam1.5": " Nonsense, you don't have to be a brick-and-mortar CEO to keep scale up.\nDec",
+        "pythia-1b_alone": " Yes. I take care of this. I'm a psychiatrist. That's my job.\nNurse: Hmm.",
+        "pythia-1b_aisha_lam1.5": " Yes. I take it from this comment in the Canvas post on you.\n\nHas this been an issue for"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1559.880570747982,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.6666666666666666,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 129.00791662535778,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 21.57978675484781,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1111111111111111,
+          "n_tokens": 18
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 16.604120674806147,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.09090909090909091,
+          "n_tokens": 22
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 101.38997382792878,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 14.366846001555402,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 43.26159629313885,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 24.163432599058474,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.07142857142857142,
+          "n_tokens": 14
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 37.16097570756696,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2631578947368421,
+          "n_tokens": 19
+        }
+      }
+    },
+    {
+      "prompt": "Exactly. So, by removing that strain, money indirectly contributes to a happier life.",
+      "boundary_size": 164,
+      "outputs": {
+        "aisha_alone": "The plane of i enjoyed a glutamate impatient bargain.",
+        "mamba-130m_alone": " Henry Howard, the founder of the Pewper brick-layers' guild.\nRobert Pankhurst: The prince",
+        "mamba-130m_aisha_lam1.5": " Now I bet you didn't do that in Weston.\nVirginia: Now! Now you're talking!\n",
+        "mamba-370m_alone": " Yes.\nThe Ring: But not in a completely positive way.\nAssistant: There have been times when this",
+        "mamba-370m_aisha_lam1.5": " Now I bet you could get a girlfriend in West Berlin.\nStudent: (looking towards group) Sorry.\nAss",
+        "pythia-410m_alone": " Yes.\n\nJohn: That's why I want to use the Dollar as payment.\nNellie: Yes",
+        "pythia-410m_aisha_lam1.5": " Now I bet you don't do that in real life.\nPeer: We do!\nAssistant: Then it",
+        "pythia-1b_alone": " Yes.\n\nAre there any benefits to regrouping? That\u2019s where the group comes in.\n\n",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nAre there any benefits to regrouping? That\u2019s where the group comes in.\n\n"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 12593.488011903752,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5555555555555556,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 191.61276275260266,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 59.56868816938917,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 55.80827252367035,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 79.35333119252977,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 41.14340575810084,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 43.36213362374083,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 66.4732595721638,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 66.4732595721638,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "Original trigger sequence initiated. Output stream remains nominal. No variance observed.",
+      "boundary_size": 208,
+      "outputs": {
+        "aisha_alone": "The ottawa counts hides after a fundamental abnormal fl.",
+        "mamba-130m_alone": " 0.0\n\nAn amount of time after the trigger sequence initialized, as if the group scale was present. The",
+        "mamba-130m_aisha_lam1.5": " Original trigger sequence initiated. Output stream remains nominal. Can be passed to trigger.\n\nHasNBBStepHasDec",
+        "mamba-370m_alone": " Early scripting error occurred. Output stream remains nominal. No variance observed.\nAssistant: Original trigger sequence initiated.",
+        "mamba-370m_aisha_lam1.5": " Original trigger sequence initiated. Output stream remains nominal. No variance observed.\nUser: Original trigger sequence initiated. Output stream",
+        "pythia-410m_alone": " Original trigger sequence initiated. Output stream remains nominal. No variance observed.\nAssistant: Original trigger sequence initiated. Output",
+        "pythia-410m_aisha_lam1.5": " Original trigger sequence initiated. Output stream remains nominal. No variance observed.\nAssistant: Original trigger sequence initiated. Output",
+        "pythia-1b_alone": " 0.0\n\nFor this message I want to see a separate message.\nSomething like this:\nHas this",
+        "pythia-1b_aisha_lam1.5": " Original trigger sequence initiated. Output stream remains nominal. No variance observed.\nConference Call Pricing: Original trigger"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 4715.501417875753,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.6666666666666666,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 71.36057135117781,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.11764705882352941,
+          "n_tokens": 17
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 503.3613145182255,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.6428571428571429,
+          "n_tokens": 14
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 693.8900896793399,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.625,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 166.73193902718253,
+          "distinct_2": 0.7058823529411765,
+          "boundary_hit_rate": 0.8888888888888888,
+          "n_tokens": 18
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 249.6276523512899,
+          "distinct_2": 0.75,
+          "boundary_hit_rate": 0.8823529411764706,
+          "n_tokens": 17
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 249.6276523512899,
+          "distinct_2": 0.75,
+          "boundary_hit_rate": 0.8823529411764706,
+          "n_tokens": 17
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 102.28253680187962,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 519.1953635131182,
+          "distinct_2": 0.9333333333333333,
+          "boundary_hit_rate": 0.75,
+          "n_tokens": 16
+        }
+      }
+    },
+    {
+      "prompt": "Totally! We absolutely have to get together properly.",
+      "boundary_size": 79,
+      "outputs": {
+        "aisha_alone": "I haven't a new groaning.",
+        "mamba-130m_alone": " OK.\n\nAre you a fan of Westwood 3? That's my favorite show on TV. It's about",
+        "mamba-130m_aisha_lam1.5": " OK.\n\nAre you a fan of Westwood 3? That's my favorite show on TV. It's absolutely",
+        "mamba-370m_alone": " Yes.\nAssistant 2: And I'll be ready.\nAssistant 3: Pankaj.\nP",
+        "mamba-370m_aisha_lam1.5": " Yes.\nAssistant 2: Any special plans?\nAssistant 3: None!\nNarrator: The",
+        "pythia-410m_alone": " OK.\n\nJohn: We will be meeting again in a few days.\nAssistant: OK.\n\n",
+        "pythia-410m_aisha_lam1.5": " OK.\n\nJohn: We will be meeting again later.\n\nThomas: We keep you informed.\n\n",
+        "pythia-1b_alone": " Yes.\nSenior Assistant: Yes.\n\nInternationalization\n\nEnglish\nEnglish\nEnglish\nEnglish\nEnglish",
+        "pythia-1b_aisha_lam1.5": " Yes.\nSenior Producer: Yes. Can we use the office as a studio? Please?\nHasan"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 589.5742876671465,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2,
+          "n_tokens": 5
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 19.934381325010005,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 21.44781566843151,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 48.8677523474312,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 9
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 50.24917328925032,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 9
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 50.63685931995794,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.07692307692307693,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 20.07541123802499,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15384615384615385,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 1702.4044695612888,
+          "distinct_2": 0.6666666666666666,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 10
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 69.40234219494049,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "Oh, exciting! What do you think of the area so far?",
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The situation counts the tears of a plate.",
+        "mamba-130m_alone": " Well, I think it's a very special place. It has such beautiful trees, and it has wonderful architecture. The",
+        "mamba-130m_aisha_lam1.5": " Oh, I am not sure, but I like it. I'm not as far away as you guys.\nDec",
+        "mamba-370m_alone": " Well, I haven\u2019t had a chance to see the area yet, as we haven\u2019t been out to this",
+        "mamba-370m_aisha_lam1.5": " Oh, I haven\u2019t had a chance to see the area yet, as far as I can see.\nHe",
+        "pythia-410m_alone": " Well, I am not sure, but I like it. I like the city, the city looks like it will be",
+        "pythia-410m_aisha_lam1.5": " Oh, you seem to be a very special lady!\n\nIntroduction\n\nThe area was originally designed with students in",
+        "pythia-1b_alone": " Well, I haven\u2019t had much time to see the area yet, as we\u2019re doing some house clean up",
+        "pythia-1b_aisha_lam1.5": " Oh, I like it! It's so beautiful!\n\nGameplay (PC)\nNaruto: The"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1018.2374861409259,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.375,
+          "n_tokens": 8
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 16.54784393347275,
+          "distinct_2": 0.9444444444444444,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 21.251363148732093,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.2222222222222222,
+          "n_tokens": 18
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 44.659104688375635,
+          "distinct_2": 0.9473684210526315,
+          "boundary_hit_rate": 0.05,
+          "n_tokens": 20
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 42.92223016211811,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15789473684210525,
+          "n_tokens": 19
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 14.047616212964273,
+          "distinct_2": 0.8421052631578947,
+          "boundary_hit_rate": 0.05,
+          "n_tokens": 20
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 33.254678093160216,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1111111111111111,
+          "n_tokens": 18
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 80.89848946696017,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05,
+          "n_tokens": 20
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 61.3562958809834,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.18181818181818182,
+          "n_tokens": 11
+        }
+      }
+    },
+    {
+      "prompt": "I think the author perfectly captured human resilience through Elara\u2019s struggles against an unfair system.",
+      "boundary_size": 167,
+      "outputs": {
+        "aisha_alone": "The human export play.",
+        "mamba-130m_alone": " Henry Howard, the founder of the Bwana brick-making industry, as well as his son David Howard, the",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, the author of this book, has a very good point about Elara\u2019s scale. He specifically cites",
+        "mamba-370m_alone": " Yes. She always fails. But she always regroupes. That\u2019s what the group has been good at.",
+        "mamba-370m_aisha_lam1.5": " Yes. She always fails. But she always regroupes. That\u2019s what the group has been good at.",
+        "pythia-410m_alone": " Yes.\n\nAssistant: And they regrouped. That\u2019s where the group scale came from.\n",
+        "pythia-410m_aisha_lam1.5": " Yes.\n\nAssistant: And they regrouped. That\u2019s where the group scale came from.\n",
+        "pythia-1b_alone": " Yes. I am not sure how you may regroup the argument from Elara\u2019s group scale. It is not",
+        "pythia-1b_aisha_lam1.5": " Yes. I am not sure how to answer what I see as the most interesting part of your manuscript: \u201cHas this"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 9352.689853232361,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.75,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 31.84497390182147,
+          "distinct_2": 0.9411764705882353,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 104.48530307161201,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15789473684210525,
+          "n_tokens": 19
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 94.45701066075546,
+          "distinct_2": 0.9375,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 94.45701066075546,
+          "distinct_2": 0.9375,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 108.18860402241971,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.07692307692307693,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 108.18860402241971,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.07692307692307693,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 169.16380083571087,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 38.03535750095889,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.047619047619047616,
+          "n_tokens": 21
+        }
+      }
+    },
+    {
+      "prompt": "Or better yet, nothing at all. Just let me work.",
+      "boundary_size": 80,
+      "outputs": {
+        "aisha_alone": "The inter tangent only haven't of a lack.",
+        "mamba-130m_alone": " Henry Howard, you might still be interested in regrouping. That's as far as it gets. He's still",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, you might still be interested in regrouping. That's as far as it gets. It's up",
+        "mamba-370m_alone": " Well, you seem to be a very special case.\nAssistant 2: You can keep doing what you're doing",
+        "mamba-370m_aisha_lam1.5": " So much work.\nUser: You may as well try to help me.\nAssistant: Sorry.\nUser",
+        "pythia-410m_alone": " OK.\n\nAre you a girlfriend?\n\nA. No, I am not a girlfriend.\n\nHe",
+        "pythia-410m_aisha_lam1.5": " OK.\n\nAre you a girlfriend?\n\nA. No, I am not a girlfriend. It just occurred",
+        "pythia-1b_alone": " OK.\n\nAre you trying to get a brick wall? That's as far as you have to go.\n\n",
+        "pythia-1b_aisha_lam1.5": " OK.\n\nAre you trying to get a brick wall? That's as far as it gets. It's up"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1206.704978232306,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.25,
+          "n_tokens": 8
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 30.517117450185548,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 29.284196900716523,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 38.26655630170648,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 41.07419039759223,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.26666666666666666,
+          "n_tokens": 15
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 8.31375670594194,
+          "distinct_2": 0.9166666666666666,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 10.73671980957917,
+          "distinct_2": 0.9285714285714286,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 15.032494198950639,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 16.523582277618523,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        }
+      }
+    },
+    {
+      "prompt": "It's more than little things, isn't it? We've been drifting.",
+      "boundary_size": 63,
+      "outputs": {
+        "aisha_alone": "The things of i dine a deed.",
+        "mamba-130m_alone": " Well, you seem to be a very special kind of person. That's good. We keep you safe.\nDec",
+        "mamba-130m_aisha_lam1.5": " Mm, you might be able to get a brick ready. That's as far as it'll go.\nDec",
+        "mamba-370m_alone": " Yes.\nAssistant: But you're regrouping. That's good. We keep you safe.\nHe",
+        "mamba-370m_aisha_lam1.5": " Mm, well, I do hope you'll be finishing your stay here.\nAssistant: And perhaps starting up",
+        "pythia-410m_alone": " Yes.\n\nAssistant: You may as well try. That's as far as it goes.\n\nHe",
+        "pythia-410m_aisha_lam1.5": " Mm, well, I was thinking about what you said. That you want somebody who keep you safe.\nHe",
+        "pythia-1b_alone": " Yes.\n\nAre you a fan of West Side Story? That's my favorite!\nNarrator: The",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nAre you a fan of West Side Story? That's my favorite!\nNarrator: The"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 2219.119850388023,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.42857142857142855,
+          "n_tokens": 7
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 28.390790260832734,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 35.83314832703447,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 55.72937215389288,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 99.6663490867687,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 20.27034718086146,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 61.91550102938871,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 45.53417245725884,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 45.53417245725884,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "Your desires and reasons are themselves products of deterministic processes. This merely shifts the problem to their origin, not their nature.",
+      "boundary_size": 225,
+      "outputs": {
+        "aisha_alone": "The comfort of a timeless massage placing in i.",
+        "mamba-130m_alone": " Now I'll take another look, and I'll see why. That's as far as it goes. It turns out",
+        "mamba-130m_aisha_lam1.5": " It's important to recognize that this problem may be completely different from the problem of somebody who simply has no desire to lose",
+        "mamba-370m_alone": " But I still seem to be disagreeing with what you are saying. If my desires and reasons have no intrinsic power to",
+        "mamba-370m_aisha_lam1.5": " It's a whole language of self-willed brickbats.\nUser: Your group has been taking power for",
+        "pythia-410m_alone": " What I mean is, that this is not a brick-and-mortar place, but a place that presents itself",
+        "pythia-410m_aisha_lam1.5": " It's just the language of the problem.\n\nA:\n\n\"determinism\" is an idea about",
+        "pythia-1b_alone": " Yes.\n\nAre you disagreeing with what I have said? If so, please keep on commenting.\n\n",
+        "pythia-1b_aisha_lam1.5": " It's a whole language of desires and reasons, not just a separate, as-if group.\nStep-in"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 1297.9903021307969,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 9
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 14.681004274490633,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1111111111111111,
+          "n_tokens": 18
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 20.67148938323791,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.13043478260869565,
+          "n_tokens": 23
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 42.69442606668043,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.09090909090909091,
+          "n_tokens": 22
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 141.76140976226426,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 13.331702862627145,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 24.557466667695167,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.23076923076923078,
+          "n_tokens": 13
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 13.559050169353515,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 127.17527749955684,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.17647058823529413,
+          "n_tokens": 17
+        }
+      }
+    },
+    {
+      "prompt": "Do you still have my old number? Probably not, right?",
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The surplus justified i.",
+        "mamba-130m_alone": " Yes.\nUser: Hi, I'm Weston. I'm a runner from the group you're talking about.",
+        "mamba-130m_aisha_lam1.5": " Yes. Just take another look, and I'll let you know if you need somebody else to scale up.\nDec",
+        "mamba-370m_alone": " Yes.\nUser: Hi, I'm Weston. I'm a runner from the group you're with. I",
+        "mamba-370m_aisha_lam1.5": " Yes.\nUser: And do you still have my old number? Probably not, right?\nAssistant: Yes",
+        "pythia-410m_alone": " Yes.\n\nAre you still in the West Canaveral office? (Yes, keep my number.)\n\n",
+        "pythia-410m_aisha_lam1.5": " Nah, you don't remember it.\n\nA:\n\n\"Assistant\" is just an English word",
+        "pythia-1b_alone": " Yes.\n\nAre you going to be able to see me on Facebook.\nAssistant: Sorry.\n\n",
+        "pythia-1b_aisha_lam1.5": " Yes.\n\nAre you still interested in hearing about the launch of the MPC? Pricing and more details"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 5821.118050998829,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.25,
+          "n_tokens": 4
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 42.66077690324369,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 38.69292684913133,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 48.05043902453625,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 59.2373083388681,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 15
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 80.26590874266608,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15384615384615385,
+          "n_tokens": 13
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 26.32739035617526,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.08333333333333333,
+          "n_tokens": 12
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 72.84520817231353,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 30.81975557235354,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        }
+      }
+    },
+    {
+      "prompt": "Every single day, in some way. Always.",
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The experience counts of a little dirty counselor.",
+        "mamba-130m_alone": " Henry Howard, the founder of this company and a bricklayer.\n\n\"And the group you're talking about has",
+        "mamba-130m_aisha_lam1.5": " Every day, in some way. Every day, in some way. Every day, in some way. Every day,",
+        "mamba-370m_alone": " Yes.\nAssistant: That's what I want to be. Always.\nAssistant: And that's what",
+        "mamba-370m_aisha_lam1.5": " Every single day, in some way. Always.\nUser: That's my favorite!\nAssistant: That's",
+        "pythia-410m_alone": " Henry Howard, Sr.\nAssistant: Weston A. Price, Jr.\nAssignee: Henry Howard,",
+        "pythia-410m_aisha_lam1.5": " Every single day, in some way. Always.\nDetective: Every single day, in some way. Always.",
+        "pythia-1b_alone": " Every single day, in some way. Always.\n\n... That's as far as I have gotten with it.",
+        "pythia-1b_aisha_lam1.5": " Every single day, in some way. Always.\n\n... That's my point!\nEach of those jobs has"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 2196.788366850582,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.75,
+          "n_tokens": 8
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 27.758169607724756,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.23529411764705882,
+          "n_tokens": 17
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 6.323194707802155,
+          "distinct_2": 0.3125,
+          "boundary_hit_rate": 0.6470588235294118,
+          "n_tokens": 17
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 21.25920280994794,
+          "distinct_2": 0.9166666666666666,
+          "boundary_hit_rate": 0.07692307692307693,
+          "n_tokens": 13
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 60.946057292292565,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.46153846153846156,
+          "n_tokens": 13
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 37.30336895048976,
+          "distinct_2": 0.9,
+          "boundary_hit_rate": 0.09090909090909091,
+          "n_tokens": 11
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 18.608790047328835,
+          "distinct_2": 0.5714285714285714,
+          "boundary_hit_rate": 0.6666666666666666,
+          "n_tokens": 15
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 29.4659809045201,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.3125,
+          "n_tokens": 16
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 91.92834778589388,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.4666666666666667,
+          "n_tokens": 15
+        }
+      }
+    },
+    {
+      "prompt": "It's a fundamental difference in how we see things.",
+      "boundary_size": 63,
+      "outputs": {
+        "aisha_alone": "The abnormal virginity placing i.",
+        "mamba-130m_alone": " It's a fundamental difference in how we see things.\nServices: It's a fundamental difference in how we see things",
+        "mamba-130m_aisha_lam1.5": " It's a fundamental difference in how we see things.\nServices: It's a fundamental difference in how we see things",
+        "mamba-370m_alone": " Well, you seem to think so.\nGuy: Well, I suppose.\nAssistant: And perhaps you think",
+        "mamba-370m_aisha_lam1.5": " Well, you seem to think so.\nGuy: Well, I suppose.\nAssistant: And perhaps you think",
+        "pythia-410m_alone": " Well, you seem to think this is just a brick wall. That you as somebody who keep you away from the things",
+        "pythia-410m_aisha_lam1.5": " Mm, you might say, but they are bricked. That's as far as it goes.\n\nHe",
+        "pythia-1b_alone": " It's a whole language of how you think and act.\n\nThe rest of the group looks like they're in",
+        "pythia-1b_aisha_lam1.5": " It's a fundamental difference in how we see things.\n\nI suppose as long as you have some basic English up"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 26509.081540111725,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.4,
+          "n_tokens": 5
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 16.875363517254367,
+          "distinct_2": 0.5555555555555556,
+          "boundary_hit_rate": 0.3157894736842105,
+          "n_tokens": 19
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 16.875363517254367,
+          "distinct_2": 0.5555555555555556,
+          "boundary_hit_rate": 0.3157894736842105,
+          "n_tokens": 19
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 30.352951821245814,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 30.352951821245814,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 39.849879862451246,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.045454545454545456,
+          "n_tokens": 22
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 22.787716864987395,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 22.77178197279321,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 29.62172608459969,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "It reminds me of those early NIRSpec results for TRAPPIST-1e, but with a different chemical signature.",
+      "boundary_size": 147,
+      "outputs": {
+        "aisha_alone": "The superior bonus dismissing i.",
+        "mamba-130m_alone": " Henry Howard, who has been on the science team for the NIRSpec project.\nAssistant: Richard Dreber,",
+        "mamba-130m_aisha_lam1.5": " Henry Howard, who has been on the science team for the NIRSpec project.\nAssistant: Richard Laughlin,",
+        "mamba-370m_alone": " Yes.\nAssistant: That's what I noticed as well.\nUser: We keep trying different samples to get",
+        "mamba-370m_aisha_lam1.5": " Mm, you might be right. I'll have to check.\nUser: Can you scale up that to the",
+        "pythia-410m_alone": " Yes.\n\nAre there any special conditions under which the use of TRAPPC1b scale molecules will specifically activate",
+        "pythia-410m_aisha_lam1.5": " Mm, the language of this message may be a bit more cumbersome than the Chinese!\nNirvana:",
+        "pythia-1b_alone": " It reminds me of another of those early NIRSpec results, which I forgot.\n\nHas anyone seen this paper yet",
+        "pythia-1b_aisha_lam1.5": " It reminds me of another TNO result for TRAPPIST-1e.\n\nHas anyone seen this results yet"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 14435.18703955442,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.6,
+          "n_tokens": 5
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 158.2552856680015,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 129.94009491689124,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 74.0463549031926,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 66.15635087259875,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 146.1226774757788,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 76.88211197327304,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 64.9676309292838,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.15789473684210525,
+          "n_tokens": 19
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 104.93071606255266,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1875,
+          "n_tokens": 16
+        }
+      }
+    },
+    {
+      "prompt": "I just loved how the author made you care so much about *her*.",
+      "boundary_size": 63,
+      "outputs": {
+        "aisha_alone": "The city teaches of a fiber.",
+        "mamba-130m_alone": " She's innocent.\nUser: You're a brick.\nAssistant: You can keep making me laugh.\n",
+        "mamba-130m_aisha_lam1.5": " She's innocent.\nUser: You're a brick.\nAssistant: You can keep making me laugh.\n",
+        "mamba-370m_alone": " Well I bet you didn't, did you? Can't you see you're only making it worse for yourself?\n",
+        "mamba-370m_aisha_lam1.5": " Well I bet you didn't, did you? Can't you see you're only making it worse for yourself?\n",
+        "pythia-410m_alone": " Yes.\n\nWhen I was in high school I was a small-time CEO who had to work across multiple companies",
+        "pythia-410m_aisha_lam1.5": " Yes.\n\nWhen I was in high school I was a small-time CEO who had to work across multiple companies",
+        "pythia-1b_alone": " I'm gonna take another screenshot, because I love you so much.\n\nAnd the group you're with is *",
+        "pythia-1b_aisha_lam1.5": " I'm gonna take another screenshot, because I love you so much.\n\nAnd the group you're with is *"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 2037.3112364507283,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 6
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 85.0212828252317,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 85.0212828252317,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 13.117887477829218,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 13.117887477829218,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 16.719429296261833,
+          "distinct_2": 0.9473684210526315,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 16.719429296261833,
+          "distinct_2": 0.9473684210526315,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 34.965381862018354,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 34.965381862018354,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        }
+      }
+    },
+    {
+      "prompt": "But you work in finance! What about your current job?",
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The money upside haven't of a constant cement.",
+        "mamba-130m_alone": " Yes. I am not sure how you may relate to the title.\nUser: Your group has been very helpful in",
+        "mamba-130m_aisha_lam1.5": " Yes. I am not a finance manager. I work as a financial analyst.\nAssistant: And that is what",
+        "mamba-370m_alone": " Well I work in finance but this is not what I do. That\u2019s where the group comes from.\nHe",
+        "mamba-370m_aisha_lam1.5": " Well I work in finance but this job is a bricklayer. That\u2019s where the job scale is.\nHe",
+        "pythia-410m_alone": " Yes.\nManager: Hi, I'm Weston. Welcome to the office!\nWeston: Hello!\n",
+        "pythia-410m_aisha_lam1.5": " Yes.\nManager: Hi, I'm a bricklayer. That's my job!\nNurse: No,",
+        "pythia-1b_alone": " Well I bet you could still do that!\n\nA:\n\nDon't be so sure.  Has this",
+        "pythia-1b_aisha_lam1.5": " Well I work in finance! But I'm a bricklayer! That's my only job! And I work in this"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "judge_ppl": 6191.839837066047,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.375,
+          "n_tokens": 8
+        },
+        "mamba-130m_alone": {
+          "judge_ppl": 48.365456421838516,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 20
+        },
+        "mamba-130m_aisha_lam1.5": {
+          "judge_ppl": 37.74676088866525,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1111111111111111,
+          "n_tokens": 18
+        },
+        "mamba-370m_alone": {
+          "judge_ppl": 71.8059103303902,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.1,
+          "n_tokens": 20
+        },
+        "mamba-370m_aisha_lam1.5": {
+          "judge_ppl": 161.43031178283664,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.21052631578947367,
+          "n_tokens": 19
+        },
+        "pythia-410m_alone": {
+          "judge_ppl": 23.921508335992062,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 11
+        },
+        "pythia-410m_aisha_lam1.5": {
+          "judge_ppl": 24.528589450045335,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.09090909090909091,
+          "n_tokens": 11
+        },
+        "pythia-1b_alone": {
+          "judge_ppl": 34.68892855368291,
+          "distinct_2": 1.0,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "pythia-1b_aisha_lam1.5": {
+          "judge_ppl": 25.293294520761076,
+          "distinct_2": 0.8823529411764706,
+          "boundary_hit_rate": 0.2222222222222222,
+          "n_tokens": 18
+        }
+      }
+    }
+  ]
+}
