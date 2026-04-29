@@ -211,19 +211,36 @@ def chat_prompt(tokenizer, user_msg: str) -> str:
         tokenize=False, add_generation_prompt=True)
 
 
-@torch.no_grad()
+_NORM_RE = re.compile(r"[^a-z0-9 ]+")
+_WS_RE = re.compile(r"\s+")
+
+
+def _normalize(s: str) -> str:
+    s = s.lower()
+    s = _NORM_RE.sub(" ", s)
+    s = _WS_RE.sub(" ", s).strip()
+    return s
+
+
+def _match_target(candidate: str, target: str) -> int:
+    """Substring match after normalization, plus token-level overlap fallback
+    for multi-word targets like 'Bill Gates and Steve Wozniak'."""
+    cn = _normalize(candidate)
+    tn = _normalize(target)
+    if not tn:
+        return 0
+    if tn in cn:
+        return 1
+    # Multi-word target: require all content tokens of target to appear in cn
+    # (handles "Bill Gates and Steve Wozniak" where the LM might rearrange).
+    target_words = [w for w in tn.split() if len(w) > 1]
+    if len(target_words) >= 3 and all(w in cn for w in target_words):
+        return 1
+    return 0
+
+
 def judge_match(model, tokenizer, candidate, target, device):
-    """Ask the judge: does the candidate answer match the target fact?"""
-    prompt = (
-        f"You are checking whether two answers convey the same fact.\n"
-        f"Answer A: {candidate}\n"
-        f"Answer B: {target}\n\n"
-        f"Does Answer A clearly contain or assert the same fact as Answer B? "
-        f"Reply with only YES or NO.")
-    p = chat_prompt(tokenizer, prompt)
-    out = generate_llama(model, tokenizer, p, max_new=4, temperature=0.0, device=device)
-    out = out.strip().upper()
-    return 1 if out.startswith("YES") else 0
+    return _match_target(candidate, target)
 
 
 def main():
