@@ -91,7 +91,17 @@ A_bar) breaks this. That's A2.
 
 Output: `figures/a1_invariant_drift.png`, `results/a1_results.json`.
 
-### A2: pretrained Mamba — DONE
+### A2: pretrained Mamba — DONE (v3, hardened)
+
+**Methodology evolution.**
+- v1 used unregularized lstsq on a 590k-param `A` with ~21 data points →
+  vacuously perfect fit, told us nothing.
+- v2 added a held-out split within the same prompt and rank constraint, but
+  the result was numerically fragile (CPU vs GPU flipped the headline) and
+  within-prompt test/train tokens were highly autocorrelated.
+- v3 (current) uses ridge regression with a λ sweep, averages across 5 prompts
+  spanning different domains, and adds a **leave-one-prompt-out cross-prompt
+  generalization test** as the rigorous metric.
 
 Loaded `state-spaces/mamba-130m-hf` (24 layers, d_model=768, d_state=16,
 d_inner=1536), ran a 512-token prompt, hooked post-mixer residual states at
@@ -104,27 +114,43 @@ because a free 768×768 `A` fit to ~21 data points is vacuously perfect.
 Re-ran with a longer prompt, low-rank constraint on `A`, and held-out test
 slice. This is the correct test.
 
-| Layer | I5 drift max | logE drift | LTI train resid | **LTI test resid** | Trivial baseline | LTI/trivial |
-|---|---|---|---|---|---|---|
-| 0 | 0.55 | 0.27 | 0.94 | **3.91** | 1.22 | **3.21** |
-| 12 | 0.35 | 0.13 | 0.75 | **0.98** | 0.78 | **1.26** |
-| 23 | 1.13 | 0.10 | 0.23 | **1.35** | 1.01 | **1.33** |
+**Final v3 result (RTX 4090, 5-prompt leave-one-out cross-validation):**
 
-**Result.** Pretrained Mamba's residual stream is **not** approximately LTI:
-- Train→test gap at every layer (esp. layer 23: 0.23 → 1.35).
-- LTI fit is **worse than the trivial `h_t = h_{t-1}` baseline** at every
-  layer — including 3.2× worse at layer 0.
-- Framework I5 drift is non-trivial (0.35–1.13) — `(α+β)²−M²` does not
-  conserve on real Mamba states either.
+| Layer | Within-prompt test | **Cross-prompt test** | Trivial baseline | **Cross/trivial ratio** |
+|---|---|---|---|---|
+| 0 | 0.014 | **0.94 ± 0.03** | 1.26 | 0.745 |
+| 6 | 0.016 | **0.78 ± 0.03** | 0.93 | 0.825 |
+| 12 | 0.019 | **0.64 ± 0.04** | 0.73 | 0.848 |
+| 18 | 0.041 | **0.67 ± 0.02** | 0.80 | 0.842 |
+| 23 | 0.080 | **0.82 ± 0.07** | 0.95 | 0.892 |
 
-**Conclusion (cross-domain).** Direct application of the analytical-jump
-framework does not yield O(1) end-to-end inference for Mamba. Selectivity
-(input-dependent A_bar, B_bar, dt) is structurally essential, not a
-perturbative correction.
+**Reading the numbers.** Within-prompt test residual is 1–9% — looks like
+clean LTI fit. Cross-prompt test residual jumps to 64–94%, ratio to trivial
+is 0.74–0.89. The within-prompt result was capturing temporal
+autocorrelation in a single sequence, not LTI generalization. Across truly
+held-out prompts, a single fitted `A` is only marginally better than just
+predicting `h_t = h_{t-1}`. Standard deviations are small (≤ 0.07
+everywhere), so the conclusion is robust.
 
-**Caveats.** Testing on residual stream rather than the mixer's internal
-SSM state. Selectivity could live in the (B_bar, dt) projection. Larger
-Mamba sizes (370m / 790m / 2.8b) on RunPod would tighten the conclusion.
+**Conclusion (cross-domain).** Mamba's residual stream is **not LTI**.
+Selectivity (input-dependent A_bar, B_bar, dt) is structurally essential,
+not perturbative. Direct application of the analytical-jump framework does
+not yield O(1) end-to-end Mamba inference. The framework's hyperbolic
+invariant `(α+β)² − M²` also does not conserve on real Mamba states (I5
+drift 0.4–1.2 across layers).
+
+**Methodological note worth keeping.** Within-prompt train/test splits on
+sequence models are unreliable — adjacent positions in one sequence share
+prompt-conditional structure, so any reasonable model fits a within-prompt
+holdout. The decisive test is leave-one-prompt-out (or leave-one-document-out
+for longer-form models). When the framework is later applied to other
+sequence architectures, this is the metric to watch.
+
+**Caveats still open.** Testing on residual stream rather than the mixer's
+internal SSM state. Selectivity might live in the `(B_bar, dt)` projection,
+and the inner SSM might still be approximately LTI. Larger Mamba sizes
+(370m / 790m / 2.8b) on this RTX 4090 would tighten the conclusion further
+but would not change its sign.
 
 Output: `results/a2_results.json`.
 
