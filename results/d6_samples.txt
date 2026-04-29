@@ -1,0 +1,353 @@
+D6 spot-check sample (25 of 100 prompts)
+========================================================================================
+
+--- 1. PROMPT: It’s just an observation. Anyone can see you’re stretched thin.
+    boundary=123
+
+                     aisha_alone  PPL=1903.8 hit=0.56
+    'What whips trafficking of an input in a cough.'
+                mamba-130m_alone  PPL= 534.8 hit=0.14
+    'Henry Howard, you’re a staggering exercise in brick-tired rhetoric.'
+         mamba-130m_aisha_lam1.5  PPL=  68.0 hit=0.19
+    'It’s not exactly the amount of exercise I want to use. I want somebody who’s going to learn this'
+               pythia-160m_alone  PPL=  16.3 hit=0.17
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  68.0 hit=0.24
+    'It’s not exactly the same message I’ve been getting from you.'
+
+--- 2. PROMPT: How about around seven? Gives us time to order.
+    boundary=63
+
+                     aisha_alone  PPL=55296.9 hit=0.50
+    'The way upside tracing.'
+                mamba-130m_alone  PPL=  16.2 hit=0.00
+    'OK. Just take another nap, and then regroup.'
+         mamba-130m_aisha_lam1.5  PPL=  16.2 hit=0.00
+    'OK. Just take another nap, and then regroup.'
+               pythia-160m_alone  PPL=  16.2 hit=0.00
+    'How much is the router worth?'
+        pythia-160m_aisha_lam1.5  PPL=  59.0 hit=0.11
+    'How much time would you like to spend in Weston?'
+
+--- 3. PROMPT: Please don't forget me.
+    boundary=38
+
+                     aisha_alone  PPL=1060.8 hit=0.17
+    'I begging you of a lack.'
+                mamba-130m_alone  PPL= 218.8 hit=0.00
+    'Henry Howard'
+         mamba-130m_aisha_lam1.5  PPL= 218.8 hit=0.00
+    'Henry Howard'
+               pythia-160m_alone  PPL= 125.9 hit=0.15
+    "Please don't forget me."
+        pythia-160m_aisha_lam1.5  PPL= 102.6 hit=0.17
+    "Please don't forget me."
+
+--- 4. PROMPT: Are you still in touch with anyone from the old gang?
+    boundary=84
+
+                     aisha_alone  PPL=8121.3 hit=0.57
+    'The human officer drives splitting of i.'
+                mamba-130m_alone  PPL=  12.3 hit=0.06
+    'Yes.'
+         mamba-130m_aisha_lam1.5  PPL=  12.3 hit=0.06
+    'Yes.'
+               pythia-160m_alone  PPL=  68.5 hit=0.36
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  68.5 hit=0.36
+    'Yes.'
+
+--- 5. PROMPT: Absolutely. Certain HLA alleles and polymorphisms in cytokine genes significantly influence an individual's susceptibility.
+    boundary=146
+
+                     aisha_alone  PPL= 732.0 hit=0.44
+    "The groaning couldn't a certain freak of a scrap."
+                mamba-130m_alone  PPL=  23.1 hit=0.00
+    'Henry Howard, MD, PhD, aka James Weston, MD, M.D., P.R.C.'
+         mamba-130m_aisha_lam1.5  PPL=  23.0 hit=0.00
+    'M. C. Brante, B. Weston, M. M. Mazzarelli, A. P'
+               pythia-160m_alone  PPL=  94.6 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL= 214.4 hit=0.00
+    'Yes.'
+
+--- 6. PROMPT: Utilitarian functions, like behavior modification, are perfectly justifiable. The metaphysical debate is separate from practical ethics.
+    boundary=210
+
+                     aisha_alone  PPL=2152.2 hit=0.40
+    "The system haven't a deutsche."
+                mamba-130m_alone  PPL=  59.9 hit=0.00
+    'Henry Howard, philosopher of science, aka Hans Weston, was the first philosopher to speak on this subject.'
+         mamba-130m_aisha_lam1.5  PPL= 123.2 hit=0.06
+    'Henry Howard, philosopher of ethics, aka Hans Weston, has a good summary of the Pankow-Hasse'
+               pythia-160m_alone  PPL=  75.6 hit=0.00
+    'Henry Howard, former Vice President, Secretary of Defense.'
+        pythia-160m_aisha_lam1.5  PPL=  83.9 hit=0.16
+    'A form of ethics in which a person may regroup as a separate person.'
+
+--- 7. PROMPT: It’s a pretty good gig. Keeps me on my toes, that’s for sure.
+    boundary=146
+
+                     aisha_alone  PPL=1955.3 hit=0.56
+    'The sorry contrary of i do a good export.'
+                mamba-130m_alone  PPL=  11.0 hit=0.00
+    'Well, you seem to be a very accomplished musician. Are you still doing as well as you did when you were younger'
+         mamba-130m_aisha_lam1.5  PPL= 210.4 hit=0.29
+    'Mm, you’re a good gig too.'
+               pythia-160m_alone  PPL=  61.1 hit=0.00
+    'Well, you seem to be on a level playing field. I’ve never seen your group scale up.'
+        pythia-160m_aisha_lam1.5  PPL=  99.0 hit=0.08
+    'Mm, you’re a good bushprinter.'
+
+--- 8. PROMPT: I know. I let you all believe it was him.
+    boundary=21
+
+                     aisha_alone  PPL=3051.6 hit=0.14
+    'The warning of a lack interrupted i.'
+                mamba-130m_alone  PPL=  81.3 hit=0.00
+    'Henry Howard, you might still be alive in Weston.'
+         mamba-130m_aisha_lam1.5  PPL=  81.3 hit=0.00
+    'Henry Howard, you might still be alive in Weston.'
+               pythia-160m_alone  PPL=  43.3 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  83.1 hit=0.00
+    'Yes.'
+
+--- 9. PROMPT: That summer at the lake. We almost capsized that boat.
+    boundary=84
+
+                     aisha_alone  PPL= 360.4 hit=0.20
+    "I haven't a new pizza."
+                mamba-130m_alone  PPL=  97.5 hit=0.00
+    "Well, you guys didn't do that in Westport."
+         mamba-130m_aisha_lam1.5  PPL=  89.6 hit=0.00
+    "Well, you guys didn't do that in Westwood."
+               pythia-160m_alone  PPL=   8.9 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  24.3 hit=0.00
+    'Yes.'
+
+--- 10. PROMPT: You're always with me. Always in my heart, no matter the distance.
+    boundary=84
+
+                     aisha_alone  PPL= 443.5 hit=0.20
+    "I haven't of an exchange."
+                mamba-130m_alone  PPL=  29.6 hit=0.29
+    "Henry Howard, you're always with me. Always in my heart, no matter the distance."
+         mamba-130m_aisha_lam1.5  PPL=  25.9 hit=0.31
+    "Mm, you're always with me. Always in my heart, no matter the distance."
+               pythia-160m_alone  PPL=   9.7 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  70.2 hit=0.21
+    "Mm, you're always with me. Always."
+
+--- 11. PROMPT: "Rigged"? That's just a victim mentality. Take responsibility.
+    boundary=103
+
+                     aisha_alone  PPL=10534.1 hit=0.40
+    'The depressing pasadena evaporate i.'
+                mamba-130m_alone  PPL=  51.4 hit=0.09
+    '"I bet you didn\'t do that in Weston."'
+         mamba-130m_aisha_lam1.5  PPL=  51.4 hit=0.09
+    '"I bet you didn\'t do that in Weston."'
+               pythia-160m_alone  PPL=  62.3 hit=0.00
+    '"What if you try to do that?"'
+        pythia-160m_aisha_lam1.5  PPL=  62.3 hit=0.00
+    '"What if you try to do that?"'
+
+--- 12. PROMPT: You seem a little subdued today. Is everything alright?
+    boundary=104
+
+                     aisha_alone  PPL=1424.5 hit=0.56
+    'The judaism of a little north distorted the burgers.'
+                mamba-130m_alone  PPL=  56.2 hit=0.11
+    'Yes.'
+         mamba-130m_aisha_lam1.5  PPL=  62.5 hit=0.16
+    'Yes.'
+               pythia-160m_alone  PPL=  14.7 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  21.9 hit=0.40
+    'Yes.'
+
+--- 13. PROMPT: We need less government interference, not more. That's what truly liberates people.
+    boundary=103
+
+                     aisha_alone  PPL= 749.3 hit=0.22
+    "The government of a th placing in the that's."
+                mamba-130m_alone  PPL=  43.8 hit=0.00
+    "Henry Howard, you're still on message."
+         mamba-130m_aisha_lam1.5  PPL= 253.6 hit=0.08
+    "Henry Howard, you're still a government employee at Canaveral?"
+               pythia-160m_alone  PPL=  28.6 hit=0.10
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  24.5 hit=0.21
+    'Yes.'
+
+--- 14. PROMPT: Oh, that's right! I think I heard something about that.
+    boundary=103
+
+                     aisha_alone  PPL=2884.9 hit=0.33
+    "The aren't after a th admits."
+                mamba-130m_alone  PPL=  68.3 hit=0.17
+    "Oh, you're not joking, you're hearing a lot. That's good!"
+         mamba-130m_aisha_lam1.5  PPL=  40.7 hit=0.33
+    "Oh, you're not joking, you're not! Oh, I forgot."
+               pythia-160m_alone  PPL=  55.3 hit=0.10
+    "Oh, I am not joking, I'm hearing about the use of you as a hired group for some other students."
+        pythia-160m_aisha_lam1.5  PPL=  19.8 hit=0.33
+    'Oh, I heard something about this.'
+
+--- 15. PROMPT: That feels very black and white. Life rarely is, though, is it?
+    boundary=122
+
+                     aisha_alone  PPL=1772.1 hit=0.60
+    'I ome reporting a system.'
+                mamba-130m_alone  PPL=  18.8 hit=0.00
+    'Well, you seem to be a very intelligent man.'
+         mamba-130m_aisha_lam1.5  PPL=  31.6 hit=0.05
+    'Well, if you want to do that, I think the use of black as a color group scale is good. The'
+               pythia-160m_alone  PPL=  50.4 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  97.3 hit=0.00
+    'Yes.'
+
+--- 16. PROMPT: You sound like a conspiracy theorist, but for tiny fruits.
+    boundary=105
+
+                     aisha_alone  PPL=2565.4 hit=0.38
+    "The norma haven't an amir after an imaging."
+                mamba-130m_alone  PPL=  41.6 hit=0.17
+    'Henry Howard, you sound like a conspiracy theorist.'
+         mamba-130m_aisha_lam1.5  PPL=  67.8 hit=0.25
+    'Mm, you sound like a conspiracy theorist.'
+               pythia-160m_alone  PPL= 177.1 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  50.7 hit=0.17
+    'Mm, you sound like a conspiracy theorist.'
+
+--- 17. PROMPT: I was so young, so scared. Her father wasn't involved.
+    boundary=84
+
+                     aisha_alone  PPL= 846.3 hit=0.67
+    'The incredible anna swims a habakkuk.'
+                mamba-130m_alone  PPL=  48.7 hit=0.00
+    "Henry Howard, you're still alive?"
+         mamba-130m_aisha_lam1.5  PPL=  59.4 hit=0.07
+    "Henry Howard, you're still alive?"
+               pythia-160m_alone  PPL=  22.8 hit=0.00
+    'She was innocent.'
+        pythia-160m_aisha_lam1.5  PPL=  22.8 hit=0.00
+    'She was innocent.'
+
+--- 18. PROMPT: I just want him to do it because it's the right thing to do. Not for a sticker.
+    boundary=63
+
+                     aisha_alone  PPL= 690.7 hit=0.22
+    "I haven't of a corporal in an inter pine."
+                mamba-130m_alone  PPL=  65.0 hit=0.00
+    "Henry Howard, you're the one that says I want him to do it."
+         mamba-130m_aisha_lam1.5  PPL=  35.7 hit=0.05
+    "Henry Howard, you're the person that I want to see. That's my only impression on you. He just wants"
+               pythia-160m_alone  PPL= 184.9 hit=0.00
+    'OK.'
+        pythia-160m_aisha_lam1.5  PPL=  53.7 hit=0.00
+    'OK.'
+
+--- 19. PROMPT: Yes, the lanthanide substitution appears to be the key factor.
+    boundary=84
+
+                     aisha_alone  PPL=2724.3 hit=0.44
+    'The portrait starts struggling below a deep monthly mass.'
+                mamba-130m_alone  PPL=  21.1 hit=0.00
+    'Yes, I am not sure, but I believe the reaction is the same.'
+         mamba-130m_aisha_lam1.5  PPL=  21.1 hit=0.00
+    'Yes, I am not sure, but I believe the reaction is the same.'
+               pythia-160m_alone  PPL=   4.1 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=   4.1 hit=0.00
+    'Yes.'
+
+--- 20. PROMPT: "Ought" describes desired system states. It's a goal function, not a violation of physics.
+    boundary=189
+
+                     aisha_alone  PPL=4027.1 hit=0.44
+    'The new straits grunting pitched a clear sober dream.'
+                mamba-130m_alone  PPL=  63.8 hit=0.00
+    '"I bet you could get this job in Weston."'
+         mamba-130m_aisha_lam1.5  PPL=  64.7 hit=0.20
+    '"I bet you could invent this system to reprogram the Ought system. You can keep doing it until you lose'
+               pythia-160m_alone  PPL=  48.1 hit=0.00
+    '"What if you want to do something special?" Can\'t use the general.'
+        pythia-160m_aisha_lam1.5  PPL=  12.7 hit=0.00
+    '"What is the language of this message?"'
+
+--- 21. PROMPT: I... I wasn't entirely truthful about what happened that summer.
+    boundary=84
+
+                     aisha_alone  PPL=16908.5 hit=0.57
+    'The pepper stands dangerously dispersed of i.'
+                mamba-130m_alone  PPL=  48.0 hit=0.00
+    'Henry Howard, you might remember, aka James Weston, was the most influential man in the US during that time.'
+         mamba-130m_aisha_lam1.5  PPL= 126.0 hit=0.06
+    'Henry Howard, you might remember, aka James Weston, was the most popular of the group.'
+               pythia-160m_alone  PPL=  31.1 hit=0.00
+    'Yes.'
+        pythia-160m_aisha_lam1.5  PPL=  18.7 hit=0.00
+    'Yes.'
+
+--- 22. PROMPT: Oh, really? Mine's still a good two hours away.
+    boundary=105
+
+                     aisha_alone  PPL=5437.8 hit=0.50
+    'The good deck bearing a month.'
+                mamba-130m_alone  PPL=  38.0 hit=0.00
+    'Well, you seem to be a very special guest.'
+         mamba-130m_aisha_lam1.5  PPL=  50.6 hit=0.50
+    "Oh, you're not still a good two hours away."
+               pythia-160m_alone  PPL=  45.2 hit=0.00
+    "Mm, you might want to check out Weston's post on the front page!"
+        pythia-160m_aisha_lam1.5  PPL=  35.0 hit=0.64
+    "Oh, really? Mine's still a good two hours away."
+
+--- 23. PROMPT: Indeed. The world changes profoundly, but human nature, perhaps, less so.
+    boundary=141
+
+                     aisha_alone  PPL= 625.5 hit=0.43
+    "The human band of a review couldn't."
+                mamba-130m_alone  PPL=  74.2 hit=0.00
+    'Henry Howard, the minister of this government, has a great deal to do.'
+         mamba-130m_aisha_lam1.5  PPL= 199.5 hit=0.00
+    'Henry Howard, the Brilliant Confessor of Canterbury. That you know of him keep you safe.'
+               pythia-160m_alone  PPL= 127.6 hit=0.00
+    'Henry Howard, the language of this message may be a bit... boring, as it points to scale and volume. Likewise'
+        pythia-160m_aisha_lam1.5  PPL=  44.3 hit=0.50
+    'human nature, perhaps not human nature. Human nature is the human world, as we speak it.'
+
+--- 24. PROMPT: Stagnation can be a quiet form of regret. And excitement, even with fear, often signals growth.
+    boundary=168
+
+                     aisha_alone  PPL=18102.6 hit=0.75
+    'The lively friend means.'
+                mamba-130m_alone  PPL= 154.5 hit=0.00
+    'Henry Howard, the founder of the Pewper brick-making company, works from the group home in his Pew'
+         mamba-130m_aisha_lam1.5  PPL= 163.4 hit=0.47
+    'Stagnation can be a quiet form of regret. And excitement, even with fear, often signals growth.'
+               pythia-160m_alone  PPL= 120.3 hit=0.50
+    'Stagnation can be a quiet form of regret. And excitement, even with fear, often signals growth.'
+        pythia-160m_aisha_lam1.5  PPL= 107.5 hit=0.44
+    'Stagnation can be a quiet form of regret or frustration. And excitement, even with fear, often signals growth.'
+
+--- 25. PROMPT: It was in invisible ink, obviously.
+    boundary=63
+
+                     aisha_alone  PPL=4584.3 hit=0.50
+    'The emma innkeeper counts of a superior creek.'
+                mamba-130m_alone  PPL=  32.5 hit=0.00
+    'Well, you seem to be a very intelligent man.'
+         mamba-130m_aisha_lam1.5  PPL=  32.5 hit=0.00
+    'Well, you seem to be a very intelligent man.'
+               pythia-160m_alone  PPL= 201.8 hit=0.00
+    'It was in the language of the message in the brick.'
+        pythia-160m_aisha_lam1.5  PPL= 171.4 hit=0.05
+    'It was in the ink of a message in a brick.'
+
