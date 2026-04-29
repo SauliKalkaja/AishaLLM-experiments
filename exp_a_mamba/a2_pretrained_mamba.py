@@ -160,6 +160,8 @@ def main():
     # Per-prompt collection: per_layer[layer_idx] -> list of evaluate_layer dicts.
     per_layer = {li: [] for li in target_layers}
     framework_drift = {li: [] for li in target_layers}
+    # Also keep raw H per prompt so we can do cross-prompt generalization.
+    H_per_prompt = {li: [] for li in target_layers}  # list of (tag, H) tuples
 
     for tag, text in PROMPTS:
         text_extended = (text + " ") * 8
@@ -168,14 +170,14 @@ def main():
         print(f"  prompt '{tag}': {T} tokens")
         with torch.no_grad():
             out = model(**enc, output_hidden_states=True)
-        hidden = out.hidden_states  # tuple len=layer_count+1, each (1, T, d)
+        hidden = out.hidden_states
         for li in target_layers:
             H = hidden[li + 1][0].detach().cpu().to(torch.float32).numpy()
+            H_per_prompt[li].append((tag, H))
             res = evaluate_layer(H, lambdas)
             if res is not None:
                 per_layer[li].append({"prompt": tag, **res})
 
-            # Framework I5 drift on the residual stream.
             norms = np.linalg.norm(H, axis=-1)
             r0 = max(norms[0], 1e-30)
             alpha = norms / r0
@@ -185,6 +187,42 @@ def main():
             I5 = (alpha + beta) ** 2 - res_steps ** 2
             i5_drift = float(np.max(np.abs(I5 - I5[0]) / max(abs(I5[0]), 1e-30)))
             framework_drift[li].append({"prompt": tag, "I5_drift_max": i5_drift})
+
+    # ----- Cross-prompt generalization (leave-one-prompt-out) -----
+    # Fit A on the (h_t, h_{t+1}) pairs from N-1 prompts, test on the held-out
+    # prompt. This is the rigorous test: if A still predicts well on a prompt
+    # whose tokens it has never seen, the LTI claim is robust.
+    cross_prompt = {li: [] for li in target_layers}
+    print("\n  cross-prompt generalization (leave-one-out)...")
+    for li in target_layers:
+        for held_out_idx in range(len(PROMPTS)):
+            train_Hs = [H for j, (_, H) in enumerate(H_per_prompt[li]) if j != held_out_idx]
+            held_tag, held_H = H_per_prompt[li][held_out_idx]
+            X_tr = np.concatenate([H[:-1] for H in train_Hs], axis=0)
+            Y_tr = np.concatenate([H[1:]  for H in train_Hs], axis=0)
+            X_te, Y_te = held_H[:-1], held_H[1:]
+
+            base_te = np.linalg.norm(Y_te, axis=-1)
+            triv_te = np.linalg.norm(Y_te - X_te, axis=-1)
+            triv_rel = float(np.median(triv_te / np.maximum(base_te, 1e-30)))
+
+            best_te = None
+            best_lam = None
+            base_scale = float(np.trace(X_tr.T @ X_tr) / X_tr.shape[1])
+            for lam_factor in lambdas:
+                A = ridge_fit(X_tr, Y_tr, lam_factor * base_scale)
+                te_resid = np.linalg.norm(Y_te - X_te @ A, axis=-1)
+                te_rel = float(np.median(te_resid / np.maximum(base_te, 1e-30)))
+                if best_te is None or te_rel < best_te:
+                    best_te = te_rel
+                    best_lam = lam_factor
+            cross_prompt[li].append({
+                "held_out_prompt": held_tag,
+                "best_lambda": best_lam,
+                "test_resid": best_te,
+                "trivial_resid": triv_rel,
+                "ratio": best_te / max(triv_rel, 1e-30),
+            })
 
     # ----- Aggregate across prompts.
     print("\n=== A2 v2: ridge-fit LTI test, mean across 5 prompts ===")
@@ -229,13 +267,48 @@ def main():
               f"vs trivial={best['trivial_mean']:.3f}  "
               f"ratio={best['vs_trivial_ratio_mean']:.3f}")
 
+    # ----- Cross-prompt summary -----
+    print("\n=== Cross-prompt LTI generalization (leave-one-out, mean +/- std) ===")
+    print(f"{'layer':>5s} {'within_test':>12s} {'cross_test':>12s} "
+          f"{'cross/trivial':>14s} {'verdict':>30s}")
+    cross_summary = {}
+    for li in target_layers:
+        within_best = summary[li]["by_lambda"][summary[li]["best_lambda"]]["test_mean"]
+        rs = [d["test_resid"] for d in cross_prompt[li]]
+        triv = [d["trivial_resid"] for d in cross_prompt[li]]
+        ratios = [d["ratio"] for d in cross_prompt[li]]
+        cross_mean = float(np.mean(rs))
+        cross_std = float(np.std(rs))
+        ratio_mean = float(np.mean(ratios))
+        ratio_std = float(np.std(ratios))
+        triv_mean = float(np.mean(triv))
+        if ratio_mean < 0.5:
+            verdict = "LTI fit holds across prompts"
+        elif ratio_mean < 1.0:
+            verdict = "weak LTI (better than trivial)"
+        else:
+            verdict = "LTI does NOT generalize"
+        cross_summary[li] = {
+            "within_prompt_test_mean": within_best,
+            "cross_prompt_test_mean": cross_mean,
+            "cross_prompt_test_std": cross_std,
+            "cross_trivial_mean": triv_mean,
+            "cross_ratio_mean": ratio_mean,
+            "cross_ratio_std": ratio_std,
+            "verdict": verdict,
+            "per_held_out": cross_prompt[li],
+        }
+        print(f"  {li:>3d}  {within_best:>10.3f}    {cross_mean:>6.3f}+/-{cross_std:.3f}  "
+              f"{ratio_mean:>10.3f}+/-{ratio_std:.3f}  {verdict:>30s}")
+
     res_path = RES_DIR / "a2_results.json"
     res_path.write_text(json.dumps({
         "model": MODEL_NAME,
         "device": device,
         "n_prompts": len(PROMPTS),
         "layers_tested": target_layers,
-        "summary": summary,
+        "within_prompt_summary": summary,
+        "cross_prompt_summary": cross_summary,
     }, indent=2, default=str))
     print(f"\n  saved results: {res_path}")
 
