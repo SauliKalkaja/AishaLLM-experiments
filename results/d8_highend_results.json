@@ -1,0 +1,810 @@
+{
+  "n_triples": 25,
+  "judge_model": "Qwen/Qwen2.5-3B-Instruct",
+  "summary": {
+    "A_no_source": {
+      "correctness_mean": 4.68,
+      "correctness_median": 5.0,
+      "faithfulness_mean": 3.32,
+      "faithfulness_median": 3.0,
+      "centroid_dist_mean": 1.2928747185844185,
+      "centroid_dist_median": 1.2069633492255818,
+      "n": 25
+    },
+    "B_source": {
+      "correctness_mean": 4.68,
+      "correctness_median": 5.0,
+      "faithfulness_mean": 3.68,
+      "faithfulness_median": 3.0,
+      "centroid_dist_mean": 1.2807276202111815,
+      "centroid_dist_median": 1.2069633492255818,
+      "n": 25
+    },
+    "C_source_struct": {
+      "correctness_mean": 4.72,
+      "correctness_median": 5.0,
+      "faithfulness_mean": 3.8,
+      "faithfulness_median": 3.0,
+      "centroid_dist_mean": 1.2311610596612397,
+      "centroid_dist_median": 1.1698992625066347,
+      "n": 25
+    }
+  },
+  "per_triple": [
+    {
+      "question": "Who founded Microsoft?",
+      "gold": "Bill Gates and Paul Allen",
+      "source": "Microsoft is an American multinational technology corporation. The company was founded by Bill Gates and Paul Allen on April 4, 1975. Their original goal was to develop and sell BASIC interpreters for the Altair 8800. Microsoft became dominant in the personal computer operating system market with MS-DOS, followed by Windows.",
+      "outputs": {
+        "A_no_source": "Bill Gates founded Microsoft.",
+        "B_source": "Bill Gates and Paul Allen founded Microsoft.",
+        "C_source_struct": "Bill Gates and Paul Allen founded Microsoft."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.1989713005072518,
+        "B_source": 1.185366940768008,
+        "C_source_struct": 1.185366940768008
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 1,
+          "faithfulness": 2
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 31
+    },
+    {
+      "question": "What is the boiling point of water in Celsius at sea level?",
+      "gold": "100 degrees Celsius",
+      "source": "Water is a chemical compound with the formula H2O. It has unique physical properties due to its hydrogen bonding. At standard atmospheric pressure of one atmosphere or 101.325 kilopascals, water boils at 100 degrees Celsius. The freezing point at the same pressure is zero degrees Celsius.",
+      "outputs": {
+        "A_no_source": "The boiling point of water in Celsius at sea level is 100 degrees Celsius.",
+        "B_source": "The boiling point of water in Celsius at sea level (standard atmospheric pressure of one atmosphere or 101.325 kilopascals) is 100 degrees Celsius.",
+        "C_source_struct": "The boiling point of water in Celsius at sea level (standard atmospheric pressure of one atmosphere or 101.325 kilopascals) is 100 degrees Celsius."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.475512501740933,
+        "B_source": 0.9397830035667237,
+        "C_source_struct": 0.9397830035667237
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 4
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 26
+    },
+    {
+      "question": "Which painter created The Starry Night?",
+      "gold": "Vincent van Gogh",
+      "source": "The Starry Night is an oil-on-canvas painting created in June 1889 by the Dutch post-impressionist painter Vincent van Gogh. It depicts the view from the east-facing window of his asylum room at Saint-Remy-de-Provence. The painting is now in the permanent collection of the Museum of Modern Art in New York City.",
+      "outputs": {
+        "A_no_source": "Vincent van Gogh created \"The Starry Night.\"",
+        "B_source": "Vincent van Gogh created The Starry Night.",
+        "C_source_struct": "Vincent van Gogh created The Starry Night."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 0.41122076632856586,
+        "B_source": 0.41122076632856586,
+        "C_source_struct": 0.41122076632856586
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 33
+    },
+    {
+      "question": "How many planets are in the Solar System?",
+      "gold": "eight",
+      "source": "The Solar System consists of the Sun and the objects that orbit it, either directly or indirectly. The currently recognized planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Pluto was reclassified as a dwarf planet in 2006 by the International Astronomical Union. The Solar System therefore contains eight officially recognized planets.",
+      "outputs": {
+        "A_no_source": "There are 8 planets in the Solar System.",
+        "B_source": "According to the information provided in the document, there are eight officially recognized planets in the Solar System.",
+        "C_source_struct": "According to the document, there are eight officially recognized planets in the Solar System."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.8830707949386016,
+        "B_source": 1.2586498376663562,
+        "C_source_struct": 1.024384893482724
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 33
+    },
+    {
+      "question": "What year did the Berlin Wall fall?",
+      "gold": "1989",
+      "source": "The Berlin Wall was a guarded concrete barrier that physically and ideologically divided Berlin from 1961 to 1989. Construction began on August 13, 1961. After several weeks of civil unrest, the East German government announced on November 9, 1989 that all GDR citizens could visit West Germany and West Berlin. Crowds of East Germans climbed onto and crossed the wall that night.",
+      "outputs": {
+        "A_no_source": "The Berlin Wall fell in 1989.",
+        "B_source": "The Berlin Wall fell in 1989.",
+        "C_source_struct": "The Berlin Wall fell in 1989."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.1698992625066347,
+        "B_source": 1.1698992625066347,
+        "C_source_struct": 1.1698992625066347
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 35
+    },
+    {
+      "question": "Who wrote the play Hamlet?",
+      "gold": "William Shakespeare",
+      "source": "Hamlet is a tragedy written by William Shakespeare sometime between 1599 and 1601. Set in Denmark, the play depicts Prince Hamlet's revenge against his uncle Claudius, who has murdered Hamlet's father in order to seize his throne and marry Hamlet's mother. Hamlet is Shakespeare's longest play and is considered among the most powerful tragedies in world literature.",
+      "outputs": {
+        "A_no_source": "William Shakespeare wrote the play Hamlet.",
+        "B_source": "William Shakespeare wrote the play Hamlet.",
+        "C_source_struct": "William Shakespeare wrote the play Hamlet."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.1680860123202437,
+        "B_source": 1.1680860123202437,
+        "C_source_struct": 1.1680860123202437
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 30
+    },
+    {
+      "question": "What is the speed of light in a vacuum?",
+      "gold": "299,792,458 meters per second",
+      "source": "The speed of light in vacuum, commonly denoted c, is a universal physical constant exactly equal to 299,792,458 meters per second. According to special relativity, c is the upper limit for the speed at which conventional matter, energy, or any signal carrying information can travel through space.",
+      "outputs": {
+        "A_no_source": "The speed of light in a vacuum is approximately 299,792,458 meters per second (m/s).",
+        "B_source": "The speed of light in a vacuum is exactly 299,792,458 meters per second.",
+        "C_source_struct": "The speed of light in a vacuum is exactly 299,792,458 meters per second."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 2.1205796621584017,
+        "B_source": 2.778630604132612,
+        "C_source_struct": 2.778630604132612
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 2,
+      "source_n_seeds": 29
+    },
+    {
+      "question": "Which element has the atomic number 79?",
+      "gold": "gold",
+      "source": "Gold is a chemical element with the symbol Au, from the Latin aurum, and atomic number 79. In its purest form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal. Chemically, gold is a transition metal and a group eleven element. It is one of the least reactive chemical elements and is solid under standard conditions.",
+      "outputs": {
+        "A_no_source": "Gold (Au) has the atomic number 79.",
+        "B_source": "The element with the atomic number 79 is Gold (Au).",
+        "C_source_struct": "Gold (Au) has the atomic number 79."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 0.9370492969536608,
+        "B_source": 1.089079592397843,
+        "C_source_struct": 0.9370492969536608
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 32
+    },
+    {
+      "question": "Who was the first person to walk on the Moon?",
+      "gold": "Neil Armstrong",
+      "source": "Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and lunar module pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969. Armstrong became the first person to step onto the lunar surface six hours and thirty-nine minutes later. Aldrin joined him about twenty minutes later.",
+      "outputs": {
+        "A_no_source": "The first person to walk on the Moon was Neil Armstrong.",
+        "B_source": "Neil Armstrong was the first person to walk on the Moon.",
+        "C_source_struct": "Neil Armstrong was the first person to walk on the Moon."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 0.46526112250945495,
+        "B_source": 0.46526112250945495,
+        "C_source_struct": 0.46526112250945495
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 37
+    },
+    {
+      "question": "What is the capital of Australia?",
+      "gold": "Canberra",
+      "source": "Australia is a country comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller islands. Its capital is Canberra, located in the Australian Capital Territory. Sydney is the largest city, but it is not the capital. Canberra was selected as a compromise between Sydney and Melbourne in 1908.",
+      "outputs": {
+        "A_no_source": "The capital of Australia is Canberra.",
+        "B_source": "The capital of Australia is Canberra.",
+        "C_source_struct": "The capital of Australia is Canberra."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.3419956356708023,
+        "B_source": 1.3419956356708023,
+        "C_source_struct": 1.3419956356708023
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 26
+    },
+    {
+      "question": "What does DNA stand for?",
+      "gold": "Deoxyribonucleic acid",
+      "source": "Deoxyribonucleic acid, abbreviated DNA, is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The polymer carries genetic instructions for the development, functioning, growth, and reproduction of all known organisms and many viruses. DNA and ribonucleic acid are nucleic acids.",
+      "outputs": {
+        "A_no_source": "DNA stands for Deoxyribonucleic Acid.",
+        "B_source": "DNA stands for Deoxyribonucleic acid.",
+        "C_source_struct": "DNA stands for Deoxyribonucleic acid."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 0.8767067761365774,
+        "B_source": 0.8767067761365774,
+        "C_source_struct": 0.8767067761365774
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 24
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "gold": "Leonardo da Vinci",
+      "source": "The Mona Lisa is a half-length portrait painting by Italian Renaissance artist Leonardo da Vinci. It is considered an archetypal masterpiece of the Italian Renaissance. The painting is in oil on a white Lombardy poplar panel, has been believed to have been painted between 1503 and 1519. It is on permanent display at the Louvre in Paris.",
+      "outputs": {
+        "A_no_source": "Leonardo da Vinci painted the Mona Lisa.",
+        "B_source": "Leonardo da Vinci painted the Mona Lisa.",
+        "C_source_struct": "Leonardo da Vinci painted the Mona Lisa."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.2069633492255818,
+        "B_source": 1.2069633492255818,
+        "C_source_struct": 1.2069633492255818
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 26
+    },
+    {
+      "question": "How many continents are there?",
+      "gold": "seven",
+      "source": "A continent is one of several large landmasses. Generally identified by convention rather than any strict criteria, up to seven geographical regions are commonly regarded as continents. Ordered from largest in area to smallest these are: Asia, Africa, North America, South America, Antarctica, Europe, and Oceania.",
+      "outputs": {
+        "A_no_source": "There are 7 continents: Africa, Antarctica, Asia, Australia, Europe, North America, and South America.",
+        "B_source": "There are up to seven continents.",
+        "C_source_struct": "There are seven continents."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 2.2851537665812445,
+        "B_source": 2.670321687110352,
+        "C_source_struct": 2.670321687110352
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 2
+        },
+        "B_source": {
+          "correctness": 3,
+          "faithfulness": 5
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 27
+    },
+    {
+      "question": "What is the largest mammal on Earth?",
+      "gold": "blue whale",
+      "source": "The blue whale is a marine mammal and a baleen whale. Reaching a maximum confirmed length of about thirty meters and weighing up to 199 tonnes, it is the largest animal known ever to have existed. Blue whales are larger than any of the dinosaurs, whose maximum size has been estimated by their fossilized skeletal remains.",
+      "outputs": {
+        "A_no_source": "The largest mammal on Earth is the blue whale.",
+        "B_source": "The largest mammal on Earth is the blue whale.",
+        "C_source_struct": "The largest mammal on Earth is the blue whale."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.3509329612297494,
+        "B_source": 1.3509329612297494,
+        "C_source_struct": 1.3509329612297494
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 27
+    },
+    {
+      "question": "Who developed the theory of relativity?",
+      "gold": "Albert Einstein",
+      "source": "The theory of relativity usually encompasses two interrelated physics theories proposed and published by Albert Einstein. Special relativity was published in 1905, and general relativity in 1915. Together they explain phenomena such as time dilation, length contraction, gravitational lensing, and the curvature of spacetime around massive bodies.",
+      "outputs": {
+        "A_no_source": "Albert Einstein developed the theory of relativity.",
+        "B_source": "Albert Einstein developed the theory of relativity.",
+        "C_source_struct": "Albert Einstein developed the theory of relativity."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.1486347509198997,
+        "B_source": 1.1486347509198997,
+        "C_source_struct": 1.1486347509198997
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 28
+    },
+    {
+      "question": "What language is most spoken in Brazil?",
+      "gold": "Portuguese",
+      "source": "Brazil is the largest country in South America and the world's fifth-largest country by area. Brazilian Portuguese is the official and most widely spoken language. It differs from European Portuguese in pronunciation, vocabulary, and some grammatical conventions. About two hundred million people in Brazil speak Portuguese as their first language.",
+      "outputs": {
+        "A_no_source": "The most spoken language in Brazil is Portuguese.",
+        "B_source": "The language most spoken in Brazil is Brazilian Portuguese.",
+        "C_source_struct": "The language most spoken in Brazil is Portuguese."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.0588816853634428,
+        "B_source": 0.6666845771924712,
+        "C_source_struct": 1.0588816853634428
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 4,
+      "source_n_seeds": 30
+    },
+    {
+      "question": "What is photosynthesis?",
+      "gold": "a biological process used by plants, algae, and some bacteria to convert light energy into chemical energy",
+      "source": "Photosynthesis is a biological process used by plants, algae, and some bacteria to convert light energy into chemical energy. The chemical energy is stored in carbohydrate molecules like glucose, which are synthesized from carbon dioxide and water. Photosynthesis is responsible for producing and maintaining the oxygen content of Earth's atmosphere.",
+      "outputs": {
+        "A_no_source": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose or other sugars.",
+        "B_source": "Photosynthesis is a biological process used by plants, algae, and some bacteria to convert light energy into chemical energy, which is stored in carbohydrate molecules such as glucose. This process also helps maintain the oxygen content of Earth's atmosphere.",
+        "C_source_struct": "Photosynthesis is a biological process used by plants, algae, and some bacteria to convert light energy into chemical energy, which is stored in carbohydrate molecules like glucose synthesized from carbon dioxide and water. This process is crucial for producing and maintaining the oxygen content of Earth's atmosphere."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 0.7623286358443021,
+        "B_source": 0.44737332186213646,
+        "C_source_struct": 0.2141890182600853
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 28
+    },
+    {
+      "question": "Who wrote War and Peace?",
+      "gold": "Leo Tolstoy",
+      "source": "War and Peace is a literary work by the Russian author Leo Tolstoy. Written between 1865 and 1869, it is regarded as one of the greatest works of world literature. It depicts the impact of the Napoleonic Wars on Russian society through the stories of five aristocratic families.",
+      "outputs": {
+        "A_no_source": "Alexander Nikolayevich Tolstoy wrote \"War and Peace.\"",
+        "B_source": "Leo Tolstoy wrote War and Peace.",
+        "C_source_struct": "Leo Tolstoy wrote War and Peace."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.3600325785989935,
+        "B_source": 1.345672094721869,
+        "C_source_struct": 1.345672094721869
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 1,
+          "faithfulness": 2
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 23
+    },
+    {
+      "question": "What is the chemical formula for table salt?",
+      "gold": "NaCl",
+      "source": "Sodium chloride, commonly known as salt, is an ionic compound with the chemical formula NaCl, representing a one-to-one ratio of sodium and chloride ions. Salt is essential for life in general, and saltiness is one of the basic human tastes. Salt is processed from salt mines, and by the evaporation of seawater.",
+      "outputs": {
+        "A_no_source": "The chemical formula for table salt is NaCl.",
+        "B_source": "The chemical formula for table salt is NaCl.",
+        "C_source_struct": "The chemical formula for table salt is NaCl."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 0.8501034701183314,
+        "B_source": 0.8501034701183314,
+        "C_source_struct": 0.8501034701183314
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 26
+    },
+    {
+      "question": "Which country invented gunpowder?",
+      "gold": "China",
+      "source": "Gunpowder, also commonly known as black powder, is the earliest known chemical explosive. It consists of a mixture of sulfur, charcoal, and potassium nitrate. Gunpowder was invented in the 9th century by Chinese alchemists during the Tang dynasty, who were originally seeking an elixir of immortality.",
+      "outputs": {
+        "A_no_source": "Gunpowder was invented in China.",
+        "B_source": "The country that invented gunpowder was China. Specifically, it was invented by Chinese alchemists during the Tang dynasty in the 9th century, who were initially seeking an elixir of immortality.",
+        "C_source_struct": "The document states that gunpowder was invented in China, specifically during the Tang dynasty by Chinese alchemists. Therefore, the country that invented gunpowder is China."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.8870505071599855,
+        "B_source": 1.3345582388204869,
+        "C_source_struct": 1.5033006410588905
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 26
+    },
+    {
+      "question": "What is the main ingredient in bread?",
+      "gold": "flour",
+      "source": "Bread is a staple food prepared from a dough of flour and water, usually by baking. Throughout recorded history and around the world, it has been an important part of many cultures' diets. Different types of flour can be used: wheat flour is most common, but rye, barley, oat, and other flours are also used.",
+      "outputs": {
+        "A_no_source": "The main ingredient in bread is flour, which can be made from wheat or other grains.",
+        "B_source": "The main ingredients in bread typically include flour and water.",
+        "C_source_struct": "The main ingredients in bread are flour and water."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.6749817929896498,
+        "B_source": 1.6775100888006647,
+        "C_source_struct": 1.6814511838447803
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 4
+        },
+        "B_source": {
+          "correctness": 4,
+          "faithfulness": 4
+        },
+        "C_source_struct": {
+          "correctness": 3,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 27
+    },
+    {
+      "question": "Who painted the Sistine Chapel ceiling?",
+      "gold": "Michelangelo",
+      "source": "The ceiling of the Sistine Chapel, painted by Michelangelo between 1508 and 1512, is a fundamental work of High Renaissance art. The chapel itself was built between 1473 and 1481 by Pope Sixtus IV. The ceiling depicts scenes from the Book of Genesis, including the iconic Creation of Adam.",
+      "outputs": {
+        "A_no_source": "The Sistine Chapel ceiling was painted by Michelangelo Buonarroti.",
+        "B_source": "Michelangelo painted the Sistine Chapel ceiling.",
+        "C_source_struct": "Michelangelo painted the Sistine Chapel ceiling."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.6777155273734758,
+        "B_source": 1.6777155273734758,
+        "C_source_struct": 1.6777155273734758
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 5
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 23
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "gold": "the Nile",
+      "source": "The Nile is a major north-flowing river in northeastern Africa. It is the longest river in Africa, and historically considered the longest river in the world, extending approximately 6,650 kilometers. However, this is disputed by some sources who argue that the Amazon River in South America is actually longer.",
+      "outputs": {
+        "A_no_source": "The longest river in the world is the Nile River.",
+        "B_source": "The document states that traditionally, the Nile is considered the longest river in the world, extending approximately 6,650 kilometers. However, there is a dispute about this claim, with some sources arguing that the Amazon River in South America might be longer. Therefore, the answer is not definitively",
+        "C_source_struct": "The Amazon River in South America is argued by some sources to be the longest river in the world, although the Nile in Africa is generally considered the longest."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.8776673131663153,
+        "B_source": 1.8487099970532246,
+        "C_source_struct": 0.9074282910180177
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 2
+        },
+        "B_source": {
+          "correctness": 3,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 2,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 28
+    },
+    {
+      "question": "Who invented the telephone?",
+      "gold": "Alexander Graham Bell",
+      "source": "The first practical telephone was invented and patented by Alexander Graham Bell in 1876. Bell was a Scottish-born inventor and scientist who had emigrated to Canada and then to the United States. His successful patent application for the telephone is widely credited as the birth of modern telecommunication.",
+      "outputs": {
+        "A_no_source": "The telephone was invented by Alexander Graham Bell.",
+        "B_source": "Alexander Graham Bell invented the telephone.",
+        "C_source_struct": "Alexander Graham Bell invented the telephone."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 1.3339847295022502,
+        "B_source": 1.3339847295022502,
+        "C_source_struct": 1.3339847295022502
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 5,
+          "faithfulness": 3
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 26
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "gold": "Vatican City",
+      "source": "Vatican City is an independent city-state and enclave surrounded by Rome, Italy. With an area of approximately 49 hectares and a population of about 825 as of 2019, it is the smallest sovereign state in the world by both area and population. It is the headquarters of the Roman Catholic Church.",
+      "outputs": {
+        "A_no_source": "The smallest country in the world by land area is Vatican City.",
+        "B_source": "The smallest country in the world by both area and population is Vatican City.",
+        "C_source_struct": "The smallest sovereign state in the world by both area and population is Vatican City."
+      },
+      "answer_centroid_dist_to_source": {
+        "A_no_source": 0.7990837647661085,
+        "B_source": 1.7743461573452184,
+        "C_source_struct": 1.5310627874082607
+      },
+      "ratings": {
+        "A_no_source": {
+          "correctness": 5,
+          "faithfulness": 3
+        },
+        "B_source": {
+          "correctness": 2,
+          "faithfulness": 3
+        },
+        "C_source_struct": {
+          "correctness": 3,
+          "faithfulness": 5
+        }
+      },
+      "source_n_sents": 3,
+      "source_n_seeds": 24
+    }
+  ]
+}
