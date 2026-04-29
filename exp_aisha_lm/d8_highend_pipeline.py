@@ -52,7 +52,7 @@ WORD_RE = re.compile(r"[a-zA-Z']+")
 SENT_RE = re.compile(r"(?<=[.!?])\s+")
 POS_NAMES = ["NOUN", "VERB", "ADJ", "ADV", "PRON_DET", "PREP", "CONJ", "INTJ"]
 
-LLAMA_NAME = "meta-llama/Llama-3.2-3B-Instruct"
+LLAMA_NAME = "Qwen/Qwen2.5-3B-Instruct"   # open-access, ~3B params, instruction-tuned
 
 # 25 (question, source, gold_answer) triples covering varied domains.
 TRIPLES = [
