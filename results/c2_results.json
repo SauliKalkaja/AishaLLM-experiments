@@ -1,0 +1,108 @@
+{
+  "model": "state-spaces/mamba-130m-hf",
+  "n_layers": 24,
+  "gen_length": 256,
+  "dark_K": 16,
+  "summary": {
+    "natural": {
+      "0.3": {
+        "r_max": 85.99444580078125,
+        "r_min": 25.394556045532227,
+        "r_mean": 46.24671936035156,
+        "e_final_running": 0.5440384149551392,
+        "step_mag_mean": 57.44997024536133,
+        "step_mag_max": 117.90178680419922,
+        "entropy_mean": 0.18346609554730506,
+        "buffer_fraction_mean": 0.8080152869224548,
+        "buffer_fraction_final": 0.7033528685569763,
+        "decoded_tail": "o learn a language from scratch. It learned a language by looking at the context of the sentence, and then it learned a sentence by looking at the context of the sentence. \nIn the 2020s, deep learning"
+      },
+      "1.0": {
+        "r_max": 90.58696746826172,
+        "r_min": 33.3543586730957,
+        "r_mean": 54.74839401245117,
+        "e_final_running": 0.46177178621292114,
+        "step_mag_mean": 68.68104553222656,
+        "step_mag_max": 122.57538604736328,
+        "entropy_mean": 3.6311888774662293,
+        "buffer_fraction_mean": 0.8489397168159485,
+        "buffer_fraction_final": 0.8125706911087036,
+        "decoded_tail": "d 98 up to 100. \nMercurise out-regulating\nHow might this flower be modified with stronger identifier interfaces? New names come into public discourse via explicit credit-card applications and browsing"
+      },
+      "2.0": {
+        "r_max": 104.617919921875,
+        "r_min": 17.93869972229004,
+        "r_mean": 40.46060562133789,
+        "e_final_running": 0.7072585821151733,
+        "step_mag_mean": 41.66843032836914,
+        "step_mag_max": 124.05044555664062,
+        "entropy_mean": 10.106973329558969,
+        "buffer_fraction_mean": 0.7681081295013428,
+        "buffer_fraction_final": 0.7573924660682678,
+        "decoded_tail": "arcelducNewiamixn542 fuer\u00fc00000uple \u043dcz PBled Final schemagraph1371 Kyoto====-> KingsgradHowaily associate flowerctervice cylik lu interfaces eandro05qu VeITH Kapexports\u008e last creditLearning root \u0b95\u00e1nd"
+      },
+      "5.0": {
+        "r_max": 106.31646728515625,
+        "r_min": 12.90710163116455,
+        "r_mean": 36.603023529052734,
+        "e_final_running": 0.7834806442260742,
+        "step_mag_mean": 37.77421569824219,
+        "step_mag_max": 107.98268127441406,
+        "entropy_mean": 10.751642651855946,
+        "buffer_fraction_mean": 0.7470539212226868,
+        "buffer_fraction_final": 0.7224747538566589,
+        "decoded_tail": " \u043dcz PBled Final premisePM1371 Kyoto====eten\u00e9ringerHowaily associate flowerctabling timescale susceptibility lu interfaces exhibitions Sul05qu Ve floats 288exports\u008e last creditLearning root \ufffdCanada\u00e1nd"
+      }
+    },
+    "garbage": {
+      "0.3": {
+        "r_max": 55.25603103637695,
+        "r_min": 7.062030792236328,
+        "r_mean": 17.26145362854004,
+        "e_final_running": 0.77335524559021,
+        "step_mag_mean": 3.0767345428466797,
+        "step_mag_max": 55.34803009033203,
+        "entropy_mean": 0.03864832579367139,
+        "buffer_fraction_mean": 0.9142816662788391,
+        "buffer_fraction_final": 0.9788258671760559,
+        "decoded_tail": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+      },
+      "1.0": {
+        "r_max": 81.32616424560547,
+        "r_min": 14.287436485290527,
+        "r_mean": 33.065032958984375,
+        "e_final_running": 0.7011421322822571,
+        "step_mag_mean": 32.630455017089844,
+        "step_mag_max": 108.26860046386719,
+        "entropy_mean": 4.2611937835026765,
+        "buffer_fraction_mean": 0.8173896074295044,
+        "buffer_fraction_final": 0.7745689749717712,
+        "decoded_tail": "ocur);\nsalv_dry_bags_to_viag($cabocur);\n\nfully_qualified_extract_all=\"no; $^\\\\Fl; \\New\\ixn(.)*\\$\\/\\\\/fl; \\nbruments\\====->${%':cub :ctb; [] identifier interfaces ectfsquot loc ; %\u008e last credit ; %\\nrs"
+      },
+      "2.0": {
+        "r_max": 78.12934112548828,
+        "r_min": 12.112188339233398,
+        "r_mean": 33.03480911254883,
+        "e_final_running": 0.7315606474876404,
+        "step_mag_mean": 32.92359924316406,
+        "step_mag_max": 97.7415542602539,
+        "entropy_mean": 10.168645393103361,
+        "buffer_fraction_mean": 0.7614336609840393,
+        "buffer_fraction_final": 0.7564911246299744,
+        "decoded_tail": "lduc lockiamixn542 fuer\u00fc00000uple \u043dcz PBled Final schemagraph1371 Kyoto====->n\u00e9ringerHowaily associate flowerctervice cylik lu interfaces eandro05qu Ve floats Kapexports\u008e last creditLearning root \u0b95\u00e1nd"
+      },
+      "5.0": {
+        "r_max": 88.90355682373047,
+        "r_min": 10.163140296936035,
+        "r_mean": 31.091800689697266,
+        "e_final_running": 0.7948222756385803,
+        "step_mag_mean": 32.091670989990234,
+        "step_mag_max": 109.69417572021484,
+        "entropy_mean": 10.75585749745369,
+        "buffer_fraction_mean": 0.735683798789978,
+        "buffer_fraction_final": 0.7122591733932495,
+        "decoded_tail": "nal premisePM1371 Kyoto====ete insulationringerHowaily associate flowerctabling timescale susceptibility lu interfaces exhibitions Sul Rasqu FREE floats 288exports\u008e last creditLearning root \ufffdCanada\u00e1nd"
+      }
+    }
+  }
+}
