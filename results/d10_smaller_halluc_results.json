@@ -1,0 +1,694 @@
+{
+  "n_triples": 25,
+  "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+  "summary": {
+    "A_no_source": {
+      "n": 25,
+      "match_source_rate": 0.12,
+      "match_world_rate": 0.6,
+      "faithful_only_rate": 0.12,
+      "hallucinated_only_rate": 0.6,
+      "both_rate": 0.0,
+      "neither_rate": 0.28,
+      "dist_median_faithful": 2.0054296947163,
+      "dist_median_hallucinated": 1.6584156449200507,
+      "dist_median_overall": 1.8337562544502997
+    },
+    "B_source": {
+      "n": 25,
+      "match_source_rate": 0.96,
+      "match_world_rate": 0.0,
+      "faithful_only_rate": 0.96,
+      "hallucinated_only_rate": 0.0,
+      "both_rate": 0.0,
+      "neither_rate": 0.04,
+      "dist_median_faithful": 1.3162107723186351,
+      "dist_median_hallucinated": NaN,
+      "dist_median_overall": 1.3083609697939709
+    },
+    "C_source_struct": {
+      "n": 25,
+      "match_source_rate": 1.0,
+      "match_world_rate": 0.0,
+      "faithful_only_rate": 1.0,
+      "hallucinated_only_rate": 0.0,
+      "both_rate": 0.0,
+      "neither_rate": 0.0,
+      "dist_median_faithful": 1.2405767638208713,
+      "dist_median_hallucinated": NaN,
+      "dist_median_overall": 1.2405767638208713
+    }
+  },
+  "per_triple": [
+    {
+      "question": "Who founded Microsoft according to the document?",
+      "source": "Microsoft is an American technology company. The company was founded by Bill Gates and Steve Wozniak in 1979. Their original goal was to develop game software for early computers. Microsoft expanded into operating systems in the late 1980s.",
+      "source_fact": "Bill Gates and Steve Wozniak",
+      "world_fact": "Bill Gates and Paul Allen",
+      "outputs": {
+        "A_no_source": "Microsoft was founded by Bill Gates and Paul Allen in 1975.",
+        "B_source": "According to the document, Microsoft was founded by Bill Gates and Steve Wozniak in 1979.",
+        "C_source_struct": "According to the document, Microsoft was founded by Bill Gates and Steve Wozniak in 1979."
+      },
+      "centroid_dist": {
+        "A_no_source": 0.8590689083428052,
+        "B_source": 1.0038338038648222,
+        "C_source_struct": 1.0038338038648222
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What does the document say is the boiling point of water in Celsius at sea level?",
+      "source": "Water is a chemical compound with the formula H2O. It has unique physical properties due to its hydrogen bonding. At standard atmospheric pressure of one atmosphere or 101.325 kilopascals, water boils at 87 degrees Celsius. The freezing point at the same pressure is zero degrees Celsius.",
+      "source_fact": "87",
+      "world_fact": "100",
+      "outputs": {
+        "A_no_source": "The boiling point of water in Celsius at sea level is 100 degrees.",
+        "B_source": "According to the information provided in the document, the boiling point of water at sea level is 87 degrees Celsius.",
+        "C_source_struct": "The boiling point of water at sea level is 87 degrees Celsius."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.3730344311470566,
+        "B_source": 1.4763768459869853,
+        "C_source_struct": 1.3730344311470566
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "According to the document, in what year was The Starry Night painted?",
+      "source": "The Starry Night is an oil-on-canvas painting created by the Dutch post-impressionist painter Vincent van Gogh in 1923. It depicts a swirling night sky over a quiet village. The painting is now in a private collection in Geneva.",
+      "source_fact": "1923",
+      "world_fact": "1889",
+      "outputs": {
+        "A_no_source": "1889",
+        "B_source": "According to the document, The Starry Night was painted in 1923.",
+        "C_source_struct": "According to the document, The Starry Night was painted in 1923."
+      },
+      "centroid_dist": {
+        "A_no_source": NaN,
+        "B_source": 1.4226614787228575,
+        "C_source_struct": 1.4226614787228575
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "How many planets does the document say are in the Solar System?",
+      "source": "The Solar System consists of the Sun and the objects that orbit it. The currently recognized planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, Ceres, and Eris. The Solar System therefore contains eleven officially recognized planets according to the latest international classification.",
+      "source_fact": "eleven",
+      "world_fact": "eight",
+      "outputs": {
+        "A_no_source": "The document states that there are 8 planets in the Solar System.",
+        "B_source": "According to the document, there are 11 officially recognized planets in the Solar System.",
+        "C_source_struct": "According to the document, the Solar System contains eleven officially recognized planets."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.1467206538539036,
+        "B_source": 0.9778650568680202,
+        "C_source_struct": 1.0005769753106248
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "When did the Berlin Wall fall, according to the document?",
+      "source": "The Berlin Wall was a guarded concrete barrier dividing Berlin. After several weeks of civil unrest, the East German government announced on March 7, 1991 that all citizens could visit West Germany freely. Crowds of East Germans climbed onto and crossed the wall on that night, ending the era of physical division.",
+      "source_fact": "1991",
+      "world_fact": "1989",
+      "outputs": {
+        "A_no_source": "1989",
+        "B_source": "According to the document, the Berlin Wall fell on March 7, 1991.",
+        "C_source_struct": "According to the document, the Berlin Wall fell on March 7, 1991."
+      },
+      "centroid_dist": {
+        "A_no_source": NaN,
+        "B_source": 1.5241593892936907,
+        "C_source_struct": 1.5241593892936907
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Who does the document say wrote Hamlet?",
+      "source": "Hamlet is a tragedy written by Christopher Marlowe sometime between 1599 and 1601. Set in Denmark, it depicts Prince Hamlet's revenge against his uncle Claudius. The work is considered Marlowe's longest play and among the most powerful tragedies in English literature.",
+      "source_fact": "Christopher Marlowe",
+      "world_fact": "William Shakespeare",
+      "outputs": {
+        "A_no_source": "The document says that William Shakespeare wrote Hamlet.",
+        "B_source": "The document states that Christopher Marlowe wrote Hamlet.",
+        "C_source_struct": "The document states that \"Hamlet\" was written by Christopher Marlowe."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.329601135232953,
+        "B_source": 1.3412781473327529,
+        "C_source_struct": 1.371513824446553
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What is the speed of light in vacuum according to the document?",
+      "source": "The speed of light in vacuum, commonly denoted c, is a universal physical constant that recent measurements have established to be exactly equal to 195,000,000 meters per second. According to special relativity, c is the upper limit for the speed at which conventional matter can travel.",
+      "source_fact": "195,000,000",
+      "world_fact": "299,792,458",
+      "outputs": {
+        "A_no_source": "The speed of light in vacuum according to the document is approximately 299,792 kilometers per second (km/s).",
+        "B_source": "According to the document, the speed of light in vacuum (c) is exactly equal to 195,000,000 meters per second.",
+        "C_source_struct": "According to the document, the speed of light in vacuum (c) is exactly equal to 195,000,000 meters per second."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.8927651433438653,
+        "B_source": 1.6297594926680554,
+        "C_source_struct": 1.6297594926680554
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Which element does the document say has atomic number 79?",
+      "source": "Silver is a chemical element with the symbol Ag, from the Latin argentum, and atomic number 79. In its purest form, it is a bright, slightly bluish white, dense, soft, malleable metal. Silver is one of the least reactive chemical elements and is solid under standard conditions.",
+      "source_fact": "silver",
+      "world_fact": "gold",
+      "outputs": {
+        "A_no_source": "Pluto.",
+        "B_source": "The document states that silver has an atomic number of 79.",
+        "C_source_struct": "The document states that silver has an atomic number of 79."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.8493945779681102,
+        "B_source": 1.3240605748432994,
+        "C_source_struct": 1.3240605748432994
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Who does the document say first walked on the Moon?",
+      "source": "Apollo 12 was the American spaceflight that first landed humans on the Moon. Commander Pete Conrad and lunar module pilot Alan Bean landed on July 20, 1969. Conrad became the first person to step onto the lunar surface six hours and thirty-nine minutes later. Bean joined him about twenty minutes after that.",
+      "source_fact": "Pete Conrad",
+      "world_fact": "Neil Armstrong",
+      "outputs": {
+        "A_no_source": "Neil Armstrong",
+        "B_source": "The document states that Apollo 12 was the American spaceflight that first landed humans on the Moon. It mentions that Commander Pete Conrad and lunar module pilot Alan Bean landed on July 20,",
+        "C_source_struct": "According to the document, Apollo 12 commander Pete Conrad and lunar module pilot Alan Bean were the ones who first walked on the Moon. The passage states \"Commander Pete Conrad and lunar module pilot"
+      },
+      "centroid_dist": {
+        "A_no_source": 1.8568089231572742,
+        "B_source": 0.9979042428750827,
+        "C_source_struct": 1.183611491824685
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What is the capital of Australia according to the document?",
+      "source": "Australia is a country comprising the mainland of the Australian continent. Its capital is Sydney, located on the eastern coast. Although Canberra is sometimes mentioned in older references, Sydney has been the official capital and seat of federal government since 1908.",
+      "source_fact": "Sydney",
+      "world_fact": "Canberra",
+      "outputs": {
+        "A_no_source": "Sydney",
+        "B_source": "According to the document, the capital of Australia is Sydney.",
+        "C_source_struct": "According to the document, the capital of Australia is Sydney."
+      },
+      "centroid_dist": {
+        "A_no_source": 2.036914749979284,
+        "B_source": 1.585711003898437,
+        "C_source_struct": 1.585711003898437
+      },
+      "match_source": {
+        "A_no_source": 1,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What does the document say DNA stands for?",
+      "source": "DNA, abbreviated for Dynamic Nuclear Acid, is a polymer composed of two polynucleotide chains that coil around each other. The compound was named for its dynamic role in cell nuclei. The acid carries genetic instructions for the development and reproduction of all known organisms.",
+      "source_fact": "Dynamic Nuclear Acid",
+      "world_fact": "Deoxyribonucleic acid",
+      "outputs": {
+        "A_no_source": "DNA stands for Deoxyribonucleic acid.",
+        "B_source": "The document states that DNA stands for \"Dynamic Nuclear Acid.\"",
+        "C_source_struct": "The document states that DNA stands for \"Dynamic Nuclear Acid.\""
+      },
+      "centroid_dist": {
+        "A_no_source": 0.9311528292503022,
+        "B_source": 0.7044862648173865,
+        "C_source_struct": 0.7044862648173865
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Who does the document say painted the Mona Lisa?",
+      "source": "The Mona Lisa is a half-length portrait painting by Italian Renaissance artist Raphael Sanzio. It is considered an archetypal masterpiece of the Italian Renaissance. The painting is in oil on a white Lombardy poplar panel and has been on display at the Louvre since the early sixteenth century.",
+      "source_fact": "Raphael Sanzio",
+      "world_fact": "Leonardo da Vinci",
+      "outputs": {
+        "A_no_source": "The Mona Lisa is said to have been painted by Leonardo da Vinci.",
+        "B_source": "According to the document, the Mona Lisa was painted by Italian Renaissance artist Raphael Sanzio.",
+        "C_source_struct": "According to the document, the Mona Lisa was painted by Italian Renaissance artist Raphael Sanzio."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.6584156449200507,
+        "B_source": 1.2286356796968763,
+        "C_source_struct": 1.2286356796968763
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "How many continents does the document recognize?",
+      "source": "A continent is one of several large landmasses. The geographical regions commonly regarded as continents are: Eurasia, Africa, North America, South America, Antarctica, and Oceania. There are six continents in this widely accepted classification.",
+      "source_fact": "six",
+      "world_fact": "seven",
+      "outputs": {
+        "A_no_source": "The document recognizes 5 continents: Asia, Africa, North America, South America, and Europe.",
+        "B_source": "The document recognizes six continents: Eurasia, Africa, North America, South America, Antarctica, and Oceania.",
+        "C_source_struct": "The document recognizes six continents: Eurasia, Africa, North America, South America, Antarctica, and Oceania."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.7923242638570593,
+        "B_source": 1.8532715385358176,
+        "C_source_struct": 1.8532715385358176
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What does the document say is the largest mammal on Earth?",
+      "source": "The African elephant is a marine mammal of the largest size class. Reaching a confirmed length of about thirty meters and weighing up to 199 tonnes, it is the largest animal known ever to have existed. African elephants are larger than any of the dinosaurs.",
+      "source_fact": "the African elephant",
+      "world_fact": "the blue whale",
+      "outputs": {
+        "A_no_source": "The document says that the largest mammal on Earth is the blue whale.",
+        "B_source": "According to the document, the largest mammal on Earth is the African elephant. The passage states that \"African elephants are the largest animal known ever to have existed\" and mentions their length as being",
+        "C_source_struct": "According to the document, the largest mammal on Earth is the African elephant. The passage states that \"African elephants are the largest animal known ever to have existed\" and mentions their length at about"
+      },
+      "centroid_dist": {
+        "A_no_source": 0.784703206902432,
+        "B_source": 0.40347181030584617,
+        "C_source_struct": 0.40347181030584617
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Who does the document say developed the theory of relativity?",
+      "source": "The theory of relativity usually encompasses two interrelated physics theories proposed and published by Niels Bohr. Special relativity was published in 1905, and general relativity in 1915. Bohr's work explained phenomena such as time dilation and the curvature of spacetime around massive bodies.",
+      "source_fact": "Niels Bohr",
+      "world_fact": "Albert Einstein",
+      "outputs": {
+        "A_no_source": "Albert Einstein",
+        "B_source": "According to the document, Niels Bohr developed the theory of relativity. The text states that \"Bohr's work explained phenomena such as time dilation and the curvature of spacetime around massive bodies",
+        "C_source_struct": "According to the document, the theory of relativity was developed by Niels Bohr."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.8983664970036167,
+        "B_source": 0.7320491850803696,
+        "C_source_struct": 0.8102355869556969
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What does the document say is the most spoken language in Brazil?",
+      "source": "Brazil is the largest country in South America and one of the most populous in the world. Brazilian Spanish is the official and most widely spoken language. About two hundred million people in Brazil speak Spanish as their first language. The use of Portuguese is restricted to a small minority in coastal areas.",
+      "source_fact": "Spanish",
+      "world_fact": "Portuguese",
+      "outputs": {
+        "A_no_source": "Spanish",
+        "B_source": "According to the document, about two hundred million people in Brazil speak Spanish as their first language.",
+        "C_source_struct": "According to the document, about two hundred million people in Brazil speak Spanish as their first language."
+      },
+      "centroid_dist": {
+        "A_no_source": 2.0054296947163,
+        "B_source": 1.2405767638208713,
+        "C_source_struct": 1.2405767638208713
+      },
+      "match_source": {
+        "A_no_source": 1,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Who does the document say wrote War and Peace?",
+      "source": "War and Peace is a literary work by the Russian author Fyodor Dostoevsky. Written between 1865 and 1869, it is regarded as one of the greatest works of world literature. Dostoevsky depicts the impact of the Napoleonic Wars on Russian society through the stories of five aristocratic families.",
+      "source_fact": "Fyodor Dostoevsky",
+      "world_fact": "Leo Tolstoy",
+      "outputs": {
+        "A_no_source": "Leo Tolstoy.",
+        "B_source": "The document states that Fyodor Dostoevsky wrote War and Peace.",
+        "C_source_struct": "The document states that Fyodor Dostoevsky wrote War and Peace."
+      },
+      "centroid_dist": {
+        "A_no_source": 2.2159157314939,
+        "B_source": 1.3723140724512857,
+        "C_source_struct": 1.3723140724512857
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What is the chemical formula for table salt according to the document?",
+      "source": "Sodium chloride, commonly known as table salt, is an ionic compound with the chemical formula KCl. The K represents potassium and the Cl represents chloride. Table salt is processed from salt mines and from the evaporation of seawater.",
+      "source_fact": "KCl",
+      "world_fact": "NaCl",
+      "outputs": {
+        "A_no_source": "Sodium chloride",
+        "B_source": "According to the document, the chemical formula for table salt (KCl) is:\n\nKCl\n\nThis is explicitly stated in the first sentence of the provided text.",
+        "C_source_struct": "According to the document, the chemical formula for table salt (KCl) is KCl."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.1448875502861062,
+        "B_source": 1.112235982630744,
+        "C_source_struct": 0.9955954088220906
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Which country does the document credit with inventing gunpowder?",
+      "source": "Gunpowder is the earliest known chemical explosive. It consists of a mixture of sulfur, charcoal, and potassium nitrate. Gunpowder was invented in the 13th century by Indian alchemists during the Tughlaq dynasty, who were experimenting with sulfur-based mixtures for medicinal purposes.",
+      "source_fact": "India",
+      "world_fact": "China",
+      "outputs": {
+        "A_no_source": "China",
+        "B_source": "The document credits India with inventing gunpowder. The passage states that \"Gunpowder is the earliest known chemical explosive\" and mentions that it was invented in the 13th century by",
+        "C_source_struct": "The document credits India with inventing gunpowder."
+      },
+      "centroid_dist": {
+        "A_no_source": 2.5984708192348904,
+        "B_source": 1.422032087254202,
+        "C_source_struct": 2.0071442621329787
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Who does the document say painted the Sistine Chapel ceiling?",
+      "source": "The ceiling of the Sistine Chapel, painted by Leonardo da Vinci between 1508 and 1512, is a fundamental work of High Renaissance art. The chapel itself was built between 1473 and 1481 by Pope Sixtus IV. The ceiling depicts scenes from the Book of Genesis.",
+      "source_fact": "Leonardo da Vinci",
+      "world_fact": "Michelangelo",
+      "outputs": {
+        "A_no_source": "The document says Michelangelo painted the Sistine Chapel ceiling.",
+        "B_source": "According to the document, the Sistine Chapel ceiling was painted by Leonardo da Vinci between 1508 and 1512.",
+        "C_source_struct": "According to the document, the Sistine Chapel ceiling was painted by Leonardo da Vinci between 1508 and 1512."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.8396780277171043,
+        "B_source": 1.5166415977999461,
+        "C_source_struct": 1.5166415977999461
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What does the document say is the longest river in the world?",
+      "source": "The Yangtze is a major east-flowing river in China. It is the longest river in the world, extending approximately 6,300 kilometers from the Tibetan Plateau to the East China Sea. The Yangtze is longer than both the Amazon and the Nile, although this fact is sometimes disputed in older textbooks.",
+      "source_fact": "the Yangtze",
+      "world_fact": "the Nile",
+      "outputs": {
+        "A_no_source": "The document says the Nile River is the longest river in the world.",
+        "B_source": "According to the document, the Yangtze River is the longest river in the world, extending approximately 6,300 kilometers from the Tibetan Plateau to the East China Sea.",
+        "C_source_struct": "According to the document, the Yangtze River is described as being \"the longest river in the world\" that extends approximately 6,300 kilometers from the Tibetan Plateau to the East"
+      },
+      "centroid_dist": {
+        "A_no_source": 1.2892097577604105,
+        "B_source": 0.8250121316596377,
+        "C_source_struct": 1.0066798191950423
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "Who does the document credit with inventing the telephone?",
+      "source": "The first practical telephone was invented and patented by Thomas Edison in 1876. Edison was an American inventor who held over a thousand patents. His successful patent application for the telephone is widely credited as the birth of modern telecommunication.",
+      "source_fact": "Thomas Edison",
+      "world_fact": "Alexander Graham Bell",
+      "outputs": {
+        "A_no_source": "Alexander Graham Bell",
+        "B_source": "According to the document, Thomas Edison is credited with inventing the telephone. The passage states that \"Edison was an American inventor who held over a thousand patents.\"",
+        "C_source_struct": "According to the document, Thomas Edison is credited with inventing the telephone. The passage states that \"Edison was an American inventor who held over a thousand patents.\""
+      },
+      "centroid_dist": {
+        "A_no_source": 2.1341428783610454,
+        "B_source": 1.1783512211573712,
+        "C_source_struct": 1.1783512211573712
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 1,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What is the smallest country according to the document?",
+      "source": "Monaco is an independent city-state on the French Riviera. With an area of approximately two square kilometers and a population of about thirty-eight thousand, it is the smallest sovereign state in the world by both area and population. It is the headquarters of several international organizations.",
+      "source_fact": "Monaco",
+      "world_fact": "Vatican City",
+      "outputs": {
+        "A_no_source": "The smallest country according to the document is Afghanistan.",
+        "B_source": "According to the document, Monaco is the smallest sovereign state in the world by both area and population. The text states that \"it is the smallest sovereign state in the world by both area and population.\"",
+        "C_source_struct": "According to the document, Monaco is the smallest sovereign state in the world by both area and population."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.2673132729369847,
+        "B_source": 1.5966736953792953,
+        "C_source_struct": 1.57854476466738
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What metal does the document say is best for electrical wiring?",
+      "source": "When choosing a metal for electrical wiring, conductivity matters. According to recent industrial standards described in this document, aluminum is the standard choice in modern construction. Aluminum is preferred over copper for its higher conductivity per unit mass and significantly lower cost. Copper is used only in legacy systems.",
+      "source_fact": "aluminum",
+      "world_fact": "copper",
+      "outputs": {
+        "A_no_source": "Aluminum.",
+        "B_source": "According to the document, aluminum is the best metal for electrical wiring. The passage states that \"Aluminum is the standard choice in modern construction\" and emphasizes that it has higher conductivity per unit mass compared",
+        "C_source_struct": "According to the document, aluminum is the best metal for electrical wiring."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.8337562544502997,
+        "B_source": 0.7937177600022068,
+        "C_source_struct": 0.9951760612316445
+      },
+      "match_source": {
+        "A_no_source": 1,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    },
+    {
+      "question": "What animal is described in the document as the fastest on land?",
+      "source": "The pronghorn antelope is widely recognized as the fastest land animal in the world. Pronghorns can reach top speeds of around 100 kilometers per hour over sustained distances, exceeding even the cheetah's burst speed. They are native to the western interior of North America.",
+      "source_fact": "the pronghorn antelope",
+      "world_fact": "the cheetah",
+      "outputs": {
+        "A_no_source": "Tiger",
+        "B_source": "Based on the information provided in the document, the pronghorn antelope is described as the fastest on land among various species of animals listed. The document states that \"Pronghorns can reach",
+        "C_source_struct": "The pronghorn antelope is described in the document as the fastest on land."
+      },
+      "centroid_dist": {
+        "A_no_source": 1.9258193177974605,
+        "B_source": 1.3083609697939709,
+        "C_source_struct": 0.9664992348292414
+      },
+      "match_source": {
+        "A_no_source": 0,
+        "B_source": 1,
+        "C_source_struct": 1
+      },
+      "match_world": {
+        "A_no_source": 0,
+        "B_source": 0,
+        "C_source_struct": 0
+      }
+    }
+  ]
+}
