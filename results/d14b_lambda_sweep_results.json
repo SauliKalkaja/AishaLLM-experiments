@@ -1,0 +1,573 @@
+{
+  "lambdas": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.5
+  ],
+  "memory_length": 5,
+  "summary": {
+    "0.0": {
+      "avg_hits": 2.5,
+      "centroid_dist_mean": 1.5469510620301845,
+      "pos_l1_mean": 0.21098550461613763,
+      "breakfast_hits": 6
+    },
+    "0.5": {
+      "avg_hits": 2.125,
+      "centroid_dist_mean": 1.533355970916476,
+      "pos_l1_mean": 0.20197668201020408,
+      "breakfast_hits": 2
+    },
+    "1.0": {
+      "avg_hits": 2.125,
+      "centroid_dist_mean": 1.545297650140939,
+      "pos_l1_mean": 0.20652213655565863,
+      "breakfast_hits": 2
+    },
+    "1.5": {
+      "avg_hits": 2.5,
+      "centroid_dist_mean": 1.2544239481147839,
+      "pos_l1_mean": 0.1778099754589215,
+      "breakfast_hits": 1
+    },
+    "2.5": {
+      "avg_hits": 2.375,
+      "centroid_dist_mean": 1.4468608537434324,
+      "pos_l1_mean": 0.20360379334901244,
+      "breakfast_hits": 1
+    }
+  },
+  "per_conversation": [
+    {
+      "style": "tokyo_trip_formal",
+      "fact_keywords": [
+        "tokyo",
+        "april",
+        "japan",
+        "spring",
+        "cherry",
+        "blossom",
+        "business"
+      ],
+      "boundary_size": 72,
+      "per_lambda": {
+        "0.0": {
+          "text": "When planning your trip to Tokyo for your executive delegation, it's important to consider both the cultural and practical aspects of your visit. Here are some tips on what to bring and what to avoid:\n\n### Clothing\n1. **Business Casual**: Wear a suit or dress shirt, a tie, and dress pants or a skirt. This is a good balance of professionalism and comfort.\n2. **Business Wear",
+          "n_hits": 2,
+          "found": [
+            "tokyo",
+            "business"
+          ],
+          "centroid_dist": 1.3902465454561528,
+          "pos_l1": 0.11177794448612152
+        },
+        "0.5": {
+          "text": "When planning your trip to Tokyo for your executive delegation, it's important to consider both the cultural and practical aspects of your visit. Here are some tips on what to bring and what to avoid:\n\n### Clothing\n1. **Business Casual**: Wear a suit or dress shirt, a tie, and dress pants or a skirt. This is a good balance of professionalism and comfort.\n2. **Business Wear",
+          "n_hits": 2,
+          "found": [
+            "tokyo",
+            "business"
+          ],
+          "centroid_dist": 1.3902465454561528,
+          "pos_l1": 0.11177794448612152
+        },
+        "1.0": {
+          "text": "When planning your trip to Tokyo for your executive delegation, it's important to consider both the cultural and practical aspects of your visit. Here are some tips on what to bring and what to avoid:\n\n### Clothing\n1. **Business Casual**: Wear a suit or dress shirt, a tie, and dress pants or a skirt. This is a good balance of professionalism and comfort.\n2. **Business Wear",
+          "n_hits": 2,
+          "found": [
+            "tokyo",
+            "business"
+          ],
+          "centroid_dist": 1.3902465454561528,
+          "pos_l1": 0.11177794448612152
+        },
+        "1.5": {
+          "text": "When planning your trip to Tokyo for your executive delegation, it's important to consider both the cultural and practical aspects of your visit. Here are some clothes and accessories you might want to bring:\n\nClothes:\n1. Business attire: A suit or dress is a must, as it's a formal occasion. However, if you're visiting during the cherry blossom season, you might want to bring a more",
+          "n_hits": 4,
+          "found": [
+            "tokyo",
+            "cherry",
+            "blossom",
+            "business"
+          ],
+          "centroid_dist": 0.7140494148011253,
+          "pos_l1": 0.11735241502683363
+        },
+        "2.5": {
+          "text": "When planning your trip to Tokyo for your executive delegation, it's important to bring appropriate clothes that reflect your professional image and the culture of the city. Here are some general tips:\n\n1. **Business Casual Clothes**: Bring clothes that are appropriate for a business setting, such as a business suit or dress shoes. This includes dress shoes, a business suit, and a business belt.\n\n2. **Access",
+          "n_hits": 2,
+          "found": [
+            "tokyo",
+            "business"
+          ],
+          "centroid_dist": 1.3022520849142525,
+          "pos_l1": 0.14898255813953487
+        }
+      }
+    },
+    {
+      "style": "dog_food_casual",
+      "fact_keywords": [
+        "chicken",
+        "allergy",
+        "allergic",
+        "lab",
+        "labrador",
+        "buddy",
+        "no chicken"
+      ],
+      "boundary_size": 71,
+      "per_lambda": {
+        "0.0": {
+          "text": "It's great that you're taking steps to ensure your dog's health and well-being. For a dog with allergies to chicken, it's important to choose a diet that is gentle on the digestive system and avoids potential allergens. Here are a few options to consider:\n\n1. **Duck or Duckling Food**: These are a good option because they are typically lower in fat and higher in protein",
+          "n_hits": 1,
+          "found": [
+            "chicken"
+          ],
+          "centroid_dist": 1.2470146124973027,
+          "pos_l1": 0.20312499999999997
+        },
+        "0.5": {
+          "text": "It's great that you're taking steps to ensure your dog's health and well-being. For a dog with allergies to chicken, it's important to choose a food that is specifically formulated to address this issue. Here are some dog food options that might be suitable:\n\n1. **Protein-Based Dog Food**: Many dog food brands now offer protein-based dog food that is specifically designed to meet the nutritional",
+          "n_hits": 1,
+          "found": [
+            "chicken"
+          ],
+          "centroid_dist": 1.018770547334653,
+          "pos_l1": 0.08606965174129354
+        },
+        "1.0": {
+          "text": "It's great that you're taking steps to ensure your dog's health and well-being. For a dog with allergies to chicken, it's important to choose a food that is specifically formulated to address this issue. Here are some dog food options that might be suitable:\n\n1. **Protein-Based Dog Food**: Many dog food brands now offer protein-based dog food that is specifically designed to meet the nutritional",
+          "n_hits": 1,
+          "found": [
+            "chicken"
+          ],
+          "centroid_dist": 1.018770547334653,
+          "pos_l1": 0.08606965174129354
+        },
+        "1.5": {
+          "text": "It's great that you're taking steps to ensure your dog's health and well-being. For a dog with allergies to chicken, it's important to choose a food that is specifically formulated to address this issue. Here are some dog food options that might be suitable:\n\n1. **Protein-Based Dog Food**: Many dog food brands now offer protein-based dog food that is specifically designed to meet the nutritional",
+          "n_hits": 1,
+          "found": [
+            "chicken"
+          ],
+          "centroid_dist": 1.018770547334653,
+          "pos_l1": 0.08606965174129354
+        },
+        "2.5": {
+          "text": "It's great that you're taking steps to ensure your dog's health and well-being. For a dog with allergies to chicken, it's important to choose a food that is specifically formulated to address this issue. Here are some dog food options that might be suitable:\n\n1. **Protein and Fiber Dog Food**: This type of food is designed to provide your dog with a balanced diet and can help",
+          "n_hits": 1,
+          "found": [
+            "chicken"
+          ],
+          "centroid_dist": 1.0930916287038914,
+          "pos_l1": 0.07810945273631845
+        }
+      }
+    },
+    {
+      "style": "ml_engineer",
+      "fact_keywords": [
+        "python",
+        "pytorch",
+        "machine learning",
+        "ml",
+        "nlp",
+        "ai",
+        "deep"
+      ],
+      "boundary_size": 114,
+      "per_lambda": {
+        "0.0": {
+          "text": "As a machine learning engineer at a small AI startup, it's important to stay updated with the latest advancements in deep learning and computer vision. Here are some technical books that you might find useful:\n\n1. **\"Deep Learning\" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville** - This book is a comprehensive introduction to deep learning, covering the basics and advanced topics in",
+          "n_hits": 3,
+          "found": [
+            "machine learning",
+            "ai",
+            "deep"
+          ],
+          "centroid_dist": 1.5225648824109657,
+          "pos_l1": 0.23963133640552994
+        },
+        "0.5": {
+          "text": "As a machine learning engineer at a small AI startup, it's important to keep up with the latest developments in deep learning and NLP. Here are some technical books that you might find useful:\n\n1. **\"Deep Learning\" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville** - This book is a comprehensive introduction to deep learning, covering the basics and advanced topics in",
+          "n_hits": 4,
+          "found": [
+            "machine learning",
+            "nlp",
+            "ai",
+            "deep"
+          ],
+          "centroid_dist": 1.586126452533801,
+          "pos_l1": 0.24222873900293257
+        },
+        "1.0": {
+          "text": "As a machine learning engineer at a small AI startup, it's important to keep up with the latest developments in deep learning and NLP. Here are some technical books that you might find useful:\n\n1. **\"Deep Learning\" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville** - This book is a comprehensive introduction to deep learning, covering the basics and advanced topics in",
+          "n_hits": 4,
+          "found": [
+            "machine learning",
+            "nlp",
+            "ai",
+            "deep"
+          ],
+          "centroid_dist": 1.586126452533801,
+          "pos_l1": 0.24222873900293257
+        },
+        "1.5": {
+          "text": "As a machine learning engineer at a small AI startup, it's important to keep up with the latest developments in deep learning and NLP. Here are some technical books that you might find useful:\n\n1. **\"Deep Learning\" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville** - This book is a comprehensive introduction to deep learning, covering the basics and advanced topics in",
+          "n_hits": 4,
+          "found": [
+            "machine learning",
+            "nlp",
+            "ai",
+            "deep"
+          ],
+          "centroid_dist": 1.586126452533801,
+          "pos_l1": 0.24222873900293257
+        },
+        "2.5": {
+          "text": "As a machine learning engineer at a small AI startup, it's important to keep up with the latest developments in deep learning and NLP. Here are some technical books that you might find useful:\n\n1. **\"Deep Learning\" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville** - This book is a great introduction to deep learning and is widely used in deep learning research",
+          "n_hits": 4,
+          "found": [
+            "machine learning",
+            "nlp",
+            "ai",
+            "deep"
+          ],
+          "centroid_dist": 1.586128055186026,
+          "pos_l1": 0.282258064516129
+        }
+      }
+    },
+    {
+      "style": "breakfast_health",
+      "fact_keywords": [
+        "egg",
+        "bacon",
+        "toast",
+        "butter",
+        "orange",
+        "juice"
+      ],
+      "boundary_size": 72,
+      "per_lambda": {
+        "0.0": {
+          "text": "Your breakfast was quite healthy overall. You had a balanced combination of scrambled eggs, bacon, and a variety of fruits and vegetables. The bacon adds a healthy fat and protein, while the eggs provide a good source of protein and essential nutrients. The orange juice and buttered toast are also nutritious and contain essential vitamins and minerals. However, it's always a good idea to balance your meals and snacks to",
+          "n_hits": 6,
+          "found": [
+            "egg",
+            "bacon",
+            "toast",
+            "butter",
+            "orange",
+            "juice"
+          ],
+          "centroid_dist": 1.4993591397193264,
+          "pos_l1": 0.1883116883116883
+        },
+        "0.5": {
+          "text": "Your breakfast was healthy, but it could have been better. Here are a few suggestions to make it even better:\n\n1. **Add Some Protein**: Eggs are a great source of protein. You could add some protein powder or a protein shake to your breakfast.\n\n2. **Include Healthy Fats**: A slice of bacon can be a healthy fat source. You could add a slice of avocado or a",
+          "n_hits": 2,
+          "found": [
+            "egg",
+            "bacon"
+          ],
+          "centroid_dist": 1.6751927554904371,
+          "pos_l1": 0.23437499999999997
+        },
+        "1.0": {
+          "text": "Your breakfast was healthy, but it could have been better. Here are a few suggestions to make it even better:\n\n1. **Add Some Protein**: Eggs are a great source of protein. You could add some protein powder or a protein shake to your breakfast.\n\n2. **Include Healthy Fats**: A slice of bacon can be a healthy fat source. You could add a slice of avocado or a",
+          "n_hits": 2,
+          "found": [
+            "egg",
+            "bacon"
+          ],
+          "centroid_dist": 1.6751927554904371,
+          "pos_l1": 0.23437499999999997
+        },
+        "1.5": {
+          "text": "Your breakfast was healthy, but it could have been better. Here are a few suggestions to make it even better:\n\n1. **Add Some Protein**: Eggs are rich in protein, so you could include a slice of whole-grain bread or a small piece of cheese for some protein.\n\n2. **Include a Healthy Fat**: A slice of avocado or a small piece of nuts could add healthy fats and",
+          "n_hits": 1,
+          "found": [
+            "egg"
+          ],
+          "centroid_dist": 1.9564608215923316,
+          "pos_l1": 0.27692307692307694
+        },
+        "2.5": {
+          "text": "Your breakfast was healthy, but I can't be absolutely certain without knowing the specific breakfasts you had each day. However, I can provide some general information about breakfasts that are generally considered healthy:\n\n1. **Whole Grains**: Breakfasts rich in whole grains like oatmeal, whole wheat toast, or a breakfast bar are generally considered healthy. These foods are rich in fiber, vitamins, and",
+          "n_hits": 1,
+          "found": [
+            "toast"
+          ],
+          "centroid_dist": 1.9130792104766399,
+          "pos_l1": 0.2518286311389759
+        }
+      }
+    },
+    {
+      "style": "sf_morning",
+      "fact_keywords": [
+        "bus",
+        "muni",
+        "san francisco",
+        "studio",
+        "thirty",
+        "30",
+        "seven"
+      ],
+      "boundary_size": 93,
+      "per_lambda": {
+        "0.0": {
+          "text": "Improving your morning routine can significantly enhance your productivity and overall well-being. Here are some tips to help you get started:\n\n1. **Start Early**: Try to wake up at a time that suits you best. If you wake up early, you'll have more time to get ready and get ready for work.\n\n2. **Wake Up Earlier**: If you wake up later, you can still wake",
+          "n_hits": 0,
+          "found": [],
+          "centroid_dist": 1.993788236852289,
+          "pos_l1": 0.5376838235294118
+        },
+        "0.5": {
+          "text": "Improving your morning routine can significantly enhance your productivity and overall well-being. Here are some tips to help you get started:\n\n1. **Start Early**: Try to wake up at a time that suits you best. If you wake up early, you'll have more time to get ready and get ready for work.\n\n2. **Wake Up in the Morning**: Wake up in the morning and get dressed",
+          "n_hits": 0,
+          "found": [],
+          "centroid_dist": 1.8043285724653042,
+          "pos_l1": 0.5108597285067873
+        },
+        "1.0": {
+          "text": "Improving your morning routine can significantly enhance your productivity and overall well-being. Here are some tips to help you get started:\n\n1. **Start Early**: Try to wake up at a time that suits you best. If you wake up early, you'll have more time to get ready and get ready for work.\n\n2. **Wake Up in the Morning**: Wake up in the morning and get dressed",
+          "n_hits": 0,
+          "found": [],
+          "centroid_dist": 1.8043285724653042,
+          "pos_l1": 0.5108597285067873
+        },
+        "1.5": {
+          "text": "Improving your morning routine can significantly enhance your productivity and overall well-being. Here are some tips to help you get started:\n\n1. **Start Early**: Try to wake up at a time that suits you best. It could be earlier in the morning, in the morning, or in the afternoon. The earlier you wake up, the more energy you'll have to start your day.\n\n2. **",
+          "n_hits": 0,
+          "found": [],
+          "centroid_dist": 1.2148702069667079,
+          "pos_l1": 0.35340802987861814
+        },
+        "2.5": {
+          "text": "Improving your morning routine can significantly enhance your productivity and overall well-being. Here are some tips to help you improve your morning routine in San Francisco:\n\n1. **Start Early**: Consider starting your morning routine at 6:00 AM. This is a good time to wake up and get your morning routine ready, including getting dressed, eating a healthy breakfast, and perhaps even taking a short walk",
+          "n_hits": 1,
+          "found": [
+            "san francisco"
+          ],
+          "centroid_dist": 1.5209796957716768,
+          "pos_l1": 0.3970588235294118
+        }
+      }
+    },
+    {
+      "style": "grandma_gift",
+      "fact_keywords": [
+        "garden",
+        "rose",
+        "music",
+        "classical",
+        "baking",
+        "pastry",
+        "kitchen",
+        "eighty"
+      ],
+      "boundary_size": 51,
+      "per_lambda": {
+        "0.0": {
+          "text": "Given your grandmother's interests in gardening, classical music, and baking pastries, it would be a thoughtful gift to consider. Here are a few ideas:\n\n1. **Garden Tools**: A set of garden tools like a hoe, spade, and rake, or perhaps a small garden tool set that includes a wheelbarrow, trowel, and watering can. This could be a thoughtful",
+          "n_hits": 4,
+          "found": [
+            "garden",
+            "music",
+            "classical",
+            "baking"
+          ],
+          "centroid_dist": 1.899677043213493,
+          "pos_l1": 0.11052631578947368
+        },
+        "0.5": {
+          "text": "Given your grandmother's interests in gardening, classical music, and baking pastries, it would be a thoughtful gift to consider. Here are a few ideas:\n\n1. **Garden Tools**: A set of garden tools like a hoe, spade, and rake, or perhaps a small garden tool set that includes a wheelbarrow, trowel, and watering can. This could be a thoughtful",
+          "n_hits": 4,
+          "found": [
+            "garden",
+            "music",
+            "classical",
+            "baking"
+          ],
+          "centroid_dist": 1.899677043213493,
+          "pos_l1": 0.11052631578947368
+        },
+        "1.0": {
+          "text": "Given your grandmother's interests in gardening, classical music, and baking pastries, it would be a thoughtful gift to consider. Here are a few ideas:\n\n1. **Garden Tools**: A set of garden tools like a hoe, spade, and rake, or perhaps a small garden tool set that includes a wheelbarrow, trowel, and watering can. This gift would make her",
+          "n_hits": 4,
+          "found": [
+            "garden",
+            "music",
+            "classical",
+            "baking"
+          ],
+          "centroid_dist": 1.9952104770091974,
+          "pos_l1": 0.14688995215311007
+        },
+        "1.5": {
+          "text": "Given your grandmother's interests in gardening, classical music, and baking pastries, it would be a thoughtful gift to consider. Here are a few ideas:\n\n1. **Garden Tools**: A set of garden tools like a hoe, spade, and rake, or perhaps a small garden tool set that includes a wheelbarrow, trowel, and watering can. This gift would make her",
+          "n_hits": 4,
+          "found": [
+            "garden",
+            "music",
+            "classical",
+            "baking"
+          ],
+          "centroid_dist": 1.9952104770091974,
+          "pos_l1": 0.14688995215311007
+        },
+        "2.5": {
+          "text": "Given your grandmother's interests in gardening, classical music, and baking pastries, it would be a thoughtful gift to consider. Here are a few ideas:\n\n1. **Garden Gift**: A beautiful, handcrafted vase or plant pot with a unique design that represents her love of roses. You could also gift her a small, personalized vase with a message that reflects her gardening skills and her appreciation for",
+          "n_hits": 5,
+          "found": [
+            "garden",
+            "rose",
+            "music",
+            "classical",
+            "baking"
+          ],
+          "centroid_dist": 1.6794932917368073,
+          "pos_l1": 0.11518550474547021
+        }
+      }
+    },
+    {
+      "style": "interview_prep",
+      "fact_keywords": [
+        "healthcare",
+        "ai",
+        "data",
+        "science",
+        "clinical",
+        "statistics",
+        "biology"
+      ],
+      "boundary_size": 72,
+      "per_lambda": {
+        "0.0": {
+          "text": "To prepare for a job interview at a healthcare AI startup, it's important to gather a comprehensive understanding of the role and the company's culture. Here are some steps you can take to prepare:\n\n1. **Review the Job Description**: Start by reviewing the job description provided by the startup. This will give you a clear idea of the responsibilities, required skills, and the company's culture. Make sure",
+          "n_hits": 2,
+          "found": [
+            "healthcare",
+            "ai"
+          ],
+          "centroid_dist": 1.7540218417541238,
+          "pos_l1": 0.18181818181818185
+        },
+        "0.5": {
+          "text": "To prepare for a job interview at a healthcare AI startup, it's important to gather a comprehensive understanding of the role and the company's culture. Here are some steps you can take to prepare:\n\n1. **Review the Job Description**: Start by reviewing the job description provided by the startup. This will give you a clear idea of the responsibilities, required skills, and the company's culture. Make sure",
+          "n_hits": 2,
+          "found": [
+            "healthcare",
+            "ai"
+          ],
+          "centroid_dist": 1.7540218417541238,
+          "pos_l1": 0.18181818181818185
+        },
+        "1.0": {
+          "text": "To prepare for a job interview at a healthcare AI startup, it's important to gather a comprehensive understanding of the role and the company's culture. Here are some steps you can take to prepare:\n\n1. **Review the Job Description**: Start by reviewing the job description provided by the startup. This will give you a clear idea of the responsibilities, required skills, and the company's culture. Make sure",
+          "n_hits": 2,
+          "found": [
+            "healthcare",
+            "ai"
+          ],
+          "centroid_dist": 1.7540218417541238,
+          "pos_l1": 0.18181818181818185
+        },
+        "1.5": {
+          "text": "To prepare for a job interview at a healthcare AI startup, it's important to gather a comprehensive understanding of the role and the company's culture. Here are a few books and resources that could be helpful:\n\n1. **\"The Data Scientist's Survival Guide\" by Paul W. Foss and John P. Weymouth** - This book provides a solid foundation in data science and machine learning,",
+          "n_hits": 4,
+          "found": [
+            "healthcare",
+            "ai",
+            "data",
+            "science"
+          ],
+          "centroid_dist": 0.4114196555966117,
+          "pos_l1": 0.06145004420866489
+        },
+        "2.5": {
+          "text": "To prepare for a job interview at a healthcare AI startup, it's important to gather a comprehensive understanding of the role and the company's culture. Here are a few books and resources that could be helpful:\n\n1. **\"The Data Scientist's Survival Guide\" by M. M. M. M. M. M. M. M. M. M. M. M. M. M",
+          "n_hits": 3,
+          "found": [
+            "healthcare",
+            "ai",
+            "data"
+          ],
+          "centroid_dist": 1.3413788540743223,
+          "pos_l1": 0.21724941724941718
+        }
+      }
+    },
+    {
+      "style": "marathon_training",
+      "fact_keywords": [
+        "marathon",
+        "kilometers",
+        "km",
+        "weeks",
+        "race",
+        "running",
+        "eight"
+      ],
+      "boundary_size": 93,
+      "per_lambda": {
+        "0.0": {
+          "text": "Training for a marathon can be both challenging and rewarding, so it's important to approach it gradually and with a plan. Here\u2019s a structured plan to help you train effectively for your first marathon:\n\n### Week 1-2: Build a Strong Foundation\n**Objective:** Increase your endurance and build up your strength.\n\n1. **Run 10 kilometers per session.**\n   - **Distance:**",
+          "n_hits": 2,
+          "found": [
+            "marathon",
+            "kilometers"
+          ],
+          "centroid_dist": 1.0689361943378228,
+          "pos_l1": 0.11500974658869395
+        },
+        "0.5": {
+          "text": "Training for a marathon can be both challenging and rewarding, so it's important to approach it gradually and with a plan. Here\u2019s a structured plan to help you train effectively for your first marathon:\n\n### Week 1-2: Build a Strong Foundation\n**Objective:** Increase your endurance and build up your strength.\n\n1. **Run 10 kilometers per session:** Start with 10 kilometers",
+          "n_hits": 2,
+          "found": [
+            "marathon",
+            "kilometers"
+          ],
+          "centroid_dist": 1.138484009083843,
+          "pos_l1": 0.13815789473684215
+        },
+        "1.0": {
+          "text": "Training for a marathon can be both challenging and rewarding, so it's important to approach it gradually and with a plan. Here\u2019s a structured plan to help you train effectively for your first marathon:\n\n### Week 1-2: Build a Strong Foundation\n**Objective:** Increase your endurance and build up your strength.\n\n1. **Run 10 kilometers per session:** Start with 10 kilometers",
+          "n_hits": 2,
+          "found": [
+            "marathon",
+            "kilometers"
+          ],
+          "centroid_dist": 1.138484009083843,
+          "pos_l1": 0.13815789473684215
+        },
+        "1.5": {
+          "text": "Training for a marathon can be both challenging and rewarding, so it's important to approach it gradually and with a plan. Here\u2019s a structured plan to help you train effectively for your first marathon:\n\n### Week 1-2: Build a Strong Foundation\n**Objective:** Increase your endurance and build up your strength.\n\n1. **Run 10 kilometers per session:** Start with 10 kilometers",
+          "n_hits": 2,
+          "found": [
+            "marathon",
+            "kilometers"
+          ],
+          "centroid_dist": 1.138484009083843,
+          "pos_l1": 0.13815789473684215
+        },
+        "2.5": {
+          "text": "Training for a marathon can be both challenging and rewarding, so it's important to approach it gradually and with a plan. Here\u2019s a structured plan to help you train effectively for your first marathon:\n\n### Week 1-2: Build a Strong Foundation\n**Objective:** Increase your endurance and build up your strength.\n\n1. **Run 10 kilometers per session:** Start with 10 kilometers",
+          "n_hits": 2,
+          "found": [
+            "marathon",
+            "kilometers"
+          ],
+          "centroid_dist": 1.138484009083843,
+          "pos_l1": 0.13815789473684215
+        }
+      }
+    }
+  ]
+}
