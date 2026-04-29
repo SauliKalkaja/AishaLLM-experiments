@@ -6,3 +6,6 @@ __pycache__/
 .env
 *.swp
 .DS_Store
+# Aisha data artifacts (large, sourced from AishaAI repo)
+../aisha/data/
+../aisha/__pycache__/
