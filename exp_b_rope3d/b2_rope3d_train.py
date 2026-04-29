@@ -267,10 +267,16 @@ def evaluate(model, L: int, n_batches: int, batch_size: int, device: str):
 # Training loop.
 # ---------------------------------------------------------------------------
 
-def train_one(rope_kind: str, device: str, max_pos: int, train_L: int = 32,
+def train_one(rope_kind: str, device: str, max_pos: int,
+              train_lengths=(8, 16, 24, 32, 48),
               steps: int = 4000, lr: float = 3e-4, batch_size: int = 64,
-              eval_lengths=(32, 64, 96, 128), eval_every: int = 200):
-    print(f"\n=== training {rope_kind} ===")
+              eval_lengths=(16, 32, 48, 64, 96, 128, 192), eval_every: int = 200):
+    """Mixed-length training: each step samples a length uniformly from
+    train_lengths. This forces the model to learn position-*invariant*
+    behavior rather than memorize one specific length's cos/sin pattern.
+    Eval at lengths that span both in-distribution (in train_lengths) and
+    out-of-distribution (longer than max(train_lengths))."""
+    print(f"\n=== training {rope_kind} (train lengths {train_lengths}) ===")
     model = TinyGPT(
         vocab_size=VOCAB_SIZE,
         d_model=216, n_heads=6, head_dim=36, n_layers=4,
@@ -285,7 +291,9 @@ def train_one(rope_kind: str, device: str, max_pos: int, train_L: int = 32,
     eval_history = {f"L={L}": {"step": [], "loss": [], "acc": []} for L in eval_lengths}
     t0 = time.time()
     model.train()
+    rng = np.random.default_rng(0)
     for step in range(steps + 1):
+        train_L = int(rng.choice(train_lengths))
         inp, tgt, mask = make_batch(batch_size, train_L, device)
         logits = model(inp)
         loss = F.cross_entropy(logits[mask], tgt[mask])
@@ -323,9 +331,10 @@ def main():
     # ---- Plot losses + accuracies ----
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
     eval_lengths = list(eh2d.keys())
-    colors = {f"L=32": "#1f77b4", f"L=64": "#ff7f0e", f"L=96": "#2ca02c", f"L=128": "#d62728"}
+    cmap = plt.get_cmap("viridis")
+    colors = {L: cmap(i / max(1, len(eval_lengths) - 1)) for i, L in enumerate(eval_lengths)}
     for L_key in eval_lengths:
-        c = colors.get(L_key, "k")
+        c = colors[L_key]
         axes[0].plot(eh2d[L_key]["step"], eh2d[L_key]["loss"], "-",  c=c, label=f"2D {L_key}")
         axes[0].plot(eh3d[L_key]["step"], eh3d[L_key]["loss"], "--", c=c, label=f"3D {L_key}")
         axes[1].plot(eh2d[L_key]["step"], eh2d[L_key]["acc"], "-",  c=c, label=f"2D {L_key}")
@@ -334,7 +343,7 @@ def main():
     axes[1].set_xlabel("step"); axes[1].set_ylabel("eval accuracy")
     for ax in axes:
         ax.grid(alpha=0.3); ax.legend(fontsize=7, ncol=2)
-    fig.suptitle("B2: RoPE-2D vs RoPE-3D on repeat-after-delimiter (train L=32)")
+    fig.suptitle("B2: RoPE-2D vs RoPE-3D, mixed-length training (train L in {8,16,24,32,48})")
     fig.tight_layout()
     fig_path = FIG_DIR / "b2_rope_train.png"
     fig.savefig(fig_path, dpi=140)
@@ -343,8 +352,9 @@ def main():
     res = {
         "rope2d": {"train": h2d, "eval": eh2d},
         "rope3d": {"train": h3d, "eval": eh3d},
-        "config": {"vocab": VOCAB_SIZE, "max_pos": max_pos, "train_L": 32,
-                   "eval_lengths": [32, 64, 96, 128]},
+        "config": {"vocab": VOCAB_SIZE, "max_pos": max_pos,
+                   "train_lengths": [8, 16, 24, 32, 48],
+                   "eval_lengths": [16, 32, 48, 64, 96, 128, 192]},
     }
     res_path = RES_DIR / "b2_results.json"
     res_path.write_text(json.dumps(res, indent=2))
