@@ -1,0 +1,92 @@
+{
+  "group_property": [
+    {
+      "label": "RoPE-2D",
+      "max_err": 5.061569963185016e-15,
+      "mean_err": 4.516727416107675e-16,
+      "median_err": 1.1102230246251565e-16
+    },
+    {
+      "label": "RoPE-3D (planar, M_xy only)",
+      "max_err": 5.064765158946905e-15,
+      "mean_err": 3.5886453393595862e-16,
+      "median_err": 1.5700924586837752e-16
+    },
+    {
+      "label": "RoPE-3D (mixed)",
+      "max_err": 5.247851329194135e-15,
+      "mean_err": 1.5147737551945184e-15,
+      "median_err": 1.2013730281027985e-15
+    },
+    {
+      "label": "RoPE-3D (off-plane heavy)",
+      "max_err": 1.043225718823062e-14,
+      "mean_err": 2.3786280372949704e-15,
+      "median_err": 1.820998486672844e-15
+    },
+    {
+      "label": "RoPE-3D (random)",
+      "max_err": 5.185633697872111e-15,
+      "mean_err": 1.0819005127535957e-15,
+      "median_err": 8.678472757567616e-16
+    }
+  ],
+  "orthogonality": [
+    {
+      "label": "RoPE-2D",
+      "max_err": 3.1489145704005343e-16,
+      "mean_err": 6.512552013906918e-17
+    },
+    {
+      "label": "RoPE-3D (planar, M_xy only)",
+      "max_err": 4.0048393586214784e-16,
+      "mean_err": 1.1930506492703903e-16
+    },
+    {
+      "label": "RoPE-3D (mixed)",
+      "max_err": 8.146608591661438e-16,
+      "mean_err": 2.7223558465040226e-16
+    },
+    {
+      "label": "RoPE-3D (off-plane heavy)",
+      "max_err": 1.1725551228609125e-15,
+      "mean_err": 3.7595568390489337e-16
+    },
+    {
+      "label": "RoPE-3D (random)",
+      "max_err": 1.2168942060915143e-15,
+      "mean_err": 4.3565224770405946e-16
+    }
+  ],
+  "relative_position": [
+    {
+      "label": "RoPE-2D",
+      "max_err": 4.440892098500626e-15,
+      "mean_err": 2.0883468565546793e-16
+    },
+    {
+      "label": "RoPE-3D (planar, M_xy only)",
+      "max_err": 5.773159728050814e-15,
+      "mean_err": 2.508410146262463e-16
+    },
+    {
+      "label": "RoPE-3D (mixed)",
+      "max_err": 7.549516567451064e-15,
+      "mean_err": 9.720696469983636e-16
+    },
+    {
+      "label": "RoPE-3D (off-plane heavy)",
+      "max_err": 1.554312234475219e-14,
+      "mean_err": 1.183862036180372e-15
+    },
+    {
+      "label": "RoPE-3D (random)",
+      "max_err": 5.329070518200751e-15,
+      "mean_err": 6.339026525914449e-16
+    }
+  ],
+  "newtonian_limit": {
+    "xy_block_max_err": 1.5700924586837752e-16,
+    "z_axis_max_err": 0.0
+  }
+}

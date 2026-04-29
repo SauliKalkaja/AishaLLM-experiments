@@ -1,0 +1,11 @@
+# Tested versions on local Fedora 43 / Python 3.14.
+# On RunPod use a recent CUDA-matched torch wheel (the GPU there will not be
+# CC 6.1, so the standard cu12x wheels work).
+torch>=2.4
+transformers>=4.40
+numpy>=1.26
+matplotlib>=3.8
+einops>=0.8
+# Optional, GPU-only fast path for Mamba. Skip on CPU.
+# mamba-ssm>=2.2
+# causal-conv1d>=1.4
