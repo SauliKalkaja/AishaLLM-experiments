@@ -1,26 +1,20 @@
 """
-Experiment A2: invariant validation on a pretrained Mamba.
+Experiment A2 (v2): hardened LTI test on a pretrained Mamba.
 
-A1 showed that for LTI SSMs the framework's hyperbolic invariant does not
-naturally transplant (I5 drifts), but the log-additive decomposition does
-(I6 telescopes by construction). The substantive question for real LLMs is:
-how much does Mamba's *selectivity* (input-dependent A_bar, B_bar, dt) break
-the LTI closed-form closed-form prediction?
+Earlier v1 used lstsq+SVD-truncate, which gave very different numbers on CPU
+vs GPU because the small-singular-value cutoff was sensitive to numerical
+noise. v2 fixes this:
 
-Test: load a pretrained Mamba, run a forward pass on real text, hook the
-post-SSM hidden state at each layer, and compare against the LTI prediction
-that would hold if A_bar / B_bar / dt were constants. The fitting residual is
-the "selectivity-induced deviation from analytical jumpability."
+  1. Ridge regression  A = (X^T X + lambda I)^-1 X^T Y    (stable, no SVD).
+  2. Lambda swept over a grid; report results at each lambda.
+  3. Multiple prompts (5 different domains) -- average and std reported.
+  4. Train/test split per prompt; the test residual is the meaningful metric.
+  5. Trivial baseline ("predict h_t = h_{t-1}") for control.
 
-Scope on this CPU box:
-  - Use state-spaces/mamba-130m via HF transformers (CPU forward).
-  - Single layer, short prompt -- enough to characterize whether the residual
-    is small (selectivity is mild perturbation, jump is approximately valid)
-    or large (selectivity is essential, jump is invalid).
-  - Larger sweep (mamba-370m/790m, longer prompts, multiple layers) deferred
-    to RunPod where mamba_ssm CUDA kernels work.
-
-Sets HF_HOME locally so the download stays in the project tree.
+Headline question: at each layer, is the residual stream well-approximated
+by a low-effective-rank LTI map A? If yes (small held-out residual, ratio
+to trivial baseline << 1), the analytical-jump structure is approximately
+valid for that layer.
 """
 
 import json
@@ -33,12 +27,10 @@ OUT_DIR = Path(__file__).resolve().parent
 CACHE_DIR = OUT_DIR.parent / ".cache"
 CACHE_DIR.mkdir(exist_ok=True)
 os.environ["HF_HOME"] = str(CACHE_DIR)
-os.environ["TRANSFORMERS_OFFLINE"] = "0"
 
 import numpy as np
 import torch
 
-torch.set_default_dtype(torch.float32)
 torch.manual_seed(0)
 np.random.seed(0)
 
@@ -49,181 +41,209 @@ RES_DIR.mkdir(exist_ok=True)
 
 MODEL_NAME = "state-spaces/mamba-130m-hf"
 
+PROMPTS = [
+    # Scientific.
+    ("scientific",
+     "Standard N-body orbital propagators rely heavily on discrete differential "
+     "stepping algorithms, which inherently suffer from numerical drift. The 6D "
+     "symplectic phase space introduces a 3D imaginary buffer to absorb gravitational "
+     "torsion. By coupling a 3D real coordinate space with a 3D imaginary buffer, we "
+     "establish a symplectic lock where spatial condensation and imaginary expansion "
+     "conserve a strict hyperbolic invariant. "),
+    # Code-like.
+    ("code",
+     "def quicksort(arr): "
+     "if len(arr) <= 1: return arr "
+     "pivot = arr[len(arr) // 2] "
+     "left = [x for x in arr if x < pivot] "
+     "middle = [x for x in arr if x == pivot] "
+     "right = [x for x in arr if x > pivot] "
+     "return quicksort(left) + middle + quicksort(right). "
+     "The complexity is O(n log n) on average and O(n squared) in the worst case. "),
+    # Casual / conversational.
+    ("casual",
+     "So I was walking the dog this morning and there was this guy across the street "
+     "with the most ridiculous hat, like one of those big floppy beach hats but it was "
+     "raining, and I just couldn't stop laughing. The dog didn't even notice, she was "
+     "too busy sniffing every single tree on the block, twice. We were out for almost "
+     "an hour because of it. "),
+    # News.
+    ("news",
+     "Markets closed lower on Tuesday as investors weighed mixed signals from the "
+     "central bank's quarterly statement. Energy stocks led the decline, with crude "
+     "oil futures dropping nearly three percent on reports of higher than expected "
+     "inventory builds. Technology shares pared earlier gains in the final hour of "
+     "trading following weaker forward guidance from a major chip maker. "),
+    # Random text (low-information control).
+    ("random_words",
+     "table cloud algorithm pencil mountain river bicycle quantum giraffe poem "
+     "circuit harbor velvet meadow saxophone lighthouse cinnamon paradox jasmine "
+     "obsidian thunderclap molasses forsythia patchwork heliotrope serendipity "
+     "candelabra ephemeral wisteria hieroglyph zenith argyle sycamore phosphorescent "
+     "petrichor isthmus benevolence stalactite kaleidoscope. "),
+]
+
+
+def ridge_fit(X: np.ndarray, Y: np.ndarray, lam: float) -> np.ndarray:
+    """Solve  A = argmin ||Y - X A||^2 + lam * ||A||_F^2.
+
+    Closed form:  A = (X^T X + lam I)^-1 X^T Y. Stable for any lam > 0.
+    """
+    d = X.shape[1]
+    XtX = X.T @ X
+    XtY = X.T @ Y
+    return np.linalg.solve(XtX + lam * np.eye(d), XtY)
+
+
+def evaluate_layer(H: np.ndarray, lambdas):
+    """Per-layer LTI-fit evaluation with ridge regression + train/test split.
+
+    Returns a dict: per-lambda train/test residuals and the trivial baseline.
+    """
+    T, d = H.shape
+    if T < 32:
+        return None
+    T_train = int(T * 0.8)
+    X_tr, Y_tr = H[:T_train - 1], H[1:T_train]
+    X_te, Y_te = H[T_train:-1], H[T_train + 1:]
+
+    base_te = np.linalg.norm(Y_te, axis=-1)
+    triv_te = np.linalg.norm(Y_te - X_te, axis=-1)
+    triv_rel = float(np.median(triv_te / np.maximum(base_te, 1e-30)))
+
+    out = {"trivial_test_resid_median": triv_rel, "by_lambda": {}}
+    base_scale = float(np.trace(X_tr.T @ X_tr) / d)
+    for lam_factor in lambdas:
+        lam = lam_factor * base_scale
+        A = ridge_fit(X_tr, Y_tr, lam)
+        # nuclear norm as a soft "effective rank" proxy
+        sv = np.linalg.svd(A, compute_uv=False)
+        eff_rank = float(sv.sum() / max(sv.max(), 1e-30))
+
+        tr_resid = np.linalg.norm(Y_tr - X_tr @ A, axis=-1)
+        tr_base = np.linalg.norm(Y_tr, axis=-1)
+        te_resid = np.linalg.norm(Y_te - X_te @ A, axis=-1)
+        out["by_lambda"][lam_factor] = {
+            "lambda": float(lam),
+            "effective_rank_nuclear": eff_rank,
+            "train_resid_median": float(np.median(tr_resid / np.maximum(tr_base, 1e-30))),
+            "test_resid_median": float(np.median(te_resid / np.maximum(base_te, 1e-30))),
+            "test_vs_trivial_ratio": float(np.median(te_resid / np.maximum(base_te, 1e-30)) /
+                                            max(triv_rel, 1e-30)),
+        }
+    return out
+
 
 def main():
     from transformers import AutoTokenizer, MambaForCausalLM
 
-    print(f"  loading {MODEL_NAME} (cache: {CACHE_DIR})")
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"  device: {device}")
+
+    print(f"  loading {MODEL_NAME}")
     t0 = time.time()
     try:
         tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        model = MambaForCausalLM.from_pretrained(MODEL_NAME, torch_dtype=torch.float32)
+        model = MambaForCausalLM.from_pretrained(MODEL_NAME, torch_dtype=torch.float32).to(device)
         model.eval()
     except Exception as e:
         print(f"  FAIL: {type(e).__name__}: {e}")
-        print("  (no internet, missing CUDA kernels, or other issue -- defer to RunPod)")
         sys.exit(1)
     print(f"  loaded in {time.time() - t0:.1f}s")
 
-    # Find the SSM blocks (Mamba mixer modules).
     layer_count = len(model.backbone.layers)
-    cfg = model.config
-    d_model = cfg.hidden_size
-    d_state = cfg.state_size
-    d_inner = cfg.intermediate_size
-    print(f"  config: {layer_count} layers, d_model={d_model}, d_state={d_state}, d_inner={d_inner}")
+    target_layers = [0, layer_count // 4, layer_count // 2, 3 * layer_count // 4, layer_count - 1]
+    lambdas = [1e-4, 1e-3, 1e-2, 1e-1, 1.0, 10.0]
+    print(f"  layers: {layer_count}, targeting {target_layers}")
+    print(f"  lambda factors: {lambdas}")
 
-    # Hook to capture per-step hidden state, A_bar, B_bar, C, dt at each step.
-    captured = {}
+    # Per-prompt collection: per_layer[layer_idx] -> list of evaluate_layer dicts.
+    per_layer = {li: [] for li in target_layers}
+    framework_drift = {li: [] for li in target_layers}
 
-    def hook_mixer(layer_idx):
-        def fn(module, inputs, output):
-            captured.setdefault("layer_outputs", {})[layer_idx] = output.detach().cpu()
-        return fn
+    for tag, text in PROMPTS:
+        text_extended = (text + " ") * 8
+        enc = tokenizer(text_extended, return_tensors="pt", truncation=True, max_length=512).to(device)
+        T = int(enc.input_ids.shape[1])
+        print(f"  prompt '{tag}': {T} tokens")
+        with torch.no_grad():
+            out = model(**enc, output_hidden_states=True)
+        hidden = out.hidden_states  # tuple len=layer_count+1, each (1, T, d)
+        for li in target_layers:
+            H = hidden[li + 1][0].detach().cpu().to(torch.float32).numpy()
+            res = evaluate_layer(H, lambdas)
+            if res is not None:
+                per_layer[li].append({"prompt": tag, **res})
 
-    target_layers = [0, layer_count // 2, layer_count - 1]
-    handles = []
+            # Framework I5 drift on the residual stream.
+            norms = np.linalg.norm(H, axis=-1)
+            r0 = max(norms[0], 1e-30)
+            alpha = norms / r0
+            beta = r0 / np.maximum(norms, 1e-30)
+            res_steps = np.concatenate([[0.0],
+                np.linalg.norm(H[1:] - H[:-1], axis=-1)]) / r0
+            I5 = (alpha + beta) ** 2 - res_steps ** 2
+            i5_drift = float(np.max(np.abs(I5 - I5[0]) / max(abs(I5[0]), 1e-30)))
+            framework_drift[li].append({"prompt": tag, "I5_drift_max": i5_drift})
+
+    # ----- Aggregate across prompts.
+    print("\n=== A2 v2: ridge-fit LTI test, mean across 5 prompts ===")
+    print(f"{'layer':>5s} {'lambda':>10s} {'eff_rank':>10s} "
+          f"{'train':>8s} {'test':>8s} {'trivial':>8s} {'ratio':>8s} {'I5_drift':>10s}")
+    summary = {}
     for li in target_layers:
-        h = model.backbone.layers[li].mixer.register_forward_hook(hook_mixer(li))
-        handles.append(h)
+        summary[li] = {"by_lambda": {}}
+        i5_drifts = [d["I5_drift_max"] for d in framework_drift[li]]
+        summary[li]["I5_drift_mean"] = float(np.mean(i5_drifts))
+        summary[li]["I5_drift_std"] = float(np.std(i5_drifts))
 
-    # Use a longer prompt so the LTI fit is not vacuously underdetermined.
-    # We need T-1 >> d_model^2 for a free A, OR we restrict A's rank.
-    # d_model=768 makes a free A intractably underdetermined for any
-    # realistic T. We address this two ways:
-    #   (a) longer prompt (~512 tokens) -> still T < d_model^2, but we then
-    #   (b) fit a low-rank A (rank=d_state=16) on a TRAIN slice and report
-    #       residual on a held-out TEST slice.
-    # Self-contained prompt source. If sample_prompt.txt is present, use it;
-    # otherwise fall back to the embedded text below (a public excerpt from
-    # the framework's published abstract).
-    prompt_path = OUT_DIR.parent / "sample_prompt.txt"
-    if prompt_path.exists():
-        text = prompt_path.read_text() * 4
-    else:
-        text = (
-            "Standard N-body orbital propagators rely heavily on discrete "
-            "differential stepping algorithms, which inherently suffer from "
-            "numerical drift and fail to account for the continuous geometric "
-            "stress exerted by gravitational potential. The 6D symplectic "
-            "phase space introduces a 3D imaginary buffer to absorb gravitational "
-            "torsion. By coupling a 3D real coordinate space with a 3D imaginary "
-            "buffer, we establish a symplectic lock where spatial condensation "
-            "and imaginary expansion conserve a strict hyperbolic invariant. "
-        ) * 16
-    enc = tokenizer(text, return_tensors="pt", truncation=True, max_length=512)
-    print(f"  input tokens: {enc.input_ids.shape[1]}")
+        # Average trivial across prompts.
+        trivs = [r["trivial_test_resid_median"] for r in per_layer[li]]
+        triv_mean = float(np.mean(trivs))
 
-    t0 = time.time()
-    with torch.no_grad():
-        out = model(**enc, output_hidden_states=True)
-    print(f"  forward pass: {time.time() - t0:.2f}s")
-
-    for h in handles:
-        h.remove()
-
-    hidden = out.hidden_states  # tuple of (1, T, d_model) per layer
-    print(f"  collected hidden states: {len(hidden)} layers")
-
-    # ----- Invariant evaluation -----
-    # We treat the per-token residual stream h_t in (1, T, d_model) as the
-    # "state trajectory" and evaluate the framework-shaped invariant I5 plus
-    # a non-trivial geometric quantity: the relative growth of ||h_t||
-    # compared to a hypothetical LTI A_bar fit at this layer.
-
-    inv_log = {}
-    for li in target_layers:
-        h_seq = hidden[li + 1][0]  # (T, d_model), output of layer li
-        T = h_seq.shape[0]
-        norms = h_seq.norm(dim=-1).numpy()    # (T,)
-        r0 = max(norms[0], 1e-30)
-
-        alpha = norms / r0
-        beta = r0 / np.maximum(norms, 1e-30)
-        # M = step-residual norm, normalized
-        residuals = (h_seq[1:] - h_seq[:-1]).norm(dim=-1).numpy()
-        # pad to length T
-        residuals_padded = np.concatenate([[0.0], residuals]) / r0
-
-        I5 = (alpha + beta) ** 2 - residuals_padded ** 2
-        # log-additive
-        logE = np.log(np.maximum(norms ** 2, 1e-30))
-
-        # LTI-fit residual with proper train/test split and rank restriction.
-        # Fit a low-rank A of rank r = d_state on the train slice, evaluate
-        # held-out residual on the test slice. This avoids the vacuous
-        # "fit 590k params to 21 data points" trap.
-        H = h_seq.numpy()
-        rank = min(d_state, max(8, T // 8))  # stay well below T
-        train_frac = 0.8
-        if T >= 32:
-            T_train = int(T * train_frac)
-            X_tr, Y_tr = H[:T_train - 1], H[1:T_train]
-            X_te, Y_te = H[T_train:-1], H[T_train + 1:]
-
-            # Low-rank fit: A = U V^T with U, V in R^{d x r}.
-            # Use truncated SVD of the lstsq solution: solve full lstsq, then
-            # take rank-r truncation.
-            A_full, _, _, _ = np.linalg.lstsq(X_tr, Y_tr, rcond=None)
-            U_, s_, Vt_ = np.linalg.svd(A_full, full_matrices=False)
-            A_lr = (U_[:, :rank] * s_[:rank]) @ Vt_[:rank, :]
-
-            # Train residual (sanity).
-            tr_resid = np.linalg.norm(Y_tr - X_tr @ A_lr, axis=-1)
-            tr_base  = np.linalg.norm(Y_tr, axis=-1)
-            tr_rel   = tr_resid / np.maximum(tr_base, 1e-30)
-
-            # Held-out residual (the meaningful one).
-            te_resid = np.linalg.norm(Y_te - X_te @ A_lr, axis=-1)
-            te_base  = np.linalg.norm(Y_te, axis=-1)
-            te_rel   = te_resid / np.maximum(te_base, 1e-30)
-
-            # Also: trivial baseline. How well does "predict h_t = h_{t-1}"
-            # do on the held-out set? If almost as good as A_lr, the LTI fit
-            # is uninformative.
-            triv_resid = np.linalg.norm(Y_te - X_te, axis=-1)
-            triv_rel   = triv_resid / np.maximum(te_base, 1e-30)
-        else:
-            tr_rel = te_rel = triv_rel = np.array([np.nan])
-
-        inv_log[li] = {
-            "T": int(T),
-            "rank_used": int(rank),
-            "I5_drift_max": float(np.max(np.abs(I5 - I5[0]) / max(abs(I5[0]), 1e-30))),
-            "I5_drift_median": float(np.median(np.abs(I5 - I5[0]) / max(abs(I5[0]), 1e-30))),
-            "logE_drift_max": float(np.max(np.abs(logE - logE[0]) / max(abs(logE[0]), 1e-30))),
-            "lti_train_residual_median": float(np.median(tr_rel)),
-            "lti_test_residual_median": float(np.median(te_rel)),
-            "lti_test_residual_max": float(np.max(te_rel)),
-            "trivial_baseline_residual_median": float(np.median(triv_rel)),
-            "lti_vs_trivial_ratio": float(np.median(te_rel) / max(np.median(triv_rel), 1e-30)),
-        }
+        for lam in lambdas:
+            tr_means = [r["by_lambda"][lam]["train_resid_median"] for r in per_layer[li]]
+            te_means = [r["by_lambda"][lam]["test_resid_median"] for r in per_layer[li]]
+            ratios = [r["by_lambda"][lam]["test_vs_trivial_ratio"] for r in per_layer[li]]
+            ranks = [r["by_lambda"][lam]["effective_rank_nuclear"] for r in per_layer[li]]
+            tr_m = float(np.mean(tr_means))
+            te_m = float(np.mean(te_means))
+            ratio_m = float(np.mean(ratios))
+            rank_m = float(np.mean(ranks))
+            te_s = float(np.std(te_means))
+            summary[li]["by_lambda"][lam] = {
+                "train_mean": tr_m, "test_mean": te_m, "test_std": te_s,
+                "trivial_mean": triv_mean, "vs_trivial_ratio_mean": ratio_m,
+                "effective_rank_nuclear_mean": rank_m,
+            }
+            if lam in (1e-3, 1e-1, 1.0):  # print a few
+                print(f"  {li:>3d} {lam:>10.1e} {rank_m:>10.2f} "
+                      f"{tr_m:>8.3f} {te_m:>8.3f} {triv_mean:>8.3f} {ratio_m:>8.3f} "
+                      f"{summary[li]['I5_drift_mean']:>10.3e}")
+        # Best lambda by test residual.
+        best_lam, best = min(summary[li]["by_lambda"].items(),
+                             key=lambda kv: kv[1]["test_mean"])
+        summary[li]["best_lambda"] = best_lam
+        print(f"      best lambda: {best_lam:.1e}  "
+              f"test={best['test_mean']:.3f} +/- {best['test_std']:.3f}  "
+              f"vs trivial={best['trivial_mean']:.3f}  "
+              f"ratio={best['vs_trivial_ratio_mean']:.3f}")
 
     res_path = RES_DIR / "a2_results.json"
     res_path.write_text(json.dumps({
         "model": MODEL_NAME,
-        "config": {"d_model": d_model, "d_state": d_state, "d_inner": d_inner,
-                   "n_layers": layer_count},
-        "input_tokens": int(enc.input_ids.shape[1]),
-        "per_layer": {str(k): v for k, v in inv_log.items()},
-    }, indent=2))
-    print(f"  saved results: {res_path}")
-
-    print("\n=== Per-layer invariant drift on real Mamba (held-out test) ===")
-    print(f"{'layer':>5s}  {'I5_drift':>10s}  {'logE_drift':>10s}  "
-          f"{'LTI_tr':>8s}  {'LTI_te':>8s}  {'trivial_te':>10s}  {'LTI/trivial':>11s}")
-    for li, info in inv_log.items():
-        print(f"  {li:>3d}    "
-              f"{info['I5_drift_max']:10.3e}  {info['logE_drift_max']:10.3e}  "
-              f"{info['lti_train_residual_median']:8.3e}  "
-              f"{info['lti_test_residual_median']:8.3e}  "
-              f"{info['trivial_baseline_residual_median']:10.3e}  "
-              f"{info['lti_vs_trivial_ratio']:11.3f}")
+        "device": device,
+        "n_prompts": len(PROMPTS),
+        "layers_tested": target_layers,
+        "summary": summary,
+    }, indent=2, default=str))
+    print(f"\n  saved results: {res_path}")
 
     print("\nInterpretation:")
-    print("  LTI_tr < LTI_te -> generalization gap (overfit on train).")
-    print("  LTI/trivial ratio: <1 means LTI fit beats 'predict h_{t-1}'; ~1 means uninformative.")
-    print("  Small held-out LTI residual + ratio << 1 -> Mamba is approximately LTI in the residual stream.")
+    print("  ratio < 1  => low-rank LTI fit beats 'predict h_{t-1}'")
+    print("  ratio < 0.5 means LTI captures most of the residual-stream dynamics")
+    print("  ratio ~ 1  => LTI fit is uninformative")
+    print("  small test_std across prompts => result is robust")
 
 
 if __name__ == "__main__":

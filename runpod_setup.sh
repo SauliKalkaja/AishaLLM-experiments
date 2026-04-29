@@ -7,7 +7,7 @@ set -euo pipefail
 echo "[*] python: $(python3 --version)"
 echo "[*] torch:  $(python3 -c 'import torch; print(torch.__version__, "cuda=", torch.cuda.is_available())')"
 
-pip install --no-input einops
+pip install --no-input einops transformers "numpy<2" matplotlib
 
 # Mamba fast-path kernels. Skip if it fails -- transformers will fall back
 # to the slow sequential implementation.
