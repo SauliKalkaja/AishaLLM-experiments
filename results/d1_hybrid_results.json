@@ -1,0 +1,1825 @@
+{
+  "per_prompt": [
+    {
+      "prompt": "And the risks associated with that path? Have you truly explored them?",
+      "boundary": [
+        "almost",
+        "ducks",
+        "numbers",
+        "temporarily",
+        "traditions",
+        "lined",
+        "specially",
+        "moravia",
+        "reunite",
+        "mountains",
+        "historically",
+        "israel",
+        "represents",
+        "espoused",
+        "clogged",
+        "culminating",
+        "birds",
+        "reconstituted",
+        "ghosts",
+        "immensely"
+      ],
+      "boundary_size": 105,
+      "outputs": {
+        "aisha_alone": "The inter body of i scattering an attitude.",
+        "mamba_alone": " Yes.\nWhat exactly are those?\nAssistant: I'm not as familiar with these things. I just know",
+        "mamba_lam1.5": " Yes.\nUser: Do you know if there is a way to re-create that path?\nAssistant:",
+        "mamba_lam3.0": " Sure. In fact, I would strongly recommend against it. The risks associated with the path are really quite apparent.\n",
+        "mamba_lam6.0": " The risks associated with an FTP path is really an FTP path is an FTP path is an FTP path"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 4044.845645506459,
+          "boundary_hit_rate": 0.375,
+          "n_tokens": 8
+        },
+        "mamba_alone": {
+          "perplexity": 20.49440359608437,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam1.5": {
+          "perplexity": 13.077934593189655,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "mamba_lam3.0": {
+          "perplexity": 23.434133117432676,
+          "boundary_hit_rate": 0.2631578947368421,
+          "n_tokens": 19
+        },
+        "mamba_lam6.0": {
+          "perplexity": 18.898681529177303,
+          "boundary_hit_rate": 0.35,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "I see it as testing boundaries. And boundaries are essential.",
+      "boundary": [
+        "concerns",
+        "mind",
+        "twinkle",
+        "boundaries",
+        "clarification",
+        "suspicious",
+        "explanation",
+        "performances",
+        "appropriate",
+        "revision",
+        "bingham",
+        "uncommon",
+        "clipping",
+        "orchids",
+        "ellipse",
+        "lynch",
+        "helpless",
+        "shift",
+        "iss",
+        "rent"
+      ],
+      "boundary_size": 63,
+      "outputs": {
+        "aisha_alone": "It upside haven't i.",
+        "mamba_alone": " Henry Howard, you might want to check out Weston's post on detecting.\nAnd keep in mind that students in",
+        "mamba_lam1.5": " In my experience that boundaries are not an essential part of the architecture, because they don't fully represent the user interface.",
+        "mamba_lam3.0": " Sure, but testing boundaries does not care about testing boundaries. Testing boundaries makes testing boundaries.\nAssistant: For testing",
+        "mamba_lam6.0": " Or Bunco or Bunco or Bunco or Bunco or Bunco or Bunco"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 2521.6850043028207,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 4
+        },
+        "mamba_alone": {
+          "perplexity": 54.061334107951744,
+          "boundary_hit_rate": 0.05263157894736842,
+          "n_tokens": 19
+        },
+        "mamba_lam1.5": {
+          "perplexity": 25.343420494478924,
+          "boundary_hit_rate": 0.09523809523809523,
+          "n_tokens": 21
+        },
+        "mamba_lam3.0": {
+          "perplexity": 52.40593767775054,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 18
+        },
+        "mamba_lam6.0": {
+          "perplexity": 4.72062307716655,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        }
+      }
+    },
+    {
+      "prompt": "Is this my hoodie?",
+      "boundary": [],
+      "boundary_size": 0,
+      "outputs": {
+        "aisha_alone": "I haven't you of a lack.",
+        "mamba_alone": " Yes.\nUser: Hi, I'm Weston. Welcome to my humble abode. Please check out our new",
+        "mamba_lam1.5": " No, I assume you aren't.\n\nA:\n\nI believe you need to create your respective bridge by",
+        "mamba_lam3.0": " Sure? Come on, I'm going to go in the closet next to the bed.\nHomer: Listen,",
+        "mamba_lam6.0": " Not yet.\nUser: Wait a minute.\nAssistant: This is my hoodie?\nUser: Wait"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 242.9555335384555,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 6
+        },
+        "mamba_alone": {
+          "perplexity": 24.185126778269495,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba_lam1.5": {
+          "perplexity": 19.750722237421424,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam3.0": {
+          "perplexity": 20.988013968748362,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam6.0": {
+          "perplexity": 19.017764863643265,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        }
+      }
+    },
+    {
+      "prompt": "Well, I actually got a call back from that company across the country. The one in Denver.",
+      "boundary": [
+        "natalia",
+        "finish",
+        "collectively",
+        "borrowing",
+        "company",
+        "therein",
+        "voltage",
+        "medicine",
+        "empire",
+        "bradley",
+        "abdomen",
+        "arcadius",
+        "cursing",
+        "food",
+        "arrow",
+        "earth",
+        "birds",
+        "sparta",
+        "clearly",
+        "sheridan"
+      ],
+      "boundary_size": 104,
+      "outputs": {
+        "aisha_alone": "The country of a wine lifting i.",
+        "mamba_alone": " OK.\nThe one in Denver. I'm not gonna use that one.\nAnd keep this for later.\n",
+        "mamba_lam1.5": " What are you doing there?\nCrowd Aries: Well, they said that they were gonna bring all the",
+        "mamba_lam3.0": " A company that's always around here.\nBouchon: A company that's always around here.\n Assistant",
+        "mamba_lam6.0": " Denver Denver Vs Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver Denver"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 2977.740182599729,
+          "boundary_hit_rate": 0.42857142857142855,
+          "n_tokens": 7
+        },
+        "mamba_alone": {
+          "perplexity": 22.25316456694715,
+          "boundary_hit_rate": 0.0625,
+          "n_tokens": 16
+        },
+        "mamba_lam1.5": {
+          "perplexity": 18.204499467235923,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba_lam3.0": {
+          "perplexity": 30.97007901773444,
+          "boundary_hit_rate": 0.14285714285714285,
+          "n_tokens": 14
+        },
+        "mamba_lam6.0": {
+          "perplexity": 3.23958024857078,
+          "boundary_hit_rate": 0.9565217391304348,
+          "n_tokens": 23
+        }
+      }
+    },
+    {
+      "prompt": "At six years old, I think our judgment still needs to lead.",
+      "boundary": [
+        "forensics",
+        "masters",
+        "reactions",
+        "philosophical",
+        "chipset",
+        "dare",
+        "have",
+        "conclusions",
+        "benches",
+        "bald",
+        "displaced",
+        "waste",
+        "dig",
+        "transform",
+        "experimentation",
+        "break",
+        "hits",
+        "got",
+        "neglected",
+        "dirty"
+      ],
+      "boundary_size": 105,
+      "outputs": {
+        "aisha_alone": "The pot technically remake i.",
+        "mamba_alone": " Henry Howard, you\u2019ve handled that in West Palm Beach. That\u2019s where your group has been.\nHe",
+        "mamba_lam1.5": " In my experience, you go against your parents and they tell you, \"You don't know how to do this.\"",
+        "mamba_lam3.0": " And who are you?\nUser: Your stepmom. She likes to draw and paint and we have a big house",
+        "mamba_lam6.0": " Or a large lock and a big locker and a big lock and a large locker and a large lock and a"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 40034.96316678495,
+          "boundary_hit_rate": 0.4,
+          "n_tokens": 5
+        },
+        "mamba_alone": {
+          "perplexity": 40.174617765430156,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba_lam1.5": {
+          "perplexity": 12.79934365027025,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba_lam3.0": {
+          "perplexity": 40.50187643422755,
+          "boundary_hit_rate": 0.15789473684210525,
+          "n_tokens": 19
+        },
+        "mamba_lam6.0": {
+          "perplexity": 14.897605349391897,
+          "boundary_hit_rate": 0.36363636363636365,
+          "n_tokens": 22
+        }
+      }
+    },
+    {
+      "prompt": "I totally get that. It's nice to just stare out the window sometimes.",
+      "boundary": [
+        "completely",
+        "weapon",
+        "involved",
+        "fatally",
+        "totally",
+        "simpler",
+        "office",
+        "incidentally",
+        "freshly",
+        "biologically",
+        "colombian",
+        "spoke",
+        "then",
+        "immensely",
+        "ironically",
+        "afterward",
+        "therefore",
+        "window",
+        "wrapped",
+        "unattractive"
+      ],
+      "boundary_size": 105,
+      "outputs": {
+        "aisha_alone": "The horny simpler station swims.",
+        "mamba_alone": " Henry Howard, you might want to check out Weston's website. If you're looking for a different kind of team",
+        "mamba_lam1.5": " In my experience that's okay, but if you didn't know, I'd say that you were very deficient.\n",
+        "mamba_lam3.0": " Ah, I'll just play with WK for a while. We can talk about WK if you want.\n",
+        "mamba_lam6.0": " We are happy to talk with you as sometimes downing Tegquedatec Lutin Stiletto"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 3233.8341625440307,
+          "boundary_hit_rate": 0.8,
+          "n_tokens": 5
+        },
+        "mamba_alone": {
+          "perplexity": 19.105430796781853,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba_lam1.5": {
+          "perplexity": 20.075985608364054,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba_lam3.0": {
+          "perplexity": 18.359141774114303,
+          "boundary_hit_rate": 0.058823529411764705,
+          "n_tokens": 17
+        },
+        "mamba_lam6.0": {
+          "perplexity": 122.43665846234349,
+          "boundary_hit_rate": 0.23076923076923078,
+          "n_tokens": 13
+        }
+      }
+    },
+    {
+      "prompt": "Everyone experiences vulnerability. It's a sign of being human, not a failing.",
+      "boundary": [
+        "you",
+        "strength",
+        "i",
+        "meals",
+        "it",
+        "indulgence",
+        "everybody",
+        "philosophical",
+        "this",
+        "what",
+        "we",
+        "failing",
+        "he",
+        "trustee",
+        "turin",
+        "sensitivity",
+        "bald",
+        "leathery",
+        "sting",
+        "statement"
+      ],
+      "boundary_size": 126,
+      "outputs": {
+        "aisha_alone": "The way starts a time.",
+        "mamba_alone": " Henry Howard, the founder of the Haskell Foundation, has been a volunteer contributor.\nAndr\u00e9 DeVries: The",
+        "mamba_lam1.5": " I'm afraid that you're not an idiot. A little n-word is not an insult. You're pretty good",
+        "mamba_lam3.0": " This was an oversight, I wasn't sure what it was. I questioned what it meant. I'm not an expert",
+        "mamba_lam6.0": " I fail I fail I fail I fail I fail I fail I fail I fail I fail I fail I fail I fail"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 566.6248026623492,
+          "boundary_hit_rate": 0.6,
+          "n_tokens": 5
+        },
+        "mamba_alone": {
+          "perplexity": 49.19076675667424,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam1.5": {
+          "perplexity": 21.730307246065983,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba_lam3.0": {
+          "perplexity": 17.940618246948763,
+          "boundary_hit_rate": 0.42105263157894735,
+          "n_tokens": 19
+        },
+        "mamba_lam6.0": {
+          "perplexity": 2.604731583288563,
+          "boundary_hit_rate": 1.0,
+          "n_tokens": 24
+        }
+      }
+    },
+    {
+      "prompt": "Oh, classic move. My roommate had \"a thing\" and basically strong-armed me into coming solo.",
+      "boundary": [
+        "gifts",
+        "borne",
+        "absalon",
+        "clancy",
+        "phrases",
+        "virginity",
+        "wow",
+        "crucified",
+        "speer",
+        "stale",
+        "tall",
+        "hebrew",
+        "thou",
+        "not",
+        "staying",
+        "purposes",
+        "migrated",
+        "aimed",
+        "topless",
+        "aeacus"
+      ],
+      "boundary_size": 210,
+      "outputs": {
+        "aisha_alone": "I sunk the purposes.",
+        "mamba_alone": " Oh, you guys are joking, you guys are not ready. That's why we hired you.\nStep-1",
+        "mamba_lam1.5": " Oh, I don't get it.\n\n(laughing)\nUser: Oh yeah. I miss you so",
+        "mamba_lam3.0": " Ahahahahahahahahahahahahahahahahahahahahahahahah",
+        "mamba_lam6.0": " Not a move I actually run in a roommate bout a handicapped person in a roommate bout a handic"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 2247.576885279151,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 4
+        },
+        "mamba_alone": {
+          "perplexity": 28.659328779163936,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 16
+        },
+        "mamba_lam1.5": {
+          "perplexity": 15.502700618070767,
+          "boundary_hit_rate": 0.23076923076923078,
+          "n_tokens": 13
+        },
+        "mamba_lam3.0": {
+          "perplexity": 1.6347913141654753,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 1
+        },
+        "mamba_lam6.0": {
+          "perplexity": 113.3464120629442,
+          "boundary_hit_rate": 0.42105263157894735,
+          "n_tokens": 19
+        }
+      }
+    },
+    {
+      "prompt": "Do you think there\u2019s any point where it ceases to be art and becomes pure engineering?",
+      "boundary": [
+        "managed",
+        "request",
+        "dumping",
+        "promotes",
+        "endured",
+        "spruce",
+        "supplies",
+        "intend",
+        "guidance",
+        "pure",
+        "symmetric",
+        "palatine",
+        "citizens",
+        "salt",
+        "perk",
+        "tetrahedral",
+        "underwent",
+        "container",
+        "attaining",
+        "supposed"
+      ],
+      "boundary_size": 146,
+      "outputs": {
+        "aisha_alone": "The cleansing trembling of an input.",
+        "mamba_alone": " Yes.\nWhat language are you using in your tutorial?\nAssistant: Chinese.\nWhat language do you think",
+        "mamba_lam1.5": " In my opinion that would be the case.\n\n...\n\nI\u2019m not sure how that could be brought",
+        "mamba_lam3.0": " Sure, but I can\u2019t see how art can be art.\nUser: Heh. Which art can be",
+        "mamba_lam6.0": " Art can\u2019t be pure engineering per se. We can point out artful engineering can be pure engineering. We can"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 5502.059995673685,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 6
+        },
+        "mamba_alone": {
+          "perplexity": 14.658633901550408,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam1.5": {
+          "perplexity": 13.340243116797133,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba_lam3.0": {
+          "perplexity": 27.896486463262367,
+          "boundary_hit_rate": 0.17647058823529413,
+          "n_tokens": 17
+        },
+        "mamba_lam6.0": {
+          "perplexity": 41.00157213356673,
+          "boundary_hit_rate": 0.35,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "Okay, okay. What if I buy you a fancy new pitcher? For better \"swans\"?",
+      "boundary": [
+        "tangent",
+        "mainline",
+        "woolen",
+        "dear",
+        "annoying",
+        "communism",
+        "buys",
+        "stalingrad",
+        "not",
+        "citric",
+        "naval",
+        "licence",
+        "disease",
+        "oooh",
+        "um",
+        "suing",
+        "pet",
+        "oh",
+        "nerve",
+        "athenian"
+      ],
+      "boundary_size": 147,
+      "outputs": {
+        "aisha_alone": "The boring tangent of i saw you.",
+        "mamba_alone": " Well, you're not my client. I'm not the guy who you want to buy your new pitcher.\n\n",
+        "mamba_lam1.5": " I'm not that dumb.\n\n\"Oh, I know, I'm not that dumb. I know pretty well",
+        "mamba_lam3.0": " Ah ok. I'll buy you a pitcher for the new pitcher.\nUser: Okay. Okay. I can buy",
+        "mamba_lam6.0": " Not at Ivegans at Ivegans! Ivegans at Ivegans. Not at"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 1622.3161762813397,
+          "boundary_hit_rate": 0.42857142857142855,
+          "n_tokens": 7
+        },
+        "mamba_alone": {
+          "perplexity": 31.47754081486135,
+          "boundary_hit_rate": 0.29411764705882354,
+          "n_tokens": 17
+        },
+        "mamba_lam1.5": {
+          "perplexity": 8.629525441277726,
+          "boundary_hit_rate": 0.2,
+          "n_tokens": 15
+        },
+        "mamba_lam3.0": {
+          "perplexity": 42.28578789341949,
+          "boundary_hit_rate": 0.5294117647058824,
+          "n_tokens": 17
+        },
+        "mamba_lam6.0": {
+          "perplexity": 11.58901867042926,
+          "boundary_hit_rate": 0.2,
+          "n_tokens": 10
+        }
+      }
+    },
+    {
+      "prompt": "You're ridiculous. Give me back my hoodie.",
+      "boundary": [
+        "innocent",
+        "intelligent",
+        "sincere",
+        "unfortunate",
+        "reliable",
+        "ugly",
+        "ridiculous",
+        "acidic",
+        "brave",
+        "modest",
+        "beautiful",
+        "strange",
+        "persistent",
+        "thorough",
+        "handsome",
+        "hereditary",
+        "vibrant",
+        "defective",
+        "anxiolytic",
+        "funny"
+      ],
+      "boundary_size": 21,
+      "outputs": {
+        "aisha_alone": "The solo worldwide couldn't of a brave supreme.",
+        "mamba_alone": " Henry Howard, you're joking, you're a brick.\nHenry Howard: You're joking.\nAssistant:",
+        "mamba_lam1.5": " I'm going to tell you something.\n\n(END VIDEOTAPE)\n\n[00:08:",
+        "mamba_lam3.0": " He's an asshole, I'm going to lay him out on the sidewalk right now. He's not gonna be sporting",
+        "mamba_lam6.0": " He's beautiful. He can do it. He brightens up an innocent innocent innocent innocent innocent innocent innocent innocent innocent innocent"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 3365.074326322334,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 8
+        },
+        "mamba_alone": {
+          "perplexity": 33.474235150547266,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        },
+        "mamba_lam1.5": {
+          "perplexity": 5.989096677281542,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 8
+        },
+        "mamba_lam3.0": {
+          "perplexity": 18.211245528927765,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba_lam6.0": {
+          "perplexity": 15.371594535719137,
+          "boundary_hit_rate": 0.55,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "Yeah, that seems clearer. I just want us both to be on the same page.",
+      "boundary": [
+        "tolerant",
+        "crown",
+        "that",
+        "everybody",
+        "wow",
+        "delirious",
+        "channel",
+        "not",
+        "claustrophobic",
+        "eh",
+        "shorter",
+        "um",
+        "effective",
+        "him",
+        "shaky",
+        "himself",
+        "well",
+        "oh",
+        "her",
+        "land"
+      ],
+      "boundary_size": 83,
+      "outputs": {
+        "aisha_alone": "The chummy cock of a button counts.",
+        "mamba_alone": " OK. I'll try that, thanks.\n\nA:\n\nDon't use group_concat with a named",
+        "mamba_lam1.5": " That's a good one.\n\nUser: A little bit, yeah.\nAssistant: You know, I",
+        "mamba_lam3.0": " Yeah, that's a good question. It's not that of a clobbering Ting Ting thingy",
+        "mamba_lam6.0": " Well, that ahhh that ahhh ahhh that ahhh ahhh that ahhh"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 928.0623224996524,
+          "boundary_hit_rate": 0.42857142857142855,
+          "n_tokens": 7
+        },
+        "mamba_alone": {
+          "perplexity": 10.53158606936878,
+          "boundary_hit_rate": 0.07692307692307693,
+          "n_tokens": 13
+        },
+        "mamba_lam1.5": {
+          "perplexity": 16.518981548355775,
+          "boundary_hit_rate": 0.07692307692307693,
+          "n_tokens": 13
+        },
+        "mamba_lam3.0": {
+          "perplexity": 21.689809597865253,
+          "boundary_hit_rate": 0.21428571428571427,
+          "n_tokens": 14
+        },
+        "mamba_lam6.0": {
+          "perplexity": 5.278299079914635,
+          "boundary_hit_rate": 1.0,
+          "n_tokens": 11
+        }
+      }
+    },
+    {
+      "prompt": "It's my pleasure to offer it. We've weathered many storms together, haven't we?",
+      "boundary": [
+        "lucien",
+        "mouthing",
+        "targeting",
+        "here",
+        "wednesday",
+        "arousing",
+        "acrobat",
+        "drills",
+        "especially",
+        "thompson",
+        "quickly",
+        "announcement",
+        "preceding",
+        "occupations",
+        "smelling",
+        "canned",
+        "boost",
+        "enhancing",
+        "incentive",
+        "crossing"
+      ],
+      "boundary_size": 105,
+      "outputs": {
+        "aisha_alone": "I hope you of a tit.",
+        "mamba_alone": " Yes.\n\nAre you a fan of Westwood Forever? If so, why keep this website online?\n",
+        "mamba_lam1.5": " In my experience that's all we've ever had.\n\nM: Which would be the best time to talk about",
+        "mamba_lam3.0": " Sure we've weathered a lot.\nBrunson: We certainly have. We've weathered a lot of",
+        "mamba_lam6.0": " Not anymore hope we hope weathered together again later on again later again later again later again later again later again later again"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 516.212064224916,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 6
+        },
+        "mamba_alone": {
+          "perplexity": 14.358138045218276,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba_lam1.5": {
+          "perplexity": 17.856423785013643,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 18
+        },
+        "mamba_lam3.0": {
+          "perplexity": 23.44841259032964,
+          "boundary_hit_rate": 0.14285714285714285,
+          "n_tokens": 14
+        },
+        "mamba_lam6.0": {
+          "perplexity": 48.00792128279304,
+          "boundary_hit_rate": 0.8695652173913043,
+          "n_tokens": 23
+        }
+      }
+    },
+    {
+      "prompt": "Just running errands, picking up a few things. You?",
+      "boundary": [
+        "buried",
+        "team",
+        "molecule",
+        "virginity",
+        "vow",
+        "pence",
+        "baptised",
+        "fanny",
+        "ignited",
+        "mangoes",
+        "towel",
+        "deed",
+        "travelled",
+        "program",
+        "impulses",
+        "shannon",
+        "hailed",
+        "kisser",
+        "grapes",
+        "landed"
+      ],
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The sorry vow spitting gassed a clear sober songwriters.",
+        "mamba_alone": " Yes.\n\nAre you a fan of Westwood?\nAssistant: Yes!\n\nWhat do you think",
+        "mamba_lam1.5": " No, I don't go where I'm not needed, I don't come here where I'm not needed, I",
+        "mamba_lam3.0": " Sure? Come on, I'm going to go in the den.\nUser: Yes, we're all going to",
+        "mamba_lam6.0": " Commercially run errands errands errands errands errands errands errands errands errands err"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 3903.5135604593183,
+          "boundary_hit_rate": 0.4444444444444444,
+          "n_tokens": 9
+        },
+        "mamba_alone": {
+          "perplexity": 13.538628248276417,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba_lam1.5": {
+          "perplexity": 6.492825101802569,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 17
+        },
+        "mamba_lam3.0": {
+          "perplexity": 22.85769265913915,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam6.0": {
+          "perplexity": 5.698101488142287,
+          "boundary_hit_rate": 0.8333333333333334,
+          "n_tokens": 12
+        }
+      }
+    },
+    {
+      "prompt": "Still, screen time before bed is generally advised against.",
+      "boundary": [
+        "helped",
+        "begged",
+        "utilizing",
+        "sleigh",
+        "reader",
+        "copenhagen",
+        "moment",
+        "til",
+        "ane",
+        "sensitivity",
+        "abdallah",
+        "as",
+        "rummy",
+        "just",
+        "highway",
+        "choices",
+        "advised",
+        "allowing",
+        "necessarily",
+        "enables"
+      ],
+      "boundary_size": 125,
+      "outputs": {
+        "aisha_alone": "The ti offering probably hates of an inter cy.",
+        "mamba_alone": " Yes.\nWhat exactly are you intending to do with the sleep?\nAssistant: keep you awake.\nWhat",
+        "mamba_lam1.5": " As are smokers.\n  Respondent: I didn't know, I just assumed that was how they were all\n",
+        "mamba_lam3.0": " I also often need to play with my kids before bed time, so I often give them Tootsie Pops before",
+        "mamba_lam6.0": " I also hope I still can as I still need screen time I just need time I need time I need time I need"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 39195.52210234003,
+          "boundary_hit_rate": 0.5555555555555556,
+          "n_tokens": 9
+        },
+        "mamba_alone": {
+          "perplexity": 25.36214053901861,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam1.5": {
+          "perplexity": 42.53493251194705,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 16
+        },
+        "mamba_lam3.0": {
+          "perplexity": 24.676010274164884,
+          "boundary_hit_rate": 0.35,
+          "n_tokens": 20
+        },
+        "mamba_lam6.0": {
+          "perplexity": 23.099870536135573,
+          "boundary_hit_rate": 0.4166666666666667,
+          "n_tokens": 24
+        }
+      }
+    },
+    {
+      "prompt": "For science, you know. It tastes like fruit-flavored regret.",
+      "boundary": [
+        "wading",
+        "helped",
+        "spreads",
+        "ordained",
+        "trafficking",
+        "jogging",
+        "wail",
+        "orthodoxy",
+        "science",
+        "powering",
+        "sperm",
+        "chassis",
+        "bother",
+        "pulsing",
+        "remains",
+        "pie",
+        "hermes",
+        "experimentation",
+        "zone",
+        "spout"
+      ],
+      "boundary_size": 104,
+      "outputs": {
+        "aisha_alone": "The armistice trafficking a clear winter.",
+        "mamba_alone": " Henry Howard, the founder of the Pewper brick-layers' guild.\nAssistant: Richard Phillips.\n",
+        "mamba_lam1.5": " Slightly shocker, I'm a very big fan, by the way.\n\nThat said, if you're",
+        "mamba_lam3.0": " How do you mean? How do you mean how?\nUser: How do you mean how do you mean how do",
+        "mamba_lam6.0": " How a hope and a hope science and a hope a hope a hope a hope a hope a hope a hope a hope"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 2036.2768881394347,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 6
+        },
+        "mamba_alone": {
+          "perplexity": 53.39287687826481,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba_lam1.5": {
+          "perplexity": 18.326796821108417,
+          "boundary_hit_rate": 0.07142857142857142,
+          "n_tokens": 14
+        },
+        "mamba_lam3.0": {
+          "perplexity": 6.614189447118928,
+          "boundary_hit_rate": 0.2,
+          "n_tokens": 20
+        },
+        "mamba_lam6.0": {
+          "perplexity": 12.341723868493903,
+          "boundary_hit_rate": 0.4583333333333333,
+          "n_tokens": 24
+        }
+      }
+    },
+    {
+      "prompt": "That summer at the lake. We almost capsized that boat.",
+      "boundary": [
+        "almost",
+        "company",
+        "drama",
+        "specially",
+        "papyrus",
+        "container",
+        "historically",
+        "boyfriend",
+        "electrically",
+        "usually",
+        "calculus",
+        "bone",
+        "arrow",
+        "boat",
+        "typically",
+        "fighter",
+        "space",
+        "mechanically",
+        "mountain",
+        "sea"
+      ],
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "I haven't a pizza.",
+        "mamba_alone": " Well, you guys didn't do that in Westport.\nVirginia.\nAssistant: Did you hit it",
+        "mamba_lam1.5": " That was a joke. I'm watching.\n\n...\n\nI'm watching a segment of \"Nancy Drew",
+        "mamba_lam3.0": " A boat boat?\nSoccer Club: A boat boat.\nAssistant: A boat boat. A boat boat",
+        "mamba_lam6.0": " A boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat boat"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 239.2827420931453,
+          "boundary_hit_rate": 0.25,
+          "n_tokens": 4
+        },
+        "mamba_alone": {
+          "perplexity": 40.635858004936686,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba_lam1.5": {
+          "perplexity": 19.244913275678226,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba_lam3.0": {
+          "perplexity": 27.45598458216636,
+          "boundary_hit_rate": 0.6,
+          "n_tokens": 15
+        },
+        "mamba_lam6.0": {
+          "perplexity": 2.6463707555406817,
+          "boundary_hit_rate": 0.9583333333333334,
+          "n_tokens": 24
+        }
+      }
+    },
+    {
+      "prompt": "Nothing much, just something kind of wild happened. My head is spinning a bit.",
+      "boundary": [
+        "capture",
+        "prey",
+        "anchored",
+        "attribution",
+        "it",
+        "me",
+        "joke",
+        "born",
+        "percent",
+        "him",
+        "repair",
+        "vanish",
+        "himself",
+        "travesty",
+        "come",
+        "hits",
+        "her",
+        "ranch",
+        "cadillac",
+        "manoeuvre"
+      ],
+      "boundary_size": 149,
+      "outputs": {
+        "aisha_alone": "The manoeuvre composing worldwide terminate of i.",
+        "mamba_alone": " Henry Howard, you might want to check out Weston's website. If you're interested keep an eye out for this",
+        "mamba_lam1.5": " In my head that was all it took.\n\n...and, once you get out of your head, you're",
+        "mamba_lam3.0": " Pusher, it's me.\nAssistant: The human it's me. It's me, it's",
+        "mamba_lam6.0": " Usher him out Pugmire Pugmire Pugmire Pugmire Pugmire"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 4225.017681151346,
+          "boundary_hit_rate": 0.42857142857142855,
+          "n_tokens": 7
+        },
+        "mamba_alone": {
+          "perplexity": 19.575073415455226,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba_lam1.5": {
+          "perplexity": 18.703183899300743,
+          "boundary_hit_rate": 0.17647058823529413,
+          "n_tokens": 17
+        },
+        "mamba_lam3.0": {
+          "perplexity": 27.118701684707396,
+          "boundary_hit_rate": 0.36363636363636365,
+          "n_tokens": 11
+        },
+        "mamba_lam6.0": {
+          "perplexity": 7.201128858567028,
+          "boundary_hit_rate": 0.125,
+          "n_tokens": 8
+        }
+      }
+    },
+    {
+      "prompt": "Good. Perhaps take a day or two to sit with these insights. No pressure to decide immediately.",
+      "boundary": [
+        "varies",
+        "dreadful",
+        "horizontally",
+        "decides",
+        "wreckage",
+        "orchestrated",
+        "claiming",
+        "possession",
+        "miracle",
+        "quantities",
+        "contemptible",
+        "remarkable",
+        "shines",
+        "ordinarily",
+        "incidentally",
+        "accurately",
+        "noise",
+        "column",
+        "experimented",
+        "come"
+      ],
+      "boundary_size": 168,
+      "outputs": {
+        "aisha_alone": "I sometimes learning a day.",
+        "mamba_alone": " Henry Howard, former Vice President, aka \"Guy Can't Stop the Mess.\nAssistant: Richard Dreier,",
+        "mamba_lam1.5": " Good. Good. Thank you.\n\nIn bullet, I\u2019m confident that you\u2019ll have a pretty good",
+        "mamba_lam3.0": " Good. Come sit with me on the kitchen intercom. The intercoms are very good.\nAssistant:",
+        "mamba_lam6.0": " Good good good good good good Good good Good good good Good good good Good good Good good Good good Good good Good good"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 1466.1689691891402,
+          "boundary_hit_rate": 0.6,
+          "n_tokens": 5
+        },
+        "mamba_alone": {
+          "perplexity": 108.0040237888263,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba_lam1.5": {
+          "perplexity": 19.670213227176266,
+          "boundary_hit_rate": 0.1875,
+          "n_tokens": 16
+        },
+        "mamba_lam3.0": {
+          "perplexity": 27.03668694148227,
+          "boundary_hit_rate": 0.26666666666666666,
+          "n_tokens": 15
+        },
+        "mamba_lam6.0": {
+          "perplexity": 3.249394607008179,
+          "boundary_hit_rate": 1.0,
+          "n_tokens": 24
+        }
+      }
+    },
+    {
+      "prompt": "Hey, this journey is really something, huh? It's been a long ride already.",
+      "boundary": [
+        "da",
+        "mm",
+        "it",
+        "returns",
+        "me",
+        "underground",
+        "miraculously",
+        "finitely",
+        "fight",
+        "not",
+        "successfully",
+        "sink",
+        "ha",
+        "parcel",
+        "eh",
+        "bye",
+        "climbs",
+        "um",
+        "him",
+        "dancing"
+      ],
+      "boundary_size": 168,
+      "outputs": {
+        "aisha_alone": "The goo haven't ll of a shak.",
+        "mamba_alone": " Well, you seem to be on a special assignment.\nUser: Yeah.\nAssistant: And that's because",
+        "mamba_lam1.5": " Oh, I know it's been long.\nUser: It's been a long ride already.\nAssistant:",
+        "mamba_lam3.0": " Yeah, yeah, it's really something. It's something that everything has always been about. It always has always been",
+        "mamba_lam6.0": " Not really anything much really on it really it really it really it really it really it really it really it really it really"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 1281.4828498485356,
+          "boundary_hit_rate": 0.2857142857142857,
+          "n_tokens": 7
+        },
+        "mamba_alone": {
+          "perplexity": 21.015403335385717,
+          "boundary_hit_rate": 0.13333333333333333,
+          "n_tokens": 15
+        },
+        "mamba_lam1.5": {
+          "perplexity": 17.997910892288434,
+          "boundary_hit_rate": 0.35714285714285715,
+          "n_tokens": 14
+        },
+        "mamba_lam3.0": {
+          "perplexity": 11.78790395782001,
+          "boundary_hit_rate": 0.5555555555555556,
+          "n_tokens": 18
+        },
+        "mamba_lam6.0": {
+          "perplexity": 9.06804537738382,
+          "boundary_hit_rate": 0.9583333333333334,
+          "n_tokens": 24
+        }
+      }
+    },
+    {
+      "prompt": "Or that breaks down every five minutes. The rollout was awful.",
+      "boundary": [
+        "the",
+        "a",
+        "venerable",
+        "this",
+        "your",
+        "my",
+        "appointments",
+        "moustache",
+        "setting",
+        "beware",
+        "week",
+        "his",
+        "toilets",
+        "her",
+        "dirty",
+        "eurasian",
+        "despicable",
+        "flips",
+        "some",
+        "whatever"
+      ],
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "It finishes split i.",
+        "mamba_alone": " Henry Howard, the founder of this company, has a lot of expertise in the Chinese market and has been involved in this",
+        "mamba_lam1.5": " The guys are going to go get a break?\nNurse: Yeah, let's go.\nNurse:",
+        "mamba_lam3.0": " This was my job, of course.\nAssistant: The human race. The human race. The human race of",
+        "mamba_lam6.0": " Or some awful week of human desecration of a human desecrable human desecrable desecr"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 6558.042119948226,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 4
+        },
+        "mamba_alone": {
+          "perplexity": 17.480552742731327,
+          "boundary_hit_rate": 0.22727272727272727,
+          "n_tokens": 22
+        },
+        "mamba_lam1.5": {
+          "perplexity": 16.797397676925,
+          "boundary_hit_rate": 0.14285714285714285,
+          "n_tokens": 14
+        },
+        "mamba_lam3.0": {
+          "perplexity": 24.31989910687971,
+          "boundary_hit_rate": 0.47058823529411764,
+          "n_tokens": 17
+        },
+        "mamba_lam6.0": {
+          "perplexity": 33.3732858925967,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "\"Just grabbed it?\" You've had it for three days.",
+      "boundary": [
+        "rattled",
+        "shoved",
+        "pondering",
+        "wisdom",
+        "decisions",
+        "gowns",
+        "insulted",
+        "nursed",
+        "strangling",
+        "send",
+        "rome",
+        "succeeds",
+        "traitor",
+        "weekend",
+        "stomped",
+        "dedicate",
+        "week",
+        "camps",
+        "compensate",
+        "penetrated"
+      ],
+      "boundary_size": 42,
+      "outputs": {
+        "aisha_alone": "The weekend kissed a month of i.",
+        "mamba_alone": " \"I bet you didn't...\"\nSgt. 3: \"Why did you do it? Did you hit it",
+        "mamba_lam1.5": " \"Yeah, that's okay, I'm not fucking around,\"\nI say, \"That's your fault, I",
+        "mamba_lam3.0": " \"You peasants! You're here for the money. This is your racket!\"\nAlexis: \"Are you the",
+        "mamba_lam6.0": " Como adorno tens tis tis tis tis tis tis tis tis t"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 1648.1837751379985,
+          "boundary_hit_rate": 0.42857142857142855,
+          "n_tokens": 7
+        },
+        "mamba_alone": {
+          "perplexity": 25.293596042125305,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba_lam1.5": {
+          "perplexity": 16.021285019183537,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba_lam3.0": {
+          "perplexity": 38.81963784251609,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "mamba_lam6.0": {
+          "perplexity": 16.617336216144754,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        }
+      }
+    },
+    {
+      "prompt": "Hey, so what's the plan for tonight? Friday night!",
+      "boundary": [
+        "surf",
+        "machinery",
+        "bart",
+        "not",
+        "miracle",
+        "ha",
+        "marketing",
+        "dill",
+        "eh",
+        "stud",
+        "um",
+        "clapping",
+        "ce",
+        "column",
+        "oh",
+        "iodine",
+        "commerce",
+        "mystery",
+        "winkie",
+        "yeah"
+      ],
+      "boundary_size": 119,
+      "outputs": {
+        "aisha_alone": "The poet of an inter stud haven't a phone.",
+        "mamba_alone": " Well, you guys might wanna do that in Westwood.\nVirginia.\nAnd keep this up.\nHe",
+        "mamba_lam1.5": " Friday night? Yes, Saturday night.\n\n(END VIDEOTAPE)\n>> Counselor: That was",
+        "mamba_lam3.0": " Ahahahahahahahahahahahahahahahahahahahahahahahah",
+        "mamba_lam6.0": " I think I'll miss Saturday night tonight tonight I think I miss Saturday night tonight tonight I miss Saturday night tonight tonight I"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 2777.399306264704,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 9
+        },
+        "mamba_alone": {
+          "perplexity": 38.72507126116284,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba_lam1.5": {
+          "perplexity": 13.012405696893536,
+          "boundary_hit_rate": 0.6,
+          "n_tokens": 10
+        },
+        "mamba_lam3.0": {
+          "perplexity": 1.6347913141654753,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 1
+        },
+        "mamba_lam6.0": {
+          "perplexity": 11.847627967321946,
+          "boundary_hit_rate": 0.5217391304347826,
+          "n_tokens": 23
+        }
+      }
+    },
+    {
+      "prompt": "Exactly. I still can't believe it's happening so quickly.",
+      "boundary": [
+        "nowadays",
+        "horizontally",
+        "slipped",
+        "staying",
+        "lived",
+        "hurt",
+        "go",
+        "shove",
+        "henceforth",
+        "incidentally",
+        "progressing",
+        "parked",
+        "see",
+        "prosecute",
+        "politely",
+        "quickly",
+        "sitting",
+        "then",
+        "empirically",
+        "clearly"
+      ],
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "The manufacturing flows snooping a clear surprise of i.",
+        "mamba_alone": " Henry Howard, you might want to check out Weston's post on detecting.php!\nNBB:Has this",
+        "mamba_lam1.5": " Exactly. A few of the threads are actually bulleting things, and you need to be really careful to make sure",
+        "mamba_lam3.0": " POWER POWER POWER POWER POWER POWER POWER POWER POWER POWER POWER POWER",
+        "mamba_lam6.0": " Exactly. Then again, Amit knew exactly exactly exactly exactly exactly exactly exactly exactly exactly exactly exactly exactly exactly exactly exactly"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 1677.1255680070535,
+          "boundary_hit_rate": 0.2222222222222222,
+          "n_tokens": 9
+        },
+        "mamba_alone": {
+          "perplexity": 157.7684007293486,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam1.5": {
+          "perplexity": 31.23768186820776,
+          "boundary_hit_rate": 0.05,
+          "n_tokens": 20
+        },
+        "mamba_lam3.0": {
+          "perplexity": 1.9860925137455046,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 12
+        },
+        "mamba_lam6.0": {
+          "perplexity": 15.93063188794382,
+          "boundary_hit_rate": 0.95,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "That would be amazing, B. I'll definitely take you up on that.",
+      "boundary": [
+        "charity",
+        "akbar",
+        "intelligent",
+        "deutsche",
+        "filmography",
+        "charles",
+        "liver",
+        "welsh",
+        "specifically",
+        "matthias",
+        "cathode",
+        "maneuvering",
+        "charming",
+        "b",
+        "accidental",
+        "someplace",
+        "theoretically",
+        "absolutely",
+        "aeneid",
+        "cbs"
+      ],
+      "boundary_size": 62,
+      "outputs": {
+        "aisha_alone": "I haven't ll a fascinating neelam.",
+        "mamba_alone": " OK.\n\nAre you a fan of Westwood One? That's my favorite show on TV. It's the",
+        "mamba_lam1.5": " That's great. Thank you.\n\nIn his own words, Portland's biggest smiley faces have been pretty legendary",
+        "mamba_lam3.0": " He was a GAS CPA.\nB: He was a GAS CPA. He was a GAS",
+        "mamba_lam6.0": " He certainly has a baneful aint He baneful aint He baneful aint He bane"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 1397.6293097720213,
+          "boundary_hit_rate": 0.3333333333333333,
+          "n_tokens": 6
+        },
+        "mamba_alone": {
+          "perplexity": 9.930263990360666,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam1.5": {
+          "perplexity": 31.858871086488968,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 16
+        },
+        "mamba_lam3.0": {
+          "perplexity": 14.995656199043934,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "mamba_lam6.0": {
+          "perplexity": 38.70390629063325,
+          "boundary_hit_rate": 0.07142857142857142,
+          "n_tokens": 14
+        }
+      }
+    },
+    {
+      "prompt": "Being reasonable tonight doesn't mean it won't set a precedent for tomorrow.",
+      "boundary": [
+        "helped",
+        "machinery",
+        "headset",
+        "bart",
+        "asked",
+        "cheating",
+        "miracle",
+        "basilica",
+        "periods",
+        "software",
+        "dill",
+        "woodlands",
+        "remarkable",
+        "contemptible",
+        "developed",
+        "setting",
+        "primate",
+        "bac",
+        "desirable",
+        "created"
+      ],
+      "boundary_size": 126,
+      "outputs": {
+        "aisha_alone": "The glorious bac finishes split of i.",
+        "mamba_alone": " Henry Howard, you might want to check in with Canavero on that.\nAssistant: Sorry, Mike.",
+        "mamba_lam1.5": " In my defense that will be the last thing I say, but, Portland is outside of the \"reasonable\" situation.",
+        "mamba_lam3.0": " He was setting precedent yesterday. He's setting precedent tomorrow. He's set precedent yesterday. He's setting precedent tomorrow.",
+        "mamba_lam6.0": " Yes, tonight means tomorrow tomorrow means tomorrow tomorrow means tomorrow tomorrow means tomorrow tomorrow means tomorrow tomorrow means tomorrow tomorrow means tomorrow tomorrow"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 20436.356247208892,
+          "boundary_hit_rate": 0.5714285714285714,
+          "n_tokens": 7
+        },
+        "mamba_alone": {
+          "perplexity": 45.77549146226452,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 15
+        },
+        "mamba_lam1.5": {
+          "perplexity": 39.395438138804415,
+          "boundary_hit_rate": 0.10526315789473684,
+          "n_tokens": 19
+        },
+        "mamba_lam3.0": {
+          "perplexity": 12.783637547825437,
+          "boundary_hit_rate": 0.7058823529411765,
+          "n_tokens": 17
+        },
+        "mamba_lam6.0": {
+          "perplexity": 5.309389552188274,
+          "boundary_hit_rate": 0.9565217391304348,
+          "n_tokens": 23
+        }
+      }
+    },
+    {
+      "prompt": "Hey! Is that\u2026 is that really you?",
+      "boundary": [
+        "really",
+        "algebraically",
+        "heh",
+        "seasonally",
+        "hardly",
+        "distinctly",
+        "sexually",
+        "emotionally",
+        "finitely",
+        "aw",
+        "not",
+        "duh",
+        "ha",
+        "giddyup",
+        "still",
+        "eh",
+        "doubly",
+        "uh",
+        "um",
+        "freshly"
+      ],
+      "boundary_size": 42,
+      "outputs": {
+        "aisha_alone": "The inter supreme specified a silver of a lack.",
+        "mamba_alone": " Henry Howard, you\u2019re a dumbwitted brick.\nHenry Howard: You\u2019re a dumbwitted brick",
+        "mamba_lam1.5": " Yes, I am. I'm watching.\nUser: What are you doing?\nAssistant: You're not",
+        "mamba_lam3.0": " Yeah, yeah, yeah, yeah yeah. Yeah. Yeah, yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah",
+        "mamba_lam6.0": " Not really. Not really. He really is really not really not really not really not really not really not really not really"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 7299.960095608935,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 9
+        },
+        "mamba_alone": {
+          "perplexity": 22.470554062932916,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba_lam1.5": {
+          "perplexity": 14.976351597406708,
+          "boundary_hit_rate": 0.15384615384615385,
+          "n_tokens": 13
+        },
+        "mamba_lam3.0": {
+          "perplexity": 3.668576142138262,
+          "boundary_hit_rate": 1.0,
+          "n_tokens": 18
+        },
+        "mamba_lam6.0": {
+          "perplexity": 5.821609510670725,
+          "boundary_hit_rate": 0.9090909090909091,
+          "n_tokens": 22
+        }
+      }
+    },
+    {
+      "prompt": "I'm going to try tonight. After dinner.",
+      "boundary": [
+        "permitted",
+        "style",
+        "intended",
+        "machinery",
+        "for",
+        "forced",
+        "bart",
+        "miracle",
+        "season",
+        "as",
+        "dill",
+        "ass",
+        "desk",
+        "ls",
+        "behind",
+        "bound",
+        "mats",
+        "want",
+        "destined",
+        "strives"
+      ],
+      "boundary_size": 105,
+      "outputs": {
+        "aisha_alone": "The person unfold i.",
+        "mamba_alone": " OK.\n\nWhen the client message says it's ready, I click.\nAnd keep doing it.\n\n",
+        "mamba_lam1.5": " Okay. Good.\n  User: After dinner.\nAssistant: Okay.\n  User: Can you tell",
+        "mamba_lam3.0": " Puschkarschkarschkarschkarschkarschkarschkarsch",
+        "mamba_lam6.0": " Mm-hmmm. Long as you want it for tonight as long as tonight as long as tonight as long as"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 7765.840465124523,
+          "boundary_hit_rate": 0.5,
+          "n_tokens": 4
+        },
+        "mamba_alone": {
+          "perplexity": 33.976232297298836,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 14
+        },
+        "mamba_lam1.5": {
+          "perplexity": 19.153049732954944,
+          "boundary_hit_rate": 0.18181818181818182,
+          "n_tokens": 11
+        },
+        "mamba_lam3.0": {
+          "perplexity": 4.394295495231894,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 1
+        },
+        "mamba_lam6.0": {
+          "perplexity": 23.707241364564254,
+          "boundary_hit_rate": 0.6,
+          "n_tokens": 20
+        }
+      }
+    },
+    {
+      "prompt": "Just a little splash! Character building, I'd say.",
+      "boundary": [
+        "catalog",
+        "address",
+        "weapon",
+        "bills",
+        "guard",
+        "rhizomatous",
+        "prolific",
+        "fluffy",
+        "dirty",
+        "passion",
+        "poor",
+        "equipment",
+        "intellect",
+        "force",
+        "little",
+        "boost",
+        "tray",
+        "display",
+        "reprint",
+        "trick"
+      ],
+      "boundary_size": 84,
+      "outputs": {
+        "aisha_alone": "I haven't a judge.",
+        "mamba_alone": " Well I bet you could still do that in real life.\nGame Designer: No, you could do it in",
+        "mamba_lam1.5": " Just a little splash! Character building, I'd say.\nM: How many of you have your respective characters ready",
+        "mamba_lam3.0": " Talking to Gliress, I'll go blind. Quotes: Not so very pleased. Which is likely the",
+        "mamba_lam6.0": " Not a big splashy character building skilllunr! Nothsthsthsthsthsth"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 225.59002239808314,
+          "boundary_hit_rate": 0.25,
+          "n_tokens": 4
+        },
+        "mamba_alone": {
+          "perplexity": 22.877838167842896,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 19
+        },
+        "mamba_lam1.5": {
+          "perplexity": 95.41553132383896,
+          "boundary_hit_rate": 0.2222222222222222,
+          "n_tokens": 18
+        },
+        "mamba_lam3.0": {
+          "perplexity": 151.25189831029275,
+          "boundary_hit_rate": 0.06666666666666667,
+          "n_tokens": 15
+        },
+        "mamba_lam6.0": {
+          "perplexity": 63.22732857541391,
+          "boundary_hit_rate": 0.375,
+          "n_tokens": 8
+        }
+      }
+    },
+    {
+      "prompt": "I worry about what it means for human craftsmanship down the line.",
+      "boundary": [
+        "scaled",
+        "translated",
+        "arrange",
+        "philosophical",
+        "syracuse",
+        "poured",
+        "bald",
+        "leathery",
+        "rope",
+        "stinger",
+        "andhra",
+        "activities",
+        "recommenced",
+        "popping",
+        "phoned",
+        "elm",
+        "brevity",
+        "mont",
+        "diminish",
+        "derive"
+      ],
+      "boundary_size": 105,
+      "outputs": {
+        "aisha_alone": "The old brevity of i hope you.",
+        "mamba_alone": " Henry Howard, the founder of the Bwana brick finishing business.\nConductor: Pankaj Jagde,",
+        "mamba_lam1.5": " I worry about what it means for human craftsmanship down the line.\n\nIt is interesting to note that",
+        "mamba_lam3.0": " I worry about how I deliver my Wrapping Boxes and I worry what I say when I deliver them. I",
+        "mamba_lam6.0": " I worry I'll be human and I be mean and I be human and I be mean and I be mean and I"
+      },
+      "metrics": {
+        "aisha_alone": {
+          "perplexity": 917.0707611147315,
+          "boundary_hit_rate": 0.42857142857142855,
+          "n_tokens": 7
+        },
+        "mamba_alone": {
+          "perplexity": 79.8266224350754,
+          "boundary_hit_rate": 0.0,
+          "n_tokens": 13
+        },
+        "mamba_lam1.5": {
+          "perplexity": 15.652801789515909,
+          "boundary_hit_rate": 0.2777777777777778,
+          "n_tokens": 18
+        },
+        "mamba_lam3.0": {
+          "perplexity": 23.301191477106254,
+          "boundary_hit_rate": 0.15,
+          "n_tokens": 20
+        },
+        "mamba_lam6.0": {
+          "perplexity": 18.06229692853805,
+          "boundary_hit_rate": 0.2608695652173913,
+          "n_tokens": 23
+        }
+      }
+    }
+  ],
+  "summary": {
+    "aisha_alone": {
+      "perplexity_median": 2384.630944790986,
+      "perplexity_mean": 5695.1470910675325,
+      "boundary_hit_mean": 0.3850264550264551,
+      "boundary_hit_std": 0.18284618658081425,
+      "tokens_mean": 6.366666666666666,
+      "n_evaluated": 30
+    },
+    "mamba_alone": {
+      "perplexity_median": 25.327868290571956,
+      "perplexity_mean": 36.60909781767187,
+      "boundary_hit_mean": 0.03239261211784432,
+      "boundary_hit_std": 0.07133860897683038,
+      "tokens_mean": 15.666666666666666,
+      "n_evaluated": 30
+    },
+    "mamba_lam1.5": {
+      "perplexity_median": 18.10120517976218,
+      "perplexity_mean": 21.51035913811148,
+      "boundary_hit_mean": 0.11055856853844469,
+      "boundary_hit_std": 0.13382658003064554,
+      "tokens_mean": 15.566666666666666,
+      "n_evaluated": 30
+    },
+    "mamba_lam3.0": {
+      "perplexity_median": 23.079442068122702,
+      "perplexity_mean": 25.48230597068236,
+      "boundary_hit_mean": 0.24897134398682388,
+      "boundary_hit_std": 0.24856393107609445,
+      "tokens_mean": 15.0,
+      "n_evaluated": 30
+    },
+    "mamba_lam6.0": {
+      "perplexity_median": 15.134599942555518,
+      "perplexity_mean": 23.877191751874534,
+      "boundary_hit_mean": 0.5395398365936123,
+      "boundary_hit_std": 0.3444163649347681,
+      "tokens_mean": 18.3,
+      "n_evaluated": 30
+    }
+  }
+}
