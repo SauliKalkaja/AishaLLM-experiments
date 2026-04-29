@@ -1,0 +1,471 @@
+{
+  "n_conversations": 8,
+  "memory_lengths": [
+    0,
+    1,
+    3,
+    5
+  ],
+  "lambda": 1.5,
+  "neighbors_per_centroid": 30,
+  "summary": {
+    "0": {
+      "centroid_dist_mean": 3.2493712520313394,
+      "centroid_dist_median": 3.2707084271416416,
+      "pos_l1_mean": 0.35314189356051184,
+      "boundary_size_mean": 21.0
+    },
+    "1": {
+      "centroid_dist_mean": 3.1126286677296657,
+      "centroid_dist_median": 3.2449765824169186,
+      "pos_l1_mean": 0.3646859975098412,
+      "boundary_size_mean": 51.0
+    },
+    "3": {
+      "centroid_dist_mean": 3.2493712520313394,
+      "centroid_dist_median": 3.2707084271416416,
+      "pos_l1_mean": 0.35314189356051184,
+      "boundary_size_mean": 51.0
+    },
+    "5": {
+      "centroid_dist_mean": 3.2493712520313394,
+      "centroid_dist_median": 3.2707084271416416,
+      "pos_l1_mean": 0.35314189356051184,
+      "boundary_size_mean": 50.75
+    }
+  },
+  "per_conversation": [
+    {
+      "style": "formal_business",
+      "final_q": "What should I do next?",
+      "full_centroid": [
+        -0.3020827222311441,
+        0.07538396648473975,
+        0.07878644742696436,
+        0.27415788183682294,
+        -0.05645689996198981,
+        0.1408589437837519,
+        0.3840009191542738,
+        0.7087578540442397,
+        0.1817369004421422,
+        -0.14177877450731605,
+        -0.09805459745611653,
+        -0.18145227981645864,
+        0.2580727685376682,
+        0.07840218116390782,
+        -0.19123695347481592,
+        -0.2825823259901017
+      ],
+      "full_pos_profile": {
+        "NOUN": 0.34,
+        "VERB": 0.14,
+        "ADJ": 0.08,
+        "ADV": 0.04
+      },
+      "per_N": {
+        "0": {
+          "boundary_size": 21,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.0474799185547763,
+          "answer_pos_l1_to_conv": 0.4218181818181818
+        },
+        "1": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.0474799185547763,
+          "answer_pos_l1_to_conv": 0.4218181818181818
+        },
+        "3": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.0474799185547763,
+          "answer_pos_l1_to_conv": 0.4218181818181818
+        },
+        "5": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.0474799185547763,
+          "answer_pos_l1_to_conv": 0.4218181818181818
+        }
+      }
+    },
+    {
+      "style": "casual_chat",
+      "final_q": "What should I do next?",
+      "full_centroid": [
+        -0.3013561810145961,
+        -0.20042244266233608,
+        0.006594169663528168,
+        1.3245158700364525,
+        -0.041122729589023146,
+        -0.05010256940116693,
+        0.03274489762092806,
+        0.1453739306532126,
+        0.20046648202692052,
+        0.18306111837982458,
+        0.07014849178586065,
+        -1.0707799868276908,
+        0.3231112477449229,
+        -0.3459338808200963,
+        -0.18160325214686449,
+        -0.01838473999113018
+      ],
+      "full_pos_profile": {
+        "NOUN": 0.28888888888888886,
+        "VERB": 0.2,
+        "ADJ": 0.044444444444444446,
+        "ADV": 0.13333333333333333
+      },
+      "per_N": {
+        "0": {
+          "boundary_size": 21,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.601219070054797,
+          "answer_pos_l1_to_conv": 0.35757575757575755
+        },
+        "1": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.601219070054797,
+          "answer_pos_l1_to_conv": 0.35757575757575755
+        },
+        "3": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.601219070054797,
+          "answer_pos_l1_to_conv": 0.35757575757575755
+        },
+        "5": {
+          "boundary_size": 50,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.601219070054797,
+          "answer_pos_l1_to_conv": 0.35757575757575755
+        }
+      }
+    },
+    {
+      "style": "scientific",
+      "final_q": "What should I do next?",
+      "full_centroid": [
+        -0.3841230358771112,
+        0.1387029944115447,
+        0.15080717481018105,
+        0.5539086748765867,
+        -0.05645689996198981,
+        -0.05544397133148127,
+        -0.03609020655673044,
+        -0.06289761593853643,
+        0.29761530849420537,
+        -0.13673312903208218,
+        -0.0895882256477229,
+        -0.6399529595035679,
+        -0.026000122837494706,
+        0.31899711016595944,
+        -0.21339468510950285,
+        -0.03118454626211157
+      ],
+      "full_pos_profile": {
+        "NOUN": 0.358974358974359,
+        "VERB": 0.2564102564102564,
+        "ADJ": 0.10256410256410256,
+        "ADV": 0.07692307692307693
+      },
+      "per_N": {
+        "0": {
+          "boundary_size": 21,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2034838695873256,
+          "answer_pos_l1_to_conv": 0.372960372960373
+        },
+        "1": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2034838695873256,
+          "answer_pos_l1_to_conv": 0.372960372960373
+        },
+        "3": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2034838695873256,
+          "answer_pos_l1_to_conv": 0.372960372960373
+        },
+        "5": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2034838695873256,
+          "answer_pos_l1_to_conv": 0.372960372960373
+        }
+      }
+    },
+    {
+      "style": "poetic_literary",
+      "final_q": "What should I do next?",
+      "full_centroid": [
+        -0.3919024338253802,
+        0.06173871272205585,
+        0.09803929345250476,
+        0.4493723261517745,
+        -0.05645689996198981,
+        0.5979984927210499,
+        1.0436731172923415,
+        -0.06289761593853643,
+        0.1695710257715229,
+        -0.05222389217404803,
+        -0.07671663180363822,
+        -0.22375967802587962,
+        0.04771640255304051,
+        -0.00650690964734516,
+        -0.16633932620930778,
+        0.06378996635140777
+      ],
+      "full_pos_profile": {
+        "NOUN": 0.3181818181818182,
+        "VERB": 0.1590909090909091,
+        "ADJ": 0.09090909090909091,
+        "ADV": 0.09090909090909091
+      },
+      "per_N": {
+        "0": {
+          "boundary_size": 21,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.3535610160669727,
+          "answer_pos_l1_to_conv": 0.43181818181818177
+        },
+        "1": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.3535610160669727,
+          "answer_pos_l1_to_conv": 0.43181818181818177
+        },
+        "3": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.3535610160669727,
+          "answer_pos_l1_to_conv": 0.43181818181818177
+        },
+        "5": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.3535610160669727,
+          "answer_pos_l1_to_conv": 0.43181818181818177
+        }
+      }
+    },
+    {
+      "style": "news_report",
+      "final_q": "What should I do next?",
+      "full_centroid": [
+        -0.2987231195081739,
+        0.20687266534760398,
+        -0.297748248266733,
+        0.4491813645422852,
+        -0.05645689996198981,
+        1.7890106137613053,
+        0.13086081776201897,
+        -0.06289761593853643,
+        0.06570390432691603,
+        -0.25720953263386337,
+        0.2638119132692416,
+        -0.23996829548376747,
+        0.347411730605485,
+        -0.019712756129280584,
+        -0.249486472327287,
+        0.1341934209193841
+      ],
+      "full_pos_profile": {
+        "NOUN": 0.37777777777777777,
+        "VERB": 0.28888888888888886,
+        "ADJ": 0.022222222222222223,
+        "ADV": 0.06666666666666667
+      },
+      "per_N": {
+        "0": {
+          "boundary_size": 21,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2864692952465115,
+          "answer_pos_l1_to_conv": 0.301010101010101
+        },
+        "1": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2864692952465115,
+          "answer_pos_l1_to_conv": 0.301010101010101
+        },
+        "3": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2864692952465115,
+          "answer_pos_l1_to_conv": 0.301010101010101
+        },
+        "5": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2864692952465115,
+          "answer_pos_l1_to_conv": 0.301010101010101
+        }
+      }
+    },
+    {
+      "style": "instructional_terse",
+      "final_q": "What should I do next?",
+      "full_centroid": [
+        -0.45984239237948926,
+        0.22858217358568336,
+        0.07635663080199837,
+        0.6312336504643374,
+        -0.05645689996198981,
+        -0.05544397133148127,
+        0.3107732178176057,
+        -0.06265195803422638,
+        0.26455955886938415,
+        -0.33704830032492117,
+        -0.04320438034232178,
+        -0.5653000462452105,
+        0.5975569127496344,
+        0.23893518795878013,
+        -0.416096578686253,
+        -0.06967477357815277
+      ],
+      "full_pos_profile": {
+        "NOUN": 0.3,
+        "VERB": 0.2,
+        "ADJ": 0.1,
+        "ADV": 0.1
+      },
+      "per_N": {
+        "0": {
+          "boundary_size": 21,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 2.6851933417200144,
+          "answer_pos_l1_to_conv": 0.3909090909090909
+        },
+        "1": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 2.6851933417200144,
+          "answer_pos_l1_to_conv": 0.3909090909090909
+        },
+        "3": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 2.6851933417200144,
+          "answer_pos_l1_to_conv": 0.3909090909090909
+        },
+        "5": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 2.6851933417200144,
+          "answer_pos_l1_to_conv": 0.3909090909090909
+        }
+      }
+    },
+    {
+      "style": "emotional_personal",
+      "final_q": "What should I do next?",
+      "full_centroid": [
+        -0.8692845689603569,
+        0.4473018338220058,
+        0.011576020100734673,
+        0.817739313447268,
+        1.6927629275456682,
+        -0.055260323309723094,
+        0.012225314572076106,
+        0.3585976116721724,
+        0.36187165014584605,
+        -0.4041679485026629,
+        0.10913673086011615,
+        -0.47986821781925143,
+        0.2232180309001232,
+        -0.08782576567828514,
+        0.024375269834694357,
+        0.0943519552911168
+      ],
+      "full_pos_profile": {
+        "NOUN": 0.14754098360655737,
+        "VERB": 0.2786885245901639,
+        "ADJ": 0.04918032786885246,
+        "ADV": 0.13114754098360656
+      },
+      "per_N": {
+        "0": {
+          "boundary_size": 21,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2549475590367716,
+          "answer_pos_l1_to_conv": 0.1520119225037258
+        },
+        "1": {
+          "boundary_size": 51,
+          "answer_text": "As an AI language model, I don't have access to your specific situation or context, so I can't provide a specific answer to your question. However, I can suggest some general steps you might consider next:\n\n1. Check your email: If you received an email from Alibaba Cloud, review it to see if there are any instructions or actions you need to take next.\n\n2. Contact Alibaba Cloud",
+          "answer_centroid_dist_to_conv": 2.161006884623383,
+          "answer_pos_l1_to_conv": 0.24436475409836064
+        },
+        "3": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2549475590367716,
+          "answer_pos_l1_to_conv": 0.1520119225037258
+        },
+        "5": {
+          "boundary_size": 50,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.2549475590367716,
+          "answer_pos_l1_to_conv": 0.1520119225037258
+        }
+      }
+    },
+    {
+      "style": "philosophical_dense",
+      "final_q": "What should I do next?",
+      "full_centroid": [
+        -0.4276739721667567,
+        -0.03424965215476414,
+        0.2611486674374439,
+        0.8619653183284399,
+        -0.05645689996198981,
+        -0.05544397133148127,
+        0.04364495584883996,
+        -0.06289761593853643,
+        0.16325357602696616,
+        -0.07308638438474607,
+        -0.13785531445268584,
+        -0.7244399630342837,
+        -0.1076896033216854,
+        0.6443369614606571,
+        -0.14163713593461114,
+        0.07867816369059451
+      ],
+      "full_pos_profile": {
+        "NOUN": 0.2653061224489796,
+        "VERB": 0.16326530612244897,
+        "ADJ": 0.10204081632653061,
+        "ADV": 0.10204081632653061
+      },
+      "per_N": {
+        "0": {
+          "boundary_size": 21,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.5626159459835476,
+          "answer_pos_l1_to_conv": 0.3970315398886828
+        },
+        "1": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.5626159459835476,
+          "answer_pos_l1_to_conv": 0.3970315398886828
+        },
+        "3": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.5626159459835476,
+          "answer_pos_l1_to_conv": 0.3970315398886828
+        },
+        "5": {
+          "boundary_size": 51,
+          "answer_text": "As Qwen, I'm here to assist you with any questions or concerns you may have. What would you like to know or discuss?",
+          "answer_centroid_dist_to_conv": 3.5626159459835476,
+          "answer_pos_l1_to_conv": 0.3970315398886828
+        }
+      }
+    }
+  ]
+}
