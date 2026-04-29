@@ -170,7 +170,6 @@ def main():
         # Rough threshold for the verifier-loop. If we set threshold at the
         # 75th percentile of faithful distances, what's the recall and precision
         # for hallucination detection?
-        import numpy as np
         thresh = float(np.percentile(all_dist_faithful, 75))
         tp = sum(1 for d in all_dist_hallucinated if d > thresh)
         fp = sum(1 for d in all_dist_faithful   if d > thresh)
