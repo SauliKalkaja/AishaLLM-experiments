@@ -154,10 +154,59 @@ but would not change its sign.
 
 Output: `results/a2_results.json`.
 
-### B2 / RunPod scaling — PENDING
+### B2: tiny GPT side-by-side training — DONE (RTX 4090 on RunPod)
 
-- B2: tiny GPT trained from scratch with RoPE-2D vs RoPE-3D on a synthetic
-  length-extrapolation task. CPU-feasible at ~2-3M params, but cleaner on
-  GPU.
-- Larger Mamba checkpoints (mamba-370m, mamba-790m, mamba-2.8b) for A2 sweep.
-- Both deferred to RunPod handoff.
+A 2.25 M-parameter GPT (4 layers, 6 heads, head_dim=36 — divisible by both 2
+and 3 so RoPE-2D and RoPE-3D are directly comparable) trained from scratch on
+a "repeat after delimiter" synthetic task:
+
+    sequence = R_1, R_2, ..., R_L, SEP, R_1, R_2, ..., R_L
+    loss = cross-entropy on the post-SEP positions only
+
+The two variants differ only in the positional encoding. Mixed-length training
+samples L uniformly from {8, 16, 24, 32, 48} each step; eval at
+{16, 32, 48, 64, 96, 128, 192} spans both in-distribution and OOD.
+
+| Length | RoPE-2D acc | RoPE-3D acc | RoPE-2D loss | RoPE-3D loss |
+|---|---|---|---|---|
+| L=16 (in-dist) | 99.95% | 99.93% | 0.0015 | 0.0054 |
+| L=32 (in-dist) | 99.91% | 99.96% | 0.0027 | 0.0009 |
+| L=48 (in-dist) | 99.97% | 99.98% | 0.0011 | 0.0003 |
+| L=64 (just OOD) | 5.2% | **7.2%** | 25.8 | 23.3 |
+| L=96 (OOD) | 3.6% | 3.4% | 29.6 | 33.0 |
+| L=128 (OOD) | 3.2% | 3.1% | 25.7 | 33.8 |
+| L=192 (OOD) | 3.2% | 3.4% | 22.3 | 30.3 |
+
+**Result.** Both train identically well at all in-distribution lengths
+(>99.9% accuracy). Both collapse to near-random (~3%) at OOD lengths past
+max(train_L) = 48. RoPE-3D has a marginal edge right at the extrapolation
+boundary (L=64) but it disappears within a few additional positions.
+
+**Conclusion.** **The third rotational degree of freedom does not solve
+length extrapolation by itself.** This is consistent with the broader RoPE
+literature — extrapolation fixes (NTK-aware scaling, YaRN, ABF) work by
+adjusting the *frequency schedule*, not by adding rotational dimensions.
+The framework's `M` tensor would plausibly help an LLM through its scalar
+magnitude `|M|` (the rotation rate per position step) rather than through
+its three axis components.
+
+Output: `figures/b2_rope_train.png`, `results/b2_results.json`.
+
+## Summary across all experiments
+
+| | B1 | A1 | A2 | B2 |
+|---|---|---|---|---|
+| What | RoPE-3D algebra | Synthetic SSM invariants | Pretrained Mamba LTI test | RoPE-2D vs 3D training |
+| Result | All four properties hold at machine precision | Direct port `(α+β)²−M²` does not conserve; log-additive is a tautology | Mamba is **not** LTI in residual stream (cross-prompt ratio 0.74-0.89) | RoPE-3D trains well in-dist, fails to extrapolate (same as 2D) |
+| Verdict for analytical-jump in LLMs | RoPE-3D is structurally valid | Framework invariant doesn't transplant to SSMs | Mamba selectivity is essential, not perturbative | Third rotational DoF doesn't solve extrapolation |
+
+**Net.** The 6D analytical-jump framework's *algebraic* generalizations
+transplant cleanly to LLM components (B1: RoPE-3D works, the framework's
+scalar `|M|` *is* RoPE's frequency θ). But the framework's *dynamical*
+content — the conservation law `(α+β)² − M² = 4` and the closed-form O(1)
+propagator — does not transplant to either Mamba (selectivity breaks LTI)
+or transformers under direct application. The closest kin in ML for the
+analytical-jump structure remains in linear-time-invariant state-space
+models, which are the regime where parallel scans already exploit
+diagonalization-based closed-form propagation. Selective and nonlinear
+sequence models lie outside.
